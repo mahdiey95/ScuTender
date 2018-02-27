@@ -10,8 +10,8 @@
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<link id="callCss" rel="stylesheet" href="themes/current/bootstrap.min.css" type="text/css" media="screen"/>
-	<link href="themes/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+	<link id="callCss" rel="stylesheet" href="{{asset('resources\assets\themes\current\bootstrap.min.css')}}" type="text/css" media="screen"/>
+	<link href="{{asset('resources\assets\themes/css/bootstrap-responsive.min.css')}}" rel="stylesheet" type="text/css">
 	<link href="themes/css/font-awesome.css" rel="stylesheet" type="text/css">
 	<link href="themes/css/base.css" rel="stylesheet" type="text/css">
 	<style type="text/css" id="enject"></style>
@@ -26,22 +26,22 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<h1><a class="brand" href="index.html"> Business <small>  Ltd.</small></a></h1>
+				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li class="active"><a href="index.html">Home	</a></li>
-						<li class=""><a href="services.html">What we do?</a></li>  
-						<li class=""><a href="about_us.html">Who we are?</a></li>
-						<li class=""><a href="portfolio.html">Portfolio</a></li>
+						<li class="active"><a href="index.blade.php">Home	</a></li>
+						<li class=""><a href="services.blade.php">What we do?</a></li>
+						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
+						<li class=""><a href="portfolio.blade.php">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="elements.html">Page Elements</a></li>
-								<li><a href="comingsoon.html">Coming soon page</a></li>
+								<li><a href="elements.blade.php">Page Elements</a></li>
+								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
 							</ul>
 						</li>
-						<li class=""><a href="blog.html">Blog</a></li>
-						<li class=""><a href="contact.html">Support</a></li>
+						<li class=""><a href="blog.blade.php">Blog</a></li>
+						<li class=""><a href="contact.blade.php">Support</a></li>
 					</ul>
 				</div>
 			</div>
@@ -57,7 +57,7 @@
 					<div class="carousel-caption">
                       <h2>What we do?</h2>
                      <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services. </p>
-					  <a href="services.html" class="btn btn-large btn-success">Read more</a>
+					  <a href="services.blade.php" class="btn btn-large btn-success">Read more</a>
                     </div>
 					</div>
 				</div>
@@ -66,7 +66,7 @@
 					<div class="carousel-caption">
                       <h2>Who we are?</h2>
                       <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="about_us.html" class="btn btn-large btn-success">Read more</a>
+					  <a href="about_us.blade.php" class="btn btn-large btn-success">Read more</a>
                     </div>
 					</div>
 				</div>
@@ -75,7 +75,7 @@
 					<div class="carousel-caption">
                        <h2>What we have done?</h2>
                      <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="portfolio.html" class="btn btn-large btn-success">Our Portfolio</a>
+					  <a href="portfolio.blade.php" class="btn btn-large btn-success">Our Portfolio</a>
                     </div>
 					</div>
 				</div>
@@ -84,7 +84,7 @@
 					<div class="carousel-caption">
                       <h2>Blog</h2>
                      <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="blog.html" class="btn btn-large btn-success">Recent NEWS</a>
+					  <a href="blog.blade.php" class="btn btn-large btn-success">Recent NEWS</a>
                     </div>
 					</div>
 				</div>
@@ -93,7 +93,7 @@
 					<div class="carousel-caption">
                       <h2>Need help?</h2>
                      <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="contact.html" class="btn btn-large btn-success">Contact us</a>
+					  <a href="contact.blade.php" class="btn btn-large btn-success">Contact us</a>
                     </div>
 					</div>
 				</div>
@@ -120,7 +120,7 @@
 					<span><br/>Design</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>
 			<div class="span2">
@@ -131,7 +131,7 @@
 					<span><br/>SEO</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>
 			<div class="span2">
@@ -142,7 +142,7 @@
 					<span><br/>Development</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>
 			<div class="span2">
@@ -153,7 +153,7 @@
 					<span><br/>Optimizations</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>
 			<div class="span2">
@@ -164,7 +164,7 @@
 					<span><br/>Customizations</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>
 			<div class="span2">
@@ -175,7 +175,7 @@
 					<span><br/>Open-sourse</span>
 					</a>
 					</h4>
-					<a href="details.html"><small>view details</small></a>
+					<a href="details.blade.php"><small>view details</small></a>
 				</div>
 			</div>	
 		</div>
@@ -188,7 +188,7 @@
 	<div class="span4">
 		<div class="thumbnail">
 			<h4>Mobile Apps</h4>
-			<a href="portfolio.html"><img src="themes/images/1.jpg" alt="bootstrap business templates"></a>
+			<a href="portfolio.blade.php"><img src="themes/images/1.jpg" alt="bootstrap business templates"></a>
 			<p>
 			<br/>
 			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
@@ -200,7 +200,7 @@
 				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.html" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
 			  </div>
 			</div>
 		</div>
@@ -208,7 +208,7 @@
 	<div class="span4">
 		<div class="thumbnail">
 			<h4>Application Development</h4>
-			<a href="portfolio.html"><img src="themes/images/2.jpg" alt="bootstrap business templates"></a>
+			<a href="portfolio.blade.php"><img src="themes/images/2.jpg" alt="bootstrap business templates"></a>
 			<p>
 			<br/>
 			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
@@ -220,7 +220,7 @@
 				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.html" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
 			  </div>
 			</div>
 		</div>
@@ -228,7 +228,7 @@
 	<div class="span4">
 		<div class="thumbnail">
 			<h4>My web solutions</h4>
-			<a href="portfolio.html"><img src="themes/images/3.jpg" alt="bootstrap business templates"></a>
+			<a href="portfolio.blade.php"><img src="themes/images/3.jpg" alt="bootstrap business templates"></a>
 			<p>
 			<br/>
 			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
@@ -240,7 +240,7 @@
 				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
 				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.html" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
 			  </div>
 			</div>
 		</div>
@@ -288,43 +288,43 @@
 		<h4>Latest news</h4>
 		<ul class="media-list">
 		  <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		</ul>
@@ -333,17 +333,17 @@
 	<div class="span3">
 			<h4>Visit us</h4>
 			<address style="margin-bottom:15px;">
-			<strong><a href="index.html" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
+			<strong><a href="index.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
 				194, Vectoria Street, Newwork <br>
 				nw 488, USA<br>
 			</address>
 			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.html" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="index.html" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
+			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
+			Link: <a href="index.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
 			<h5>Quick Links</h5>	
-			<a href="services.html" title="services"><i class="icon-cogs"></i> Services </a><br/>
+			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
 			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="portfolio.html" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+			<a href="portfolio.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
 
 	<h5>Find us on</h5>	
 	<div style="font-size:2.5em;">

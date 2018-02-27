@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -26,21 +26,22 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<h1><a class="brand" href="index.html"> Business <small>  Ltd.</small></a></h1>
+				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li class=""><a href="index.html">Home	</a></li>
-						<li class=""><a href="services.html">What we do?</a></li>  
-						<li class=""><a href="about_us.html">Who we are?</a></li>
-						<li class=""><a href="portfolio.html">Portfolio</a></li>
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
+						<li class=""><a href="index.blade.php">Home	</a></li>
+						<li class=""><a href="services.blade.php">What we do?</a></li>
+						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
+						<li class=""><a href="portfolio.blade.php">Portfolio</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="elements.html">Page Elements</a></li>
-								<li><a href="comingsoon.html">Coming soon page</a></li>
+								<li><a href="elements.blade.php">Page Elements</a></li>
+								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
 							</ul>
 						</li>
-						<li class=""><a href="blog.html">Blog</a></li>
-						<li class=""><a href="contact.html">Support</a></li>
+						<li class=""><a href="blog.blade.php">Blog</a></li>
+						<li class="active"><a href="contact.blade.php">Support</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,10 +49,16 @@
 	</div>
 </section>
 <!--Header Ends================================================ -->
+<section id="mapSection"> 
+<div id="myMap" style="height:400px">
+<!-- please edit in (js code which is available in the foote section) longitude and longitude of your location  -->
+</div>	
+</section>
 <!-- Page banner -->
-<section id="bannerSection" style="background:url(themes/images/banner/details.png) no-repeat center center #000;">
+<!--
+<section id="bannerSection" style="background:url(themes/images/banner/contact.png) no-repeat center center #000;">
 	<div class="container" >	
-		<h1 id="pageTitle">More details page 
+		<h1 id="pageTitle">Contact <small> :We love to hear from you</small> 
 		<span class="pull-right toolTipgroup">
 			<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="themes/images/facebook.png" alt="facebook" title="facebook"></a>
 			<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="themes/images/twitter.png" alt="twitter" title="twitter"></a>
@@ -60,93 +67,61 @@
 		</h1>
 	</div>
 </section> 
+-->
 <!-- Page banner end -->
-<section id="bodySection">
-<div class="container">					
-<div class="row">
-<!-- Sidebar comumn -->
-<div class="span3">
-<div class="well well-small">
-<h4>Inner menu</h4>
-<ul class="nav nav-tabs nav-stacked">
-	<li class="active"><a href="#">Website Design & Development</a></li>
-	<li><a href="#">Search Engine Optimization</a></li>
-	<li><a href="#">Mobilepage Desing & Dev.</a></li>
-	<li><a href="#">E-commerse Solutions</a></li>
-	<li><a href="#">Website Optimizations</a></li>
-	<li><a href="#">Website Customizations</a></li>
-	<li><a href="#">Opensourse Web development</a></li>
-  </ul>
-</div>
-<div class="alert alert-errir">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Heads up!</strong>
-		<p> When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-		Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-		</p>
-	</div>
-<div class="alert alert-success">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Heads up!</strong>
-		<p>
-		This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-		</p>
-	</div>
 
+<section id="bodySection"> 	
+	<div class="container">					
+	<div class="row">
+			<div class="span4">
+			<h3>  Mailing Address </h3>	
+				2601 Mission St.<br/>
+				San Francisco, CA 94110<br/><br/>
+				info@mysite.com<br/>
+				﻿Tel 123-456-6780<br/>
+				Fax 123-456-5679<br/>
+			</div>
+			<div class="span4">
+					<h3> Opening Hours</h3>
+					<h4> Monday - Friday</h4>
+					09:00am - 09:00pm<br/><br/>
+					<h4>Saturday</h4>
+					09:00am - 07:00pm<br/><br/>
+					<h4>Sunday</h4>
+					12:30pm - 06:00pm<br/><br/>
+			</div>
+			<div class="span4">
+				<h3>  Email Us</h3>
+				<form class="form-horizontal">
+				<fieldset>
+				  <div class="control-group">
+				   
+					  <input type="text" placeholder="name" class="input-xlarge"/>
+				   
+				  </div>
+				   <div class="control-group">
+				   
+					  <input type="text" placeholder="email" class="input-xlarge"/>
+				   
+				  </div>
+				   <div class="control-group">
+				   
+					  <input type="text" placeholder="subject" class="input-xlarge"/>
+				  
+				  </div>
+				  <div class="control-group">
+					  <textarea rows="4" id="textarea" class="input-xlarge"></textarea>
+				   
+				  </div>
 
+					<button class="btn btn-large" type="submit"> <i class="icon-envelope"></i> Send Message</button>
 
+				</fieldset>
+			  </form>
+			</div>
+		</div>
 
-</div>				
-<div class="span9">						
-<div class="well well-small" style="text-align:left">
-	<h4><a href="#" title="my web solutions">Low Cost Mobile Web Design Price List (+ 10% to 20% OFF)</a></h4>
-	<img src="themes/images/carousel/services_dtl.jpg" alt="business templates" /><br/><br/>
-	<div class="alert alert-info">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>Heads up!</strong>
-		<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-		We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-		Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-		</p>
-	</div>
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	</p>
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	</p>
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	</p>
-	
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	</p>
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS! 
-	</p>
-
-	
-	<p>This affordable Mobile Web Design Package offers up to 20% Discount for our new clients. We believ our clients are 100% satisfied with us and our services packages. 
-	We do it all for you from start to finish. When the mobile website is completed, you can visit your website from handheld device(ie. Mobile, i-pad etc).
-	Our website prices below are complete - there are NO HIDDEN EXTRAS!<br/> [<a href="#">More Details</a>]
-	</p>
-</div>
-<br/>
-</div>
-</div>
-</div>
+		</div>
 </section>
  <!-- Footer
   ================================================== -->
@@ -178,43 +153,43 @@
 		<h4>Latest news</h4>
 		<ul class="media-list">
 		  <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		</ul>
@@ -223,24 +198,24 @@
 	<div class="span3">
 			<h4>Visit us</h4>
 			<address style="margin-bottom:15px;">
-			<strong><a href="index.html" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
+			<strong><a href="index.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
 				194, Vectoria Street, Newwork <br>
 				nw 488, USA<br>
 			</address>
 			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.html" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="index.html" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
+			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
+			Link: <a href="index.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
 			<h5>Quick Links</h5>	
-			<a href="services.html" title="services"><i class="icon-cogs"></i> Services </a><br/>
+			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
 			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="portfolio.html" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+			<a href="portfolio.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
 
 	<h5>Find us on</h5>	
 	<div style="font-size:2.5em;">
-		<a href="index.html" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a> 
-		<a href="portfolio.html" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
-		<a href="services.html" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
-		<a href="services.html" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
+		<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
+		<a href="portfolio.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
 		<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
 	</div>
 	</div>
@@ -250,7 +225,6 @@
 	</footer>
     </div><!-- /container -->
 </section>
-
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
 <!-- Javascript
     ================================================== -->
@@ -261,6 +235,34 @@
 	<script src="themes/js/bootstrap-tooltip.js"></script>
     <script src="themes/js/bootstrap-popover.js"></script>
 	<script src="themes/js/business_ltd_1.0.js"></script>
+ 
+	 <!-- Google map jquery files -->
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+	<script src="themes/js/jquery.gmap.js"></script>
+	<script>
+		// Google map data ==============================================================================
+	  $(document).ready(function(){
+		$("#myMap").gMap({ controls: false,
+						  scrollwheel: false,
+			  draggable: true,
+		  markers: [{ latitude: 37.748582,  		//your company location latitude 
+					  longitude: -122.418411,		//your company location longitude
+					  icon: { image: "http://www.google.com/mapfiles/marker.png",
+							  iconsize: [42, 48],
+							  iconanchor: [42,48],
+							  infowindowanchor: [14, 0] } },
+					],
+		  icon: { image: "http://www.google.com/mapfiles/marker.png", 
+				  iconsize: [28, 48],
+				  iconanchor: [14, 48],
+				  infowindowanchor: [14, 0] },
+		  latitude: 37.748582,
+		  longitude: -122.418411,
+		  zoom: 16, });
+	  });
+	</script>
+	
+
 <!-- Themes switcher section ============================================================================================= -->
 <div id="secectionBox">
 <link rel="stylesheet" href="themes/switch/themeswitch.css" type="text/css" media="screen" />

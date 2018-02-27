@@ -26,22 +26,22 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<h1><a class="brand" href="index.html"> Business <small>  Ltd.</small></a></h1>
+				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li class=""><a href="index.html">Home	</a></li>
-						<li class=""><a href="services.html">What we do?</a></li>  
-						<li class="active"><a href="about_us.html">Who we are?</a></li>
-						<li class=""><a href="portfolio.html">Portfolio</a></li>
+						<li class=""><a href="index.blade.php">Home	</a></li>
+						<li class="active"><a href="services.blade.php">What we do?</a></li>
+						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
+						<li class=""><a href="portfolio.blade.php">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="elements.html">Page Elements</a></li>
-								<li><a href="comingsoon.html">Coming soon page</a></li>
+								<li><a href="elements.blade.php">Page Elements</a></li>
+								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
 							</ul>
 						</li>
-						<li class=""><a href="blog.html">Blog</a></li>
-						<li class=""><a href="contact.html">Support</a></li>
+						<li class=""><a href="blog.blade.php">Blog</a></li>
+						<li class=""><a href="contact.blade.php">Support</a></li>
 					</ul>
 				</div>
 			</div>
@@ -50,9 +50,9 @@
 </section>
 <!--Header Ends================================================ -->
 <!-- Page banner -->
-<section id="bannerSection" style="background:url(themes/images/banner/aboutus.png) no-repeat center center #000;">
+<section id="bannerSection" style="background:url(themes/images/banner/contact.png) no-repeat center center #000;">
 	<div class="container" >	
-		<h1 id="pageTitle">About us 
+		<h1 id="pageTitle">Our Services <small> :We believe in quality services</small> 
 		<span class="pull-right toolTipgroup">
 			<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="themes/images/facebook.png" alt="facebook" title="facebook"></a>
 			<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="themes/images/twitter.png" alt="twitter" title="twitter"></a>
@@ -62,169 +62,157 @@
 	</div>
 </section> 
 <!-- Page banner end -->
-<section id="bodySection">	
-	<div class="container">	
-	<div class="row">
-		<div class="span3">
-			<div class="well well-small">
-				<h3>Welcome!</h3>
-				We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/><br/>
-
-				We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone.
-				 If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-				then just remember us and makes your dream success.<br/><strong> We are giving the best solution for your best value of money.</strong>
+<section id="bodySection">		
+	<div id="wrapper">
+		<div class="container">	
+		<div class="row">
+			<div class="span4">
+				<div class="thumbnail">
+					<h4>Web Design</h4>
+					<h5>Your Website represents You...</h5>
+					  <div class="btn-group toolTipgroup">
+						<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+						<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+					  </div>
+					<ul class="unstyled">
+						<li>Website Design</li>
+						<li>PSD To XHTML &amp; CSS Conversion</li>
+						<li>Graphic Design (Coverpage, Logo, Brocer etc.)</li>
+					</ul>
+					<p>
+						<a href="details.blade.php" >Read more</a>
+					</p>
+				</div>
+				<br/>
+				<div class="thumbnail">
+					<h4>Webpage Customizations</h4>
+					<h5>Drive your business in The Fast Track...</h5>
+						<div class="btn-group toolTipgroup">
+							<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+							<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+						</div>
+						<ul class="unstyled">
+							<li> Customizing different websites  </li>
+							<li> E-commersesite, Blogs and Forums etc.</li>
+							<li> Customization web packages </li>
+						</ul>
+					<p><a href="details.blade.php" >Read more</a></p>
+				</div>
+				<br/>
+				<div class="thumbnail">
+					<h4>SEO</h4>
+					<h5>For any online activities  ... </h5>
+					<div class="btn-group toolTipgroup">
+						<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+						<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+					</div>
+					<ul class="unstyled">
+						<li>PSD to XHTML and CSS Conversion</li>
+						<li> Updating old website to new generation. </li>
+						<li> Compitable with different Browser. </li>
+					</ul>
+					<p><a href="details.blade.php" >Read more</a></p>
+				</div>
+			</div>
+			<div class="span4">
+			<div class="thumbnail">
+				<h4>Website Development</h4>
+				<h5>For any online activities  ... </h5>
+				<div class="btn-group toolTipgroup">
+					<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+					<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+				  </div>
+				<ul class="unstyled">
+					<li>PSD to XHTML and CSS Conversion</li>
+					<li> Updating old website to new generation. </li>
+					<li> Compitable with different Browser. </li>
+				</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
 			</div>
 			<br/>
 			<div class="thumbnail">
-				<a href="http://mywebsolution.info" target="_blank" ><img src="themes/images/portfolio/mywebsolution.jpg" alt="bootstrap business templates"></a>
-				<h4>My web solution</h4>
-				<p>Our aim is simple - to provide affordable web design and development services for different devices., </p>
-				<div class="btn-toolbar">
-				   <div class="btn-group toolTipgroup">
-					<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+				<h4>Webpage Customizations</h4>
+				<h5>Drive your business in The Fast Track...</h5>
+				<div class="btn-group toolTipgroup">
 					<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
 					<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
-					<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-					<a href="http://mywebsolution.info" target="_blank" class="btn" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
 				  </div>
-				</div>
+					<ul class="unstyled">
+						<li> Customizing different websites  </li>
+						<li> E-commersesite, Blogs and Forums etc.</li>
+						<li> Customization web packages </li>
+					</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
 			</div>
 			<br/>
-			<h4>Testimonials</h4>
-			<ul class="media-list">
-			   <li class="media well well-small">
-					<a class="pull-left" href="#">
-					  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template"/>
-					</a>
-					<div class="media-body">
-					  Cras sit amet nibh libero metus
-					  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
-					</div>
-			  </li>
-			   <li class="media well well-small">
-					<a class="pull-left" href="#">
-					  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template"/>
-					</a>
-					<div class="media-body">
-					  Cras sit amet nibh libero metus
-					  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
-					</div>
-			  </li>
-			  
-			   <li class="media well well-small">
-					<a class="pull-left" href="#">
-					  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template"/>
-					</a>
-					<div class="media-body">
-					  Cras sit amet nibh libero metus
-					  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
-					</div>
-			  </li>
-			   <li class="media well well-small">
-					<a class="pull-left" href="#">
-					  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template"/>
-					</a>
-					<div class="media-body">
-					  Cras sit amet nibh libero metus
-					  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
-					</div>
-			  </li>
-			  <li class="media well well-small">
-					<a class="pull-left" href="#">
-					  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template"/>
-					</a>
-					<div class="media-body">
-					  Cras sit amet nibh libero metus
-					  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
-					</div>
-			  </li>
-			</ul>
 
-		</div>
-		<div class="span9">
-		<div class="well well-small" style="text-align:left">
-			<h3>Business Ltd.</h3>
-			<p><img src="themes/images/carousel/business_website_templates_3.jpg" alt="business templates" /></p>
-			<p> 
-				We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/>
-				We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-				If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-				then just remember us and makes your dream success. We are giving the best solution for your best value of money<br/>
-				We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/><br/>
-				We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-				If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-				then just remember us and makes your dream success. We are giving the best solution for your best value of money
-			   <br/>
-			</p>
-			<p> 
-				We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/>
-				We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-				If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-				then just remember us and makes your dream success. We are giving the best solution for your best value of money<br/>
-				We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/><br/>
-				We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-				If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-				then just remember us and makes your dream success. We are giving the best solution for your best value of money 
-			   <br/>
-			</p>
-			<div class="btn-toolbar">
-			  <div class="btn-group toolTipgroup">
-				<a class="btn" href="#" data-placement="top" data-original-title="send email"><i class="icon-envelope"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="print"><i class="icon-print"></i></a>
-			  </div>
+			<div class="thumbnail">
+				<h4>Optimizations</h4>
+				<h5>For any online activities  ... </h5>
+				<div class="btn-group toolTipgroup">
+					<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+					<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+				  </div>
+				<ul class="unstyled">
+					<li>PSD to XHTML and CSS Conversion</li>
+					<li> Updating old website to new generation. </li>
+					<li> Compitable with different Browser. </li>
+				</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
 			</div>
-
-		<br/>			
-		<ul class="media-list">
-		  <li class="media well well-small">
-				<a class="pull-left" href="#">
-				  <img class="media-object" src="themes/images/img185x165.png" alt="bootstrap business template"/>
-				</a>
-				<div class="media-body">
-				  <h4 class="media-heading">My web solutions</h4>
-					We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.<br/>
-
-					We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-					If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-					then just remember us and makes your dream success. We are giving the best solution for your best value of money.........
-				   <br/><a class="pull-right" href="#"><strong>more</strong></a>
-					<br/>
+			</div>
+			<div class="span4">
+			<div class="thumbnail">
+				<h4>Webpage Customizations</h4>
+				<h5>Drive your business in The Fast Track...</h5>
+				<div class="btn-group toolTipgroup">
+					<a class="btn" href="#"  data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+					<a class="btn" href="#"  data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
 				</div>
-		  </li>
-		  <li class="media well well-small">
-				<a class="pull-left" href="#">
-				  <img class="media-object" src="themes/images/img180x120.png" alt="bootstrap business template"/>
-				</a>
-				<div class="media-body">
-				  <h4 class="media-heading">My web solutions</h4>
-				 We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-					If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-					then just remember us and makes your dream success. We are giving the best solution for your best value of money.........
-				  <br/><a class="pull-right" href="#"><strong>more</strong></a> <br/>
-				</div>
-		  </li>
-		  <li class="media well well-small">
-				<a class="pull-left" href="#">
-				  <img class="media-object" src="themes/images/img180x120.png" alt="bootstrap business template"/>
-				</a>
-				<div class="media-body">
-				  <h4 class="media-heading">My web solutions</h4>
-				  We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone. 
-					If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, 
-					then just remember us and makes your dream success. We are giving the best solution for your best value of money.........
-				   <br/><a class="pull-right" href="#"><strong>more</strong></a>
-				</div>
-		  </li>
-		</ul>			
+				<ul class="unstyled">
+					<li> Customizing different websites  </li>
+					<li> E-commersesite, Blogs and Forums etc.</li>
+					<li> Customization web packages </li>
+				</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
+			</div>
+			<br/>
+			<div class="thumbnail">
+				<h4>Webpage Customizations</h4>
+				<h5>Drive your business in The Fast Track...</h5>
+				<div class="btn-group toolTipgroup">
+					<a class="btn" href="#"  data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+					<a class="btn" href="#"  data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+				  </div>
+					<ul class="unstyled">
+						<li> Customizing different websites  </li>
+						<li> E-commersesite, Blogs and Forums etc.</li>
+						<li> Customization web packages </li>
+					</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
+			</div>
+			<br/>
+			<div class="thumbnail">
+				<h4>Multimedia</h4>
+				<h5>For any online activities  ... </h5>
+				<div class="btn-group toolTipgroup">
+						<a class="btn" href="#"  data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+						<a class="btn" href="#"  data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+					  </div>
+				<ul class="unstyled">
+					<li>PSD to XHTML and CSS Conversion</li>
+					<li> Updating old website to new generation. </li>
+					<li> Compitable with different Browser. </li>
+				</ul>
+				<p><a href="details.blade.php" >Read more</a></p>
+			</div>
+			</div>
 		</div>
-		</div>
+		<br/>
 		</div>
 	</div>
 </section>
- <!-- Footer
+  <!-- Footer
   ================================================== -->
 <section id="footerSection">
 <div class="container">
@@ -254,43 +242,43 @@
 		<h4>Latest news</h4>
 		<ul class="media-list">
 		  <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		</ul>
@@ -299,24 +287,24 @@
 	<div class="span3">
 			<h4>Visit us</h4>
 			<address style="margin-bottom:15px;">
-			<strong><a href="index.html" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
+			<strong><a href="index.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
 				194, Vectoria Street, Newwork <br>
 				nw 488, USA<br>
 			</address>
 			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.html" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="index.html" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
+			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
+			Link: <a href="index.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
 			<h5>Quick Links</h5>	
-			<a href="services.html" title="services"><i class="icon-cogs"></i> Services </a><br/>
+			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
 			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="portfolio.html" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+			<a href="portfolio.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
 
 	<h5>Find us on</h5>	
 	<div style="font-size:2.5em;">
-		<a href="index.html" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a> 
-		<a href="portfolio.html" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
-		<a href="services.html" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
-		<a href="services.html" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
+		<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
+		<a href="portfolio.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
 		<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
 	</div>
 	</div>

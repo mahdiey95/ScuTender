@@ -26,22 +26,22 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				</button>
-				<h1><a class="brand" href="index.html"> Business <small>  Ltd.</small></a></h1>
+				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li class=""><a href="index.html">Home	</a></li>
-						<li class=""><a href="services.html">What we do?</a></li>  
-						<li class=""><a href="about_us.html">Who we are?</a></li>
-						<li class=""><a href="portfolio.html">Portfolio</a></li>
+						<li class=""><a href="index.blade.php">Home	</a></li>
+						<li class=""><a href="services.blade.php">What we do?</a></li>
+						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
+						<li class=""><a href="portfolio.blade.php">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="elements.html">Page Elements</a></li>
-								<li><a href="comingsoon.html">Coming soon page</a></li>
+								<li><a href="elements.blade.php">Page Elements</a></li>
+								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
 							</ul>
 						</li>
-						<li class=""><a href="blog.html">Blog</a></li>
-						<li class=""><a href="contact.html">Support</a></li>
+						<li class=""><a href="blog.blade.php">Blog</a></li>
+						<li class=""><a href="contact.blade.php">Support</a></li>
 					</ul>
 				</div>
 			</div>
@@ -1127,7 +1127,7 @@
 				<div class="controls">
 				  <label class="radio">
 					<input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-					Option one is this and that—be sure to include why it's great
+					Option one is this and thatï¿½be sure to include why it's great
 				  </label>
 				</div>
 			  </div>
@@ -1371,43 +1371,43 @@
 		<h4>Latest news</h4>
 		<ul class="media-list">
 		  <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		   <li class="media">
-			<a class="pull-left" href="blog_details.html">
+			<a class="pull-left" href="blog_details.blade.php">
 			  <img class="media-object" src="themes/images/img64x64.png" alt="bootstrap business template">
 			</a>
 			<div class="media-body">
 			  <h5 class="media-heading">Why our customers satisfied?</h5>
 			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.html"> More</a></small>
+			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
 			</div>
 		  </li>
 		</ul>
@@ -1416,17 +1416,17 @@
 	<div class="span3">
 			<h4>Visit us</h4>
 			<address style="margin-bottom:15px;">
-			<strong><a href="index.html" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
+			<strong><a href="index.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
 				194, Vectoria Street, Newwork <br>
 				nw 488, USA<br>
 			</address>
 			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.html" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="index.html" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
+			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
+			Link: <a href="index.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
 			<h5>Quick Links</h5>	
-			<a href="services.html" title="services"><i class="icon-cogs"></i> Services </a><br/>
+			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
 			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="portfolio.html" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+			<a href="portfolio.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
 
 	<h5>Find us on</h5>	
 	<div style="font-size:2.5em;">
@@ -1438,7 +1438,7 @@
 		<!-- Facebook -->
 		<div id="facebook" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="facebook" aria-hidden="true">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			<h3>Facebook Header</h3>
 		  </div>
 		  <div class="modal-body">
@@ -1452,7 +1452,7 @@
 		<!-- Twitter -->
 		<div id="twitter" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="twitter" aria-hidden="true">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			<h3>Twitter Header</h3>
 		  </div>
 		  <div class="modal-body">
@@ -1466,7 +1466,7 @@
 		<!-- Rss feed -->
 		<div id="rss" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="rss" aria-hidden="true">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			<h3>RSS fed header</h3>
 		  </div>
 		  <div class="modal-body">
@@ -1480,7 +1480,7 @@
 		<!-- Youtube -->
 		<div id="youtube" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="youtube" aria-hidden="true">
 		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
 			<h3>Youtube Vedio</h3>
 		  </div>
 		  <div class="modal-body">
