@@ -94,15 +94,19 @@
                         <div class="tab-content label-primary">
                             <div class="tab-pane active" id="all">
                                 <ul class="thumbnails">
+
+									@foreach($tenders as $tender)
                                     <li class="span3">
                                         <div class="thumbnail">
                                             <div class="blockDtl">
-                                                <h4>My web solutions</h4>
-                                                <a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>
-                                                <p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+                                                <h4>{{$tender->name}}</h4>
+                                                <a href="./tender/{{$tender->id}}"><img src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
+                                                <p>{{$tender->description}}</p>
                                             </div>
                                         </div>
                                     </li>
+									@endforeach
+
                                 </ul>
                             </div>
                         </div>
