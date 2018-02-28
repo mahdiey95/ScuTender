@@ -30,7 +30,7 @@ a, a:link, a:active, a:hover, img{outline:none;}
 #carouselSection .carousel-caption p{display:block; margin-bottom:18px}
 #carouselSection h2{color:#fff; margin:10px 0; }
 /* Sections------------------------- */
-#headerSection{ background:url(../images/headerbg.png) repeat-x 0 0 ;}
+#headerSection{background:url("../images/headerbg.png") repeat-x 0 0;}
 #headerSection .navbar { padding-top:20px; margin-bottom: 0;}
 #headerSection .navbar .brand {padding: 5px 20px 5px; color: #000;text-shadow: 0 0px 0 white;font-weight: bold; line-height: 1.3em;}
 #mapSection, #carouselSection{border-top:4px solid #D33800; border-bottom: 4px solid #717171; background: #000; color:#fff}

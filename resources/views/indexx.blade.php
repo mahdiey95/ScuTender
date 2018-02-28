@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,6 +18,11 @@
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
+<section id="logoSection">
+    <img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+    <img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+
+</section>
 <section id="headerSection">
 	<div class="container">
 		<div class="navbar">
@@ -29,7 +34,7 @@
 				</button>
 				<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سایت مناقصات</small></a></h1>
 				<div class="nav-collapse collapse">
-					<div class="tabs">
+
 					<ul class="nav pull-right">
 						<li class="active"><a href="indexx.blade.php">home</a></li>
 						<li class=""><a href="services.blade.php">delet</a></li>

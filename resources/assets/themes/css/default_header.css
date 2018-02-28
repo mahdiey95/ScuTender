@@ -1,6 +1,23 @@
-.header{
-    height: 120px;
-    background: #0e90d2;
+#logoSection{
+    height: 140px;
+    background:#3399ff;
+
+}
+.logo{
+
+    display:inline-block;
+    margin-right: 0px;
+    margin-left: 400px;
+    width: 132px;
+    height:132px;
+}
+.flagIR{
+    display: inline-block;
+    margin-left: 40px;
+    width: 135px;
+    height: 140px;
+    ;
+
 }
 .tabs{
     position:absolute;

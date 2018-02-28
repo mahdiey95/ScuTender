@@ -14,9 +14,15 @@
 	<link href="./resources/assets/themes/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
+	<link href="./resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
+<section id="logoSection">
+<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+
+</section>
 <section id="headerSection">
 		<div class="container">
 			<div class="navbar">
@@ -26,13 +32,15 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<h1><a class="brand" href="indexx.blade.php"> Business <small>  Ltd.</small></a></h1>
+					<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سایت مناقصات</small></a></h1>
 					<div class="nav-collapse collapse">
+
 						<ul class="nav pull-right">
-							<li class=""><a href="indexx.blade.php">Home	</a></li>
-							<li class=""><a href="services.blade.php">What we do?</a></li>
-							<li class=""><a href="about_us.blade.php">Who we are?</a></li>
-							<li class="active"><a href="index.blade.php">Portfolio</a></li>
+							<li class="active"><a href="indexx.blade.php">home</a></li>
+							<li class=""><a href="services.blade.php">delet</a></li>
+							<li class=""><a href="login">ورود</a></li>
+							<li class=""><a href="index.blade.php">خانه</a></li>
+							<li class=""><a href="register"> ثبت نام</a></li>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
 								<ul class="dropdown-menu">
@@ -40,8 +48,8 @@
 									<li><a href="comingsoon.blade.php">Coming soon page</a></li>
 								</ul>
 							</li>
-							<li class=""><a href="blog.blade.php">Blog</a></li>
-							<li class=""><a href="contact.blade.php">Support</a></li>
+							<li class=""><a href="blog.blade.php">اخبار</a></li>
+							<li class=""><a href="contact.blade.php">تماس با ما</a></li>
 						</ul>
 					</div>
 				</div>
@@ -51,8 +59,8 @@
 <!--Header Ends================================================ -->
 <!-- Page banner -->
 <section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">
-	<div class="container" >	
-		<h1 id="pageTitle">Portfolio <small> :Our aim your satisfactions</small> 
+	<div class="container" >
+		<h1 id="pageTitle">Portfolio <small> :Our aim your satisfactions</small>
 		<span class="pull-right toolTipgroup">
 			<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="./resources/assets/themes/images/facebook.png" alt="facebook" title="facebook"></a>
 			<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="./resources/assets/themes/images/twitter.png" alt="twitter" title="twitter"></a>
