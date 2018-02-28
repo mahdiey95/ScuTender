@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="navbar">
 			<div class="container">
-				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
+				<h1><a class="brand" href="indexx.blade.php"> Business <small>  Ltd.</small></a></h1>
 			</div>
 		</div>
 	</div>

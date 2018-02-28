@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -18,246 +18,669 @@
 </head>
 <body>
 <section id="headerSection">
-	<div class="container">
-		<div class="navbar">
-			<div class="container">
-				<button type="button" class="btn btn-navbar active" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<h1><a class="brand" href="index.blade.php"> Business <small>  Ltd.</small></a></h1>
-				<div class="nav-collapse collapse">
-					<ul class="nav pull-right">
-						<li class="active"><a href="index.blade.php">Home	</a></li>
-						<li class=""><a href="services.blade.php">What we do?</a></li>
-						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
-						<li class=""><a href="portfolio.blade.php">Portfolio</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="elements.blade.php">Page Elements</a></li>
-								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
-							</ul>
-						</li>
-						<li class=""><a href="blog.blade.php">Blog</a></li>
-						<li class=""><a href="contact.blade.php">Support</a></li>
-					</ul>
+		<div class="container">
+			<div class="navbar">
+				<div class="container">
+					<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<h1><a class="brand" href="indexx.blade.php"> Business <small>  Ltd.</small></a></h1>
+					<div class="nav-collapse collapse">
+						<ul class="nav pull-right">
+							<li class=""><a href="indexx.blade.php">Home	</a></li>
+							<li class=""><a href="services.blade.php">What we do?</a></li>
+							<li class=""><a href="about_us.blade.php">Who we are?</a></li>
+							<li class="active"><a href="index.blade.php">Portfolio</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li><a href="elements.blade.php">Page Elements</a></li>
+									<li><a href="comingsoon.blade.php">Coming soon page</a></li>
+								</ul>
+							</li>
+							<li class=""><a href="blog.blade.php">Blog</a></li>
+							<li class=""><a href="contact.blade.php">Support</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 <!--Header Ends================================================ -->
-<section id="carouselSection" style="text-align:center">
-	<div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-				<div  style="text-align:center"  class="item active">
-					<div class="wrapper"><img src="./resources/assets/themes/images/carousel/business_website_templates_1.jpg" alt="business webebsite template">
-					<div class="carousel-caption">
-                      <h2>What we do?</h2>
-                     <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services. </p>
-					  <a href="services.blade.php" class="btn btn-large btn-success">Read more</a>
-                    </div>
-					</div>
-				</div>
-				<div  style="text-align:center"  class="item">
-					<div class="wrapper"><img src="./resources/assets/themes/images/carousel/business_website_templates_2.jpg" alt="business themes">
-					<div class="carousel-caption">
-                      <h2>Who we are?</h2>
-                      <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="about_us.blade.php" class="btn btn-large btn-success">Read more</a>
-                    </div>
-					</div>
-				</div>
-				<div  style="text-align:center"  class="item">
-					<div class="wrapper"><img src="./resources/assets/themes/images/carousel/business_website_templates_3.jpg" alt="business themes">
-					<div class="carousel-caption">
-                       <h2>What we have done?</h2>
-                     <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="portfolio.blade.php" class="btn btn-large btn-success">Our Portfolio</a>
-                    </div>
-					</div>
-				</div>
-				<div  style="text-align:center"  class="item">
-					<div class="wrapper"><img src="./resources/assets/themes/images/carousel/business_website_templates_4.jpg" alt="business themes">
-					<div class="carousel-caption">
-                      <h2>Blog</h2>
-                     <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets. We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="blog.blade.php" class="btn btn-large btn-success">Recent NEWS</a>
-                    </div>
-					</div>
-				</div>
-				<div  style="text-align:center"  class="item">
-					<div class="wrapper"><img src="./resources/assets/themes/images/carousel/business_website_templates_5.jpg" alt="business themes">
-					<div class="carousel-caption">
-                      <h2>Need help?</h2>
-                     <p>We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.  We recently introduce cheapest and best mobile web design packages in our services.  </p>
-					  <a href="contact.blade.php" class="btn btn-large btn-success">Contact us</a>
-                    </div>
-					</div>
-				</div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
+<!-- Page banner -->
+<section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">
+	<div class="container" >	
+		<h1 id="pageTitle">Portfolio <small> :Our aim your satisfactions</small> 
+		<span class="pull-right toolTipgroup">
+			<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="./resources/assets/themes/images/facebook.png" alt="facebook" title="facebook"></a>
+			<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="./resources/assets/themes/images/twitter.png" alt="twitter" title="twitter"></a>
+			<a href="#" data-placement="top" data-original-title="Find us on via youtube"><img style="width:45px" src="./resources/assets/themes/images/youtube.png" alt="youtube" title="youtube"></a>
+		</span>
+		</h1>
+	</div>
 </section>
-<!-- Sectionone ends ======================================== -->
-<section id="middleSection">
-<div class="container">
-		<div class="row" style="text-align:center">
-			<div class="span12">
-			<div class="well well-small">
-				<h4>What we do?</h4>
-				<p>"Our aim is simple - to provide affordable web design and development services for Mobile and Computer by creating websites that fully meet your requirements a professional look that inspire confidence in your customer."<br/><br/></p>
-			</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" class="popOver" data-placement="top" data-content=" > Website Design<br> > PSD To XHTML conversion<br> > Graphic Design (Coverpage, Logo, Brocer etc.)" data-original-title="Your Website represents You..." style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-magic"></i>
-					<span><br/>Design</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" class="popOver" data-placement="top" data-content=" > Website Design<br> > PSD To XHTML &amp; CSS Conversion<br> > Graphic Design (Coverpage, Logo, Brocer etc.)" data-original-title="Your Website represents You..." style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-link"></i>
-					<span><br/>SEO</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" class="popOver" data-placement="top" data-content="  > Website development<br> > Updating website. <br> > Compitibility " data-original-title="For any online activities  ... " style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-cogs"></i>
-					<span><br/>Development</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" class="popOver" data-placement="top" data-content=" > Website Design<br> > PSD To XHTML &amp; CSS Conversion<br> > Graphic Design (Coverpage, Logo, Brocer etc.)" data-original-title="Your Website represents You..." style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-wrench"></i>
-					<span><br/>Optimizations</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" id="poverone" class="popOver" data-placement="top" data-content=" > Customizing different websites  <br> > e-commersesite  <br> > Blogs and Forums etc.<br> > Customization web packages" data-original-title="Drive your business in The Fast Track..." style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-beaker"></i>
-					<span><br/>Customizations</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-			<div class="span2">
-				<div class="well well-small">
-					<h4>
-					<a href="#" class="popOver" data-placement="top" data-content=" > Drupal, Joomla and Wordpress Solution<br>> Dating Site Customization<br>> And many more.." data-original-title="Opensources web solution..." style="display:block; text-decoration:none">
-					<i style="width:auto; font-size:2em; line-height:1em; height:auto" class="icon-volume-up"></i>
-					<span><br/>Open-sourse</span>
-					</a>
-					</h4>
-					<a href="details.blade.php"><small>view details</small></a>
-				</div>
-			</div>
-		</div>
-		</div>
-</section>
+<!-- Page banner end -->
 <section id="bodySection">
-<div class="container">
-<div class="row">
-	<h3 class="span12" style="text-align:center">Our Recent Work <small>view all projects (200+)</small></h3>
-	<div class="span4">
-		<div class="thumbnail">
-			<h4>Mobile Apps</h4>
-			<a href="portfolio.blade.php"><img src="./resources/assets/themes/images/1.jpg" alt="bootstrap business templates"></a>
-			<p>
-			<br/>
-			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
-			We recently introduce cheapest and best mobile web design packages in our services. <br/>
-			</p>
-			<div class="btn-toolbar">
-			  <div class="btn-group toolTipgroup">
-				<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
-			  </div>
+	<div id="sectionTwo"> 	
+		<div class="container">	
+		<div class="row">
+			<div class="span9">
+			<form class="well form-inline">
+			  Find a template <input type="text" class="span2" placeholder="e.g business">
+			  In <input type="text" class="span2" placeholder="e.g silver color">
+			  of <select class="span2"><option>All categories</option><option>New</option><option>Popular</option><option>Coming Soon</option></select>
+			  <button type="submit" class="btn btn-warning">Search Templates</button>
+			</form>
+			<div class="row">
+			<div class="span9">
+				<ul class="nav nav-pills pull-left">
+				<li class="active"><a href="#all" data-toggle="tab">ALL</a></li>
+				<li class=""><a href="#new" data-toggle="tab">NEW</a></li>
+				<li class=""><a href="#popular" data-toggle="tab">POPULAR</a></li>
+				<li class=""><a href="#comingsoon" data-toggle="tab">COMING SOON</a></li>
+				</ul>
 			</div>
-		</div>
-	</div>
-	<div class="span4">
-		<div class="thumbnail">
-			<h4>Application Development</h4>
-			<a href="portfolio.blade.php"><img src="./resources/assets/themes/images/2.jpg" alt="bootstrap business templates"></a>
-			<p>
-			<br/>
-			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
-			We recently introduce cheapest and best mobile web design packages in our services.<br/>
-			 </p>
-			<div class="btn-toolbar">
-			  <div class="btn-group toolTipgroup">
-				<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
-			  </div>
+
+			<!-- ========================= -->
+
+			<div class="span9">
+			<div class="tabbable tabs">
+			  <div class="tab-content label-primary">
+				<div class="tab-pane active" id="all">
+				<ul class="thumbnails">
+				<li class="span3">
+					<div class="thumbnail">
+						<div class="blockDtl">
+						<h4>My web solutions</h4>
+						<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>
+						<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+						<div class="btn-toolbar">
+						  <div class="btn-group toolTipgroup">
+							<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+							<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+							<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+							<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+							<a class="btn" href="#" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+						  </div>
+						</div>
+					</div>
+					</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/9.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							<div class="btn-toolbar">
+							   <div class="btn-group toolTipgroup">
+								<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+								<a class="btn" href="#" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+							  </div>
+							</div>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							<div class="btn-toolbar">
+							   <div class="btn-group toolTipgroup">
+								<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+								<a class="btn" href="#" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+							  </div>
+							</div>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="comingsoon.blade.php"><img src="./resources/assets/themes/images/portfolio/4.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							<div class="btn-toolbar">
+							   <div class="btn-group toolTipgroup">
+								<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+								<a href="comingsoon.blade.php" class="btn" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+							  </div>
+							</div>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="comingsoon.blade.php"><img src="./resources/assets/themes/images/portfolio/5.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							<div class="btn-toolbar">
+							   <div class="btn-group toolTipgroup">
+								<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+								<a href="comingsoon.blade.php" class="btn" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+							  </div>
+							</div>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="http://mywebsolution.info" target="_blank" ><img src="./resources/assets/themes/images/portfolio/6.jpg" alt="bootstrap business templates"/></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							<div class="btn-toolbar">
+							   <div class="btn-group toolTipgroup">
+								<a class="btn" href="mailto:developer.sba@gmail.com" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
+								<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
+								<a href="http://mywebsolution.info" target="_blank" class="btn" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
+							  </div>
+							</div>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/7.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/8.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/9.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/10.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/11.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<h4>My web solutions</h4>
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/2.jpg" alt="bootstrap business templates"></a>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>	
+				</ul>
+				<div class="pagination pull-right">
+				  <ul>
+					<li><a href="#">Prev</a></li>
+					<li><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">Next</a></li>
+				  </ul>
+				</div>	
+				</div>
+				<div class="tab-pane" id="new">
+				<ul class="thumbnails">
+				<li class="span3">
+					<div class="thumbnail">
+						<div class="blockDtl">
+						<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+						<h4>My web solutions</h4>
+						<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+						</div>
+					</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/2.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>	
+				</ul>
+				
+				</div>
+				<div class="tab-pane" id="popular">
+				<ul class="thumbnails">
+				<li class="span3">
+					<div class="thumbnail">
+						<div class="blockDtl">
+						<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+						<h4>My web solutions</h4>
+						<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+						</div>
+					</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/2.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/2.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>	
+				</ul>
+				
+
+				</div>
+				 <div class="tab-pane" id="comingsoon">
+				<ul class="thumbnails">
+				<li class="span3">
+					<div class="thumbnail">
+						<div class="blockDtl">
+						<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+						<h4>My web solutions</h4>
+						<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+						</div>
+					</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/4.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li><li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>
+					<li class="span3">
+						<div class="thumbnail">
+							<div class="blockDtl">
+							<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"></a>
+							<h4>My web solutions</h4>
+							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+							</div>
+						</div>
+					</li>	
+				</ul>
+				
+
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="span4">
-		<div class="thumbnail">
-			<h4>My web solutions</h4>
-			<a href="portfolio.blade.php"><img src="./resources/assets/themes/images/3.jpg" alt="bootstrap business templates"></a>
-			<p>
-			<br/>
-			We specialise in web design, web development and graphic design for different Desktop, Mobiles and Tablets.
-			We recently introduce cheapest and best mobile web design packages in our services. <br/>
-			 </p>
-			<div class="btn-toolbar">
-			  <div class="btn-group toolTipgroup">
-				<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>
-				<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>
-				<a class="btn" href="portfolio.blade.php" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>
-			  </div>
+			</div> <!-- /tabbable -->
+
+
 			</div>
+			</div>
+			<!-- ========================= -->
 		</div>
+	<div class="span3">
+		<ul class="media-list">
+						<li class="media well well-small">
+						<h4>My web solutions</h4>
+						   <p>
+						   We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone.
+						   If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, then just remember 
+						   us and makes your dream success. We are giving the best solution for your best value of money.
+						   </p>
+					  </li>
+					  <li>
+					  <h4>Testiomonials</h4>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					   <li class="media well well-small">
+							<a class="pull-left" href="#">
+							  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template"/>
+							</a>
+							<div class="media-body">
+							  Cras sit amet nibh libero metus
+							  Cras sit amet nibh ...<small> November 15 2012</small><a class="pull-right" href="#"><strong>Kim</strong></a>
+							</div>
+					  </li>
+					</ul>
+		</div>
+
+			</div>
+			
+			</div>
+
 	</div>
-</div>
-<br/>
-</div>
 </section>
-<section id="clientsSection" style="text-align:center; padding:48px 0">
-<div class="container">
-	  <a href="#" target="_blank"><img src="./resources/assets/themes/images/clients/twitterLogo.jpg" alt="business template"></a>
-	  <a href="#" target="_blank"><img src="./resources/assets/themes/images/clients/googleLogo.jpg" alt="business template"></a>
-	  <a href="#" target="_blank"><img src="./resources/assets/themes/images/clients/facebookLogo.jpg" alt="business template"></a>
-	  <a href="http://mywebsolution.info" target="_blank"><img src="./resources/assets/themes/images/clients/my_web_solution.jpg" alt="business template"></a>
-</div>
-</section>
-<!-- body block end======================================== -->
  <!-- Footer
   ================================================== -->
 <section id="footerSection">
@@ -268,7 +691,7 @@
 			<h4>Newsletter and Subscription</h4>
 			<h5>Our aim</h5>
 			<em>
-			"To provide affordable web design and development services for different devices is our aim,
+			"To provide affordable web design and development services for different devices is our aim, 
 			that fully meet your requirements." <br/><br/>
 			</em>
 			<h5>What our client say?</h5>
@@ -329,85 +752,29 @@
 		  </li>
 		</ul>
 		</div>
-
+	
 	<div class="span3">
 			<h4>Visit us</h4>
 			<address style="margin-bottom:15px;">
-			<strong><a href="index.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
+			<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
 				194, Vectoria Street, Newwork <br>
 				nw 488, USA<br>
 			</address>
 			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
 			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="index.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
-			<h5>Quick Links</h5>
+			Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
+			<h5>Quick Links</h5>	
 			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
 			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="portfolio.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+			<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
 
-	<h5>Find us on</h5>
+	<h5>Find us on</h5>	
 	<div style="font-size:2.5em;">
-		<a href="#facebook" role="button" data-toggle="modal" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
-		<a href="#twitter" role="button" data-toggle="modal" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
-		<a href="#youtube" role="button" data-toggle="modal" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
-		<a href="#" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
-		<a href="#rss" role="button" data-toggle="modal" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
-		<!-- Facebook -->
-		<div id="facebook" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="facebook" aria-hidden="true">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>Facebook Header</h3>
-		  </div>
-		  <div class="modal-body">
-			<p>"Our aim is simple - to provide affordable web design and development services for Mobile and Computer by creating websites that fully meet your requirements a professional look that inspire confidence in your customer."</p>
-		  </div>
-		  <div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			<button class="btn btn-primary">Save changes</button>
-		  </div>
-		</div>
-		<!-- Twitter -->
-		<div id="twitter" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="twitter" aria-hidden="true">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>Twitter Header</h3>
-		  </div>
-		  <div class="modal-body">
-			<p>"Our aim is simple - to provide affordable web design and development services for Mobile and Computer by creating websites that fully meet your requirements a professional look that inspire confidence in your customer."</p>
-		  </div>
-		  <div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			<button class="btn btn-primary">Save changes</button>
-		  </div>
-		</div>
-		<!-- Rss feed -->
-		<div id="rss" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="rss" aria-hidden="true">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>RSS fed header</h3>
-		  </div>
-		  <div class="modal-body">
-			<p>"Our aim is simple - to provide affordable web design and development services for Mobile and Computer by creating websites that fully meet your requirements a professional look that inspire confidence in your customer."</p>
-		  </div>
-		  <div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			<button class="btn btn-primary">Save changes</button>
-		  </div>
-		</div>
-		<!-- Youtube -->
-		<div id="youtube" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="youtube" aria-hidden="true">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3>Youtube Vedio</h3>
-		  </div>
-		  <div class="modal-body">
-			Vedios here
-		  </div>
-		  <div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-			<button class="btn btn-primary">Save changes</button>
-		  </div>
-		</div>
+		<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
+		<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
+		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
+		<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
 	</div>
 	</div>
     </div>
@@ -416,6 +783,7 @@
 	</footer>
     </div><!-- /container -->
 </section>
+
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
 <!-- Javascript
     ================================================== -->
@@ -426,7 +794,6 @@
 	<script src="./resources/assets/themes/js/bootstrap-tooltip.js"></script>
     <script src="./resources/assets/themes/js/bootstrap-popover.js"></script>
 	<script src="./resources/assets/themes/js/business_ltd_1.0.js"></script>
-
 <!-- Themes switcher section ============================================================================================= -->
 <div id="secectionBox">
 <link rel="stylesheet" href="./resources/assets/themes/switch/themeswitch.css" type="text/css" media="screen" />
@@ -464,13 +831,13 @@
 		<a href="./resources/assets/themes/css/#" name="pattern8"><img src="./resources/assets/themes/switch/images/pattern/pattern8.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern9"><img src="./resources/assets/themes/switch/images/pattern/pattern9.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern10"><img src="./resources/assets/themes/switch/images/pattern/pattern10.png" alt="bootstrap business templates"></a>
-
+		
 		<a href="./resources/assets/themes/css/#" name="pattern11"><img src="./resources/assets/themes/switch/images/pattern/pattern11.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern12"><img src="./resources/assets/themes/switch/images/pattern/pattern12.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern13"><img src="./resources/assets/themes/switch/images/pattern/pattern13.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern14"><img src="./resources/assets/themes/switch/images/pattern/pattern14.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern15"><img src="./resources/assets/themes/switch/images/pattern/pattern15.png" alt="bootstrap business templates"></a>
-
+		
 		<a href="./resources/assets/themes/css/#" name="pattern16"><img src="./resources/assets/themes/switch/images/pattern/pattern16.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern17"><img src="./resources/assets/themes/switch/images/pattern/pattern17.png" alt="bootstrap business templates"></a>
 		<a href="./resources/assets/themes/css/#" name="pattern18"><img src="./resources/assets/themes/switch/images/pattern/pattern18.png" alt="bootstrap business templates"></a>

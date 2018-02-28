@@ -1,0 +1,9 @@
+.header{
+    height: 120px;
+    background: #0e90d2;
+}
+.tabs{
+    position:absolute;
+    right: 0px;
+    bottom: 0px;
+}
