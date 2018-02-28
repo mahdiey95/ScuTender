@@ -19,10 +19,23 @@
 </head>
 <body>
 <section id="logoSection">
-<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
-<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
-
+	<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+	<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
 </section>
+
+	{{--<section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">--}}
+		{{--<div class="container" >--}}
+			{{--<h1 id="pageTitle">سامانه مناقصات  <small> دانشگاه شهید چمران اهواز</small>--}}
+				{{--<span class="pull-right toolTipgroup">--}}
+			{{--<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="./resources/assets/themes/images/facebook.png" alt="facebook" title="facebook"></a>--}}
+			{{--<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="./resources/assets/themes/images/twitter.png" alt="twitter" title="twitter"></a>--}}
+			{{--<a href="#" data-placement="top" data-original-title="Find us on via youtube"><img style="width:45px" src="./resources/assets/themes/images/youtube.png" alt="youtube" title="youtube"></a>--}}
+		{{--</span>--}}
+			{{--</h1>--}}
+		{{--</div>--}}
+	{{--</section--}}
+
+
 <section id="headerSection">
 		<div class="container">
 			<div class="navbar">
@@ -32,7 +45,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سایت مناقصات</small></a></h1>
+					<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سامانه مناقصات</small></a></h1>
 					<div class="nav-collapse collapse">
 
 						<ul class="nav pull-right">
@@ -58,21 +71,11 @@
 	</section>
 <!--Header Ends================================================ -->
 <!-- Page banner -->
-<section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">
-	<div class="container" >
-		<h1 id="pageTitle">Portfolio <small> :Our aim your satisfactions</small>
-		<span class="pull-right toolTipgroup">
-			<a href="#" data-placement="top" data-original-title="Find us on via facebook"><img style="width:45px" src="./resources/assets/themes/images/facebook.png" alt="facebook" title="facebook"></a>
-			<a href="#" data-placement="top" data-original-title="Find us on via twitter"><img style="width:45px" src="./resources/assets/themes/images/twitter.png" alt="twitter" title="twitter"></a>
-			<a href="#" data-placement="top" data-original-title="Find us on via youtube"><img style="width:45px" src="./resources/assets/themes/images/youtube.png" alt="youtube" title="youtube"></a>
-		</span>
-		</h1>
-	</div>
-</section>
+
 <!-- Page banner end -->
 <section id="bodySection">
-	<div id="sectionTwo"> 	
-		<div class="container">	
+	<div id="sectionTwo">
+		<div class="container">
 		<div class="row">
 			<div class="span9">
 			<form class="well form-inline">
@@ -258,7 +261,7 @@
 							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
 							</div>
 						</div>
-					</li>	
+					</li>
 				</ul>
 				<div class="pagination pull-right">
 				  <ul>
@@ -268,7 +271,7 @@
 					<li><a href="#">3</a></li>
 					<li><a href="#">Next</a></li>
 				  </ul>
-				</div>	
+				</div>
 				</div>
 				<div class="tab-pane" id="new">
 				<ul class="thumbnails">
@@ -377,9 +380,9 @@
 							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
 							</div>
 						</div>
-					</li>	
+					</li>
 				</ul>
-				
+
 				</div>
 				<div class="tab-pane" id="popular">
 				<ul class="thumbnails">
@@ -488,9 +491,9 @@
 							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
 							</div>
 						</div>
-					</li>	
+					</li>
 				</ul>
-				
+
 
 				</div>
 				 <div class="tab-pane" id="comingsoon">
@@ -600,9 +603,9 @@
 							<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
 							</div>
 						</div>
-					</li>	
+					</li>
 				</ul>
-				
+
 
 				</div>
 			</div>
@@ -619,7 +622,7 @@
 						<h4>My web solutions</h4>
 						   <p>
 						   We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone.
-						   If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, then just remember 
+						   If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, then just remember
 						   us and makes your dream success. We are giving the best solution for your best value of money.
 						   </p>
 					  </li>
@@ -684,7 +687,7 @@
 		</div>
 
 			</div>
-			
+
 			</div>
 
 	</div>
