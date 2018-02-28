@@ -11,16 +11,17 @@
     width: 132px;
     height:132px;
 }
-.flagIR{
+.flagIR {
     display: inline-block;
     margin-left: 40px;
     width: 135px;
     height: 140px;
-    ;
-
 }
 .tabs{
     position:absolute;
     right: 0px;
     bottom: 0px;
+}
+.body{
+    display: inline-block;
 }
