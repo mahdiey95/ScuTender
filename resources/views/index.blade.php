@@ -89,6 +89,25 @@
 				<li class=""><a href="#comingsoon" data-toggle="tab">به پایان رسیده</a></li>
 				</ul>
 			</div>
+                <div class="span9">
+                    <div class="tabbable tabs">
+                        <div class="tab-content label-primary">
+                            <div class="tab-pane active" id="all">
+                                <ul class="thumbnails">
+                                    <li class="span3">
+                                        <div class="thumbnail">
+                                            <div class="blockDtl">
+                                                <h4>My web solutions</h4>
+                                                <a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>
+                                                <p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
             <div class="span3">
@@ -105,25 +124,7 @@
             {{--<section id="tenders">--}}
                 {{--<div class="tenders">--}}
 
-                    <div class="span9">
-                        <div class="tabbable tabs">
-                            <div class="tab-content label-primary">
-                                <div class="tab-pane active" id="all">
-                                    <ul class="thumbnails">
-                                        <li class="span3">
-                                            <div class="thumbnail">
-                                                <div class="blockDtl">
-                                                    <h4>My web solutions</h4>
-                                                    <a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>
-                                                    <p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 {{--</div>--}}
             {{--</section>--}}
         </div>
