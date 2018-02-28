@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('indexx');
 });
 
 Auth::routes();
@@ -23,4 +23,4 @@ Route::get('/news' , function () {
     return view('blog');
 });
 
-Route::get('/tender','TenderController@index');
+Route::resource('tender','TenderController');
