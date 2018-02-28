@@ -17,11 +17,10 @@
     width: 135px;
     height: 140px;
 }
-.tabs{
-    position:absolute;
-    right: 0px;
-    bottom: 0px;
+P{
+    direction: rtl;
+    padding: 4px;
 }
-.body{
+#tenders{
     display: inline-block;
 }

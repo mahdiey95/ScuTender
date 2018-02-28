@@ -89,38 +89,53 @@
 				<li class=""><a href="#comingsoon" data-toggle="tab">به پایان رسیده</a></li>
 				</ul>
 			</div>
+                <div class="span9">
+                    <div class="tabbable tabs">
+                        <div class="tab-content label-primary">
+                            <div class="tab-pane active" id="all">
+                                <ul class="thumbnails">
+                                    <li class="span3">
+                                        <div class="thumbnail">
+                                            <div class="blockDtl">
+                                                <h4>My web solutions</h4>
+                                                <a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>
+                                                <p>Our aim is simple - to provide affordable web design and development services for different devices. </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             </div>
+            <div class="span3">
+                <ul class="media-list">
+                    <li class="media well well-small">
+                        <h4>راهنما </h4>
+                        <p>
+                            به سامانه مناقصات دانشگاه شهید چمران اهواز خوش آمدید.
+                            برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.در این سایت مناقصات جدید به رنگ سبز مناقصات در حال برگزاری به رنگ آبی و مناقصات به پایان رسیده با رنگ قرمز مشخص شده اند.با تشکر
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            {{--<section id="tenders">--}}
+                {{--<div class="tenders">--}}
+
+
+                {{--</div>--}}
+            {{--</section>--}}
         </div>
         </div>
     </div>
+
 </section>
+
 
 			<!-- ========================= -->
 
-			{{--<div class="span9">--}}
-			{{--<div class="tabbable tabs">--}}
-			  {{--<div class="tab-content label-primary">--}}
-				{{--<div class="tab-pane active" id="all">--}}
-				{{--<ul class="thumbnails">--}}
-				{{--<li class="span3">--}}
-					{{--<div class="thumbnail">--}}
-						{{--<div class="blockDtl">--}}
-						{{--<h4>My web solutions</h4>--}}
-						{{--<a href="#"><img src="./resources/assets/themes/images/portfolio/1.jpg" alt="bootstrap business templates"/></a>--}}
-						{{--<p>Our aim is simple - to provide affordable web design and development services for different devices. </p>--}}
-						{{--<div class="btn-toolbar">--}}
-						  {{--<div class="btn-group toolTipgroup">--}}
-							{{--<a class="btn" href="#" data-placement="right" data-original-title="send email"><i class="icon-envelope"></i></a>--}}
-							{{--<a class="btn" href="#" data-placement="top" data-original-title="do you like?"><i class="icon-thumbs-up"></i></a>--}}
-							{{--<a class="btn" href="#" data-placement="top" data-original-title="dont like?"><i class="icon-thumbs-down"></i></a>--}}
-							{{--<a class="btn" href="#" data-placement="top" data-original-title="share"><i class="icon-link"></i></a>--}}
-							{{--<a class="btn" href="#" data-placement="left" data-original-title="browse"><i class="icon-globe"></i></a>--}}
-						  {{--</div>--}}
-						{{--</div>--}}
-					{{--</div>--}}
-					{{--</div>--}}
-					{{--</li>--}}
 					{{--<li class="span3">--}}
 						{{--<div class="thumbnail">--}}
 							{{--<div class="blockDtl">--}}
@@ -191,7 +206,7 @@
 							{{--</div>--}}
 							{{--</div>--}}
 						{{--</div>--}}
-					</li>
+					{{--</li>--}}
 					{{--<li class="span3">--}}
 						{{--<div class="thumbnail">--}}
 							{{--<div class="blockDtl">--}}
@@ -321,7 +336,7 @@
 							{{--</div>--}}
 						{{--</div>--}}
 					{{--</li><li class="span3">--}}
-						<div class="thumbnail">
+						{{--<div class="thumbnail">--}}
 							{{--<div class="blockDtl">--}}
 							{{--<a href="#"><img src="./resources/assets/themes/images/portfolio/3.jpg" alt="bootstrap business templates"></a>--}}
 							{{--<h4>My web solutions</h4>--}}
@@ -618,16 +633,7 @@
 			{{--</div>--}}
 			<!-- ========================= -->
 
-	{{--<div class="span3">--}}
-		{{--<ul class="media-list">--}}
-						{{--<li class="media well well-small">--}}
-						{{--<h4>My web solutions</h4>--}}
-						   {{--<p>--}}
-						   {{--We recently introduce cheapest and best mobile web design packages in our services. This is most popular and beneficial for everyone.--}}
-						   {{--If you are looking for upgrade your website computable in mobiles and tablets, Even if you don't have any website, then just remember--}}
-						   {{--us and makes your dream success. We are giving the best solution for your best value of money.--}}
-						   {{--</p>--}}
-					  {{--</li>--}}
+
 					  {{--<li>--}}
 					  {{--<h4>Testiomonials</h4>--}}
 					  {{--</li>--}}
@@ -697,106 +703,106 @@
 {{--</section>--}}
  <!-- Footer
   ================================================== -->
-<section id="footerSection">
-<div class="container">
-    <footer class="footer well well-small">
-	<div class="row-fluid">
-	<div class="span4">
-			<h4>Newsletter and Subscription</h4>
-			<h5>Our aim</h5>
-			<em>
-			"To provide affordable web design and development services for different devices is our aim, 
-			that fully meet your requirements." <br/><br/>
-			</em>
-			<h5>What our client say?</h5>
-			<em>
-			" I can confirm, bougth the theme a couple of days afo and it is really fantastic. Very flexible, very good support. I really like it."
-			</em>
-			<br/><br/>
-			<h5>Subscription</h5>
-			<form>
-			<div class="input-append">
-			  <input id="appendedInputButton"  placeholder="Enter your e-mail" type="text">
-			  <button class="btn btn-warning" type="button">send </button>
-			</div>
-			</form>
-		</div>
-		<div class="span5">
-		<h4>Latest news</h4>
-		<ul class="media-list">
-		  <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		</ul>
-		</div>
-	
-	<div class="span3">
-			<h4>Visit us</h4>
-			<address style="margin-bottom:15px;">
-			<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
-				194, Vectoria Street, Newwork <br>
-				nw 488, USA<br>
-			</address>
-			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
-			<h5>Quick Links</h5>	
-			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
-			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+{{--<section id="footerSection">--}}
+{{--<div class="container">--}}
+    {{--<footer class="footer well well-small">--}}
+	{{--<div class="row-fluid">--}}
+	{{--<div class="span4">--}}
+			{{--<h4>Newsletter and Subscription</h4>--}}
+			{{--<h5>Our aim</h5>--}}
+			{{--<em>--}}
+			{{--"To provide affordable web design and development services for different devices is our aim, --}}
+			{{--that fully meet your requirements." <br/><br/>--}}
+			{{--</em>--}}
+			{{--<h5>What our client say?</h5>--}}
+			{{--<em>--}}
+			{{--" I can confirm, bougth the theme a couple of days afo and it is really fantastic. Very flexible, very good support. I really like it."--}}
+			{{--</em>--}}
+			{{--<br/><br/>--}}
+			{{--<h5>Subscription</h5>--}}
+			{{--<form>--}}
+			{{--<div class="input-append">--}}
+			  {{--<input id="appendedInputButton"  placeholder="Enter your e-mail" type="text">--}}
+			  {{--<button class="btn btn-warning" type="button">send </button>--}}
+			{{--</div>--}}
+			{{--</form>--}}
+		{{--</div>--}}
+		{{--<div class="span5">--}}
+		{{--<h4>Latest news</h4>--}}
+		{{--<ul class="media-list">--}}
+		  {{--<li class="media">--}}
+			{{--<a class="pull-left" href="blog_details.blade.php">--}}
+			  {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
+			{{--</a>--}}
+			{{--<div class="media-body">--}}
+			  {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
+			  {{--"To provide affordable web design and..."<br/>--}}
+			  {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
+			{{--</div>--}}
+		  {{--</li>--}}
+		   {{--<li class="media">--}}
+			{{--<a class="pull-left" href="blog_details.blade.php">--}}
+			  {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
+			{{--</a>--}}
+			{{--<div class="media-body">--}}
+			  {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
+			  {{--"To provide affordable web design and..."<br/>--}}
+			  {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
+			{{--</div>--}}
+		  {{--</li>--}}
+		   {{--<li class="media">--}}
+			{{--<a class="pull-left" href="blog_details.blade.php">--}}
+			  {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
+			{{--</a>--}}
+			{{--<div class="media-body">--}}
+			  {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
+			  {{--"To provide affordable web design and..."<br/>--}}
+			  {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
+			{{--</div>--}}
+		  {{--</li>--}}
+		   {{--<li class="media">--}}
+			{{--<a class="pull-left" href="blog_details.blade.php">--}}
+			  {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
+			{{--</a>--}}
+			{{--<div class="media-body">--}}
+			  {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
+			  {{--"To provide affordable web design and..."<br/>--}}
+			  {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
+			{{--</div>--}}
+		  {{--</li>--}}
+		{{--</ul>--}}
+		{{--</div>--}}
+	{{----}}
+	{{--<div class="span3">--}}
+			{{--<h4>Visit us</h4>--}}
+			{{--<address style="margin-bottom:15px;">--}}
+			{{--<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>--}}
+				{{--194, Vectoria Street, Newwork <br>--}}
+				{{--nw 488, USA<br>--}}
+			{{--</address>--}}
+			{{--Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>--}}
+			{{--Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>--}}
+			{{--Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>--}}
+			{{--<h5>Quick Links</h5>	--}}
+			{{--<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>--}}
+			{{--<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>--}}
+			{{--<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>--}}
 
-	<h5>Find us on</h5>	
-	<div style="font-size:2.5em;">
-		<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
-		<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
-		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
-		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
-		<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
-	</div>
-	</div>
-    </div>
+	{{--<h5>Find us on</h5>	--}}
+	{{--<div style="font-size:2.5em;">--}}
+		{{--<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>--}}
+		{{--<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>--}}
+		{{--<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>--}}
+		{{--<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>--}}
+		{{--<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>--}}
+	{{--</div>--}}
+	{{--</div>--}}
+    {{--</div>--}}
 
-	<p style="padding:18px 0 44px">&copy; 2012, allright reserved </p>
-	</footer>
-    </div><!-- /container -->
-</section>
+	{{--<p style="padding:18px 0 44px">&copy; 2012, allright reserved </p>--}}
+	{{--</footer>--}}
+    {{--</div><!-- /container -->--}}
+{{--</section>--}}
 
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
 <!-- Javascript
