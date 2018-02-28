@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tender extends Model
 {
     protected $fillable = [
-        'id','name','price','start_date','end_date'
+        'id','name','price','field','description',
+        'start_date','end_date','status'
     ];
 }
