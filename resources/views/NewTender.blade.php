@@ -62,26 +62,25 @@
         <div class="container">
             <div class="row well">
 
-                <form method="post" action="/tender">
+                <form method="post">
 
-                    <div class="form-group form-inline" style="float: right">
-                        <input type="text" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl">
+                    <div class="form-row form-inline" style="float: right">
+                        <input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl">
                         <label class="control-label">عنوان مناقصه</label>
                     </div>
                     <div class="form-group form-inline">
-                        <select class="span2">
-                            <option>عمرانی</option>
-                            <option>کامپیوتر</option>
-                            <option>Coming Soon</option>
+                        <select name="field" class="span2">
+                            <option value="CONSTRUCTION">عمرانی</option>
+                            <option value="COMPUTER">کامپیوتر</option>
                         </select>
                         <label class="control-label">موضوع مناقصه</label>
                     </div>
                     <div class="form-group form-inline" style="float: right">
-                        <textarea class="form-control"></textarea>
+                        <textarea name="description" class="form-control"></textarea>
                         <label class="control-label">توضیحات</label>
                     </div>
 
-                    <button type="submit" class="btn btn-warning">جست و جو</button>
+                    <button type="submit" class="btn btn-warning">ثبت</button>
 
                 </form>
 

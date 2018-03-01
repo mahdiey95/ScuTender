@@ -142,18 +142,26 @@
         <div class="logincontainer well">
             <form method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
-                <div {{ $errors->has('username') ? ' has-error' : '' }}>
-            <label for="uname"><b>نام کاربری</b></label>
-            <input type="text" placeholder="نام کاربری را وارد کنید" name="uname" required>
+                <label for="uname"><b>نام کاربری</b></label>
+                <input type="text" placeholder="نام کاربری را وارد کنید" name="username" value="{{ old('username') }}" required autofocus>
 
-            <label for="psw"><b>رمز عبور</b></label>
-            <input type="password" placeholder="رمز عبور" name="psw" required>
+                <label for="psw"><b>رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور" name="password" required>
 
-            <button type="submit">ورود</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> مرا به خاطر بسپار
-                <span class="psw">فراموشی <a href="#">رمز عبور</a></span>
-            </label>
+                <button type="submit">ورود</button>
+
+                <label>
+                    <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> مرا به خاطر بسپار
+
+                    <span class="psw"><a href="{{ route('password.request') }}">فراموشی رمز عبور</a></span>
+                </label>
+
+                @if ($errors->has('username') || $errors->has('password'))
+                    <span class="help-block">
+                        <strong>نام کاربری یا رمز عبور اشتباه است</strong>
+                    </span>
+                @endif
+
             </form>
         </div>
     </div>

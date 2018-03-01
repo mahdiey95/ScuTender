@@ -11,7 +11,7 @@ class TenderController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth',['except'=>['index']]);
+        $this->middleware('auth',['except'=>['index']]);
     }
 
 
@@ -33,10 +33,10 @@ class TenderController extends Controller
      */
     public function create()
     {
-//        $user = Auth::user();
-//
-//        if($user->role != 'ADMIN')
-//            return "403"; //access denied;
+        $user = Auth::user();
+
+        if($user->role != 'ADMIN')
+            abort(403);
 
         return view('NewTender'); //TODO create add tender view
     }
@@ -49,7 +49,11 @@ class TenderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = Auth::user();
+        if($user->role != "ADMIN")
+            abort(403);
+
+
     }
 
     /**
