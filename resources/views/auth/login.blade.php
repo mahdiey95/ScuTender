@@ -15,6 +15,7 @@
     <link href="./resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="./resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="./resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
+    <link href="./resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>

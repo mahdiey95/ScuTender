@@ -5,8 +5,8 @@
 }
 .logo{
     display:inline-block;
-    margin-right: auto;
-    margin-left:auto;
+    margin-right: 0px;
+    margin-left:400px;
     width: 132px;
     height:132px;
 }
@@ -16,7 +16,7 @@
 }
 .flagIR {
     display: inline-block;
-    margin-left: 40px;
+    margin-left: 2%;
     width: 135px;
     height: 140px;
 }
@@ -26,64 +26,4 @@ P{
 }
 #tenders{
     display: inline-block;
-}
-
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 60%;
-    padding: 14px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 60%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
-}
-
-
-/* Add padding to containers */
-.logincontainer {
-    width: 40%;
-    padding: 16px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-}
-form{
-    border: none;
 }
