@@ -73,30 +73,121 @@
 <!--Header Ends================================================ -->
 <section id="bodySection">
     <div id="sectionTwo">
+        {{--<div class="container">--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-md-8 col-md-offset-2">--}}
+                    {{--<div class="panel panel-default">--}}
+                        {{--<div class="panel-heading">Register</div>--}}
+
+                        {{--<div class="panel-body">--}}
+                            {{--<form class="form-horizontal" method="POST" action="{{ route('register') }}">--}}
+                                {{--{{ csrf_field() }}--}}
+
+                                {{--<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">--}}
+                                    {{--<label for="name" class="col-md-4 control-label">Name</label>--}}
+
+                                    {{--<div class="col-md-6">--}}
+                                        {{--<input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>--}}
+
+                                        {{--@if ($errors->has('name'))--}}
+                                            {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('name') }}</strong>--}}
+                                    {{--</span>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
+                                {{--<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">--}}
+                                    {{--<label for="email" class="col-md-4 control-label">Username</label>--}}
+
+                                    {{--<div class="col-md-6">--}}
+                                        {{--<input id="email" type="text" class="form-control" name="username" value="{{ old('username') }}" required>--}}
+
+                                        {{--@if ($errors->has('username'))--}}
+                                            {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('username') }}</strong>--}}
+                                    {{--</span>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
+                                {{--<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">--}}
+                                    {{--<label for="password" class="col-md-4 control-label">Password</label>--}}
+
+                                    {{--<div class="col-md-6">--}}
+                                        {{--<input id="password" type="password" class="form-control" name="password" required>--}}
+
+                                        {{--@if ($errors->has('password'))--}}
+                                            {{--<span class="help-block">--}}
+                                        {{--<strong>{{ $errors->first('password') }}</strong>--}}
+                                    {{--</span>--}}
+                                        {{--@endif--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
+                                {{--<div class="form-group">--}}
+                                    {{--<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>--}}
+
+                                    {{--<div class="col-md-6">--}}
+                                        {{--<input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+
+                                {{--<div class="form-group">--}}
+                                    {{--<div class="col-md-6 col-md-offset-4">--}}
+                                        {{--<button type="submit" class="btn btn-primary">--}}
+                                            {{--Register--}}
+                                        {{--</button>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</form>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <form action="action_page.php" style="border:1px solid #ccc">
-            <div class="container">
-                <h1>Sign Up</h1>
-                <p>Please fill in this form to create an account.</p>
+            <div class="signupcontainer well">
+                <h1>فرم ثبت نام</h1>
+                <p>لطفا اطلاعات دقیق خود را در فرم زیر ثبت کنید.</p>
                 <hr>
 
-                <label for="email"><b>Email</b></label>
+                <label for="name"><b>نام شرکت</b></label>
+                <input type="text" placeholder="نام شرکت" name="name" required>
+
+                <label for="field"><b>زمینه کاری</b></label>
+                <input type="text" placeholder="زمینه کاری شرکت خود را وارد کنید." name="field" required>
+
+                <label for="registrationnum"><b>شماره ثبت</b></label>
+                <input type="text" placeholder="شماره ثبت شرکت را وارد کنید." name="registrationnum" required>
+
+                <label for="mobile"><b>شماره موبایل</b></label>
+                <input type="text" placeholder="شماره موبایل خود را وارد کنید" name="mobile" required>
+
+                <label for="economicid"><b>َشماره اقتصادی</b></label>
+                <input type="text" placeholder="شماره اقتصادی شرکت را وارد کنید" name="economicid" required>
+
+                <label for="ceoname"><b>نام مدیرعامل</b></label>
+                <input type="text" placeholder="نام مدیر عامل شرکت را وارد کنید" name="ceoname" required>
+
+                <label for="email"><b>ایمیل</b></label>
                 <input type="text" placeholder="Enter Email" name="email" required>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
+                <label for="psw"><b>رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور خود را وارد کنید" name="psw" required>
 
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                <label for="psw-repeat"><b>تکرار رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور خود را مجددا وارد کنید" name="psw-repeat" required>
 
                 <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> مرا به خاطر بسپار
                 </label>
 
-                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                {{--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>--}}
 
                 <div class="clearfix">
-                    <button type="button" class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Sign Up</button>
+                    {{--<button type="button" class="cancelbtn">Cancel</button>--}}
+                    <button type="submit" class="signupbtn">ثبت نام</button>
                 </div>
             </div>
         </form>
