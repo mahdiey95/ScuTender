@@ -69,7 +69,7 @@ a, a:link, a:active, a:hover, img{outline:none;}
 #clientsSection{padding:44px 0;}
 #clientsSection a{margin:0 8px;}
 #clientsSection a:hover{text-decoration:none}
-#footerSection{background: url(../images/footerbg.png) repeat 0 0; color:#fff; padding:28px 0 0; border-top: 1px solid #FE5214;}
+#footerSection{background: #0944a3 repeat 0 0; color:#fff; padding:28px 0 0; border-top: 1px solid #FE5214;}
 #footerSection .well{background:none; color:#fff; border:0}
 #footerSection .media, #bodySection .media{text-align:left;}
 #footerSection .media img, #bodySection .media img{border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px; }
@@ -84,7 +84,7 @@ a, a:link, a:active, a:hover, img{outline:none;}
 @media (max-width: 767px) {
 .navbar .nav > li {
 float: none}
-#footerSection, #carouselSection, #footerSection, #bannerSection {margin: 0 -20px;}
+#footerSection, #carouselSection, #footerSection, #bannerSection {margin: 0 -20px; direction: rtl;}
 #carouselSection .carousel-caption{background:none}
 #carouselSection .carousel-caption h2, #carouselSection .carousel-caption p{ display:none;}
 #carouselSection {background-image: none; border-bottom:1px solid #ddd}

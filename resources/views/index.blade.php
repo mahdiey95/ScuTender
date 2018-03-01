@@ -100,7 +100,7 @@
                                         <div class="thumbnail">
                                             <div class="blockDtl">
                                                 <h4>{{$tender->name}}</h4>
-                                                <a href="./tender/{{$tender->id}}"><img src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
+                                                <a href="./tender/{{$tender->id}}"><img class="imgicon" src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
                                                 <p>{{$tender->description}}</p>
                                             </div>
                                         </div>
@@ -707,15 +707,15 @@
 {{--</section>--}}
  <!-- Footer
   ================================================== -->
-{{--<section id="footerSection">--}}
-{{--<div class="container">--}}
-    {{--<footer class="footer well well-small">--}}
-	{{--<div class="row-fluid">--}}
+<section id="footerSection">
+<div class="container">
+    <footer class="footer well well-small">
+	<div class="row-fluid">
 	{{--<div class="span4">--}}
 			{{--<h4>Newsletter and Subscription</h4>--}}
 			{{--<h5>Our aim</h5>--}}
 			{{--<em>--}}
-			{{--"To provide affordable web design and development services for different devices is our aim, --}}
+			{{--"To provide affordable web design and development services for different devices is our aim,--}}
 			{{--that fully meet your requirements." <br/><br/>--}}
 			{{--</em>--}}
 			{{--<h5>What our client say?</h5>--}}
@@ -776,23 +776,21 @@
 		  {{--</li>--}}
 		{{--</ul>--}}
 		{{--</div>--}}
-	{{----}}
-	{{--<div class="span3">--}}
-			{{--<h4>Visit us</h4>--}}
-			{{--<address style="margin-bottom:15px;">--}}
-			{{--<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>--}}
-				{{--194, Vectoria Street, Newwork <br>--}}
-				{{--nw 488, USA<br>--}}
-			{{--</address>--}}
+
+	<div class="span3">
+			<h4>ارتباط با ما</h4>
+			<address style="margin-bottom:15px;">
+			<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+			</address>
 			{{--Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>--}}
 			{{--Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>--}}
 			{{--Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>--}}
-			{{--<h5>Quick Links</h5>	--}}
-			{{--<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>--}}
+			{{--<h5>Quick Links</h5>--}}
+			<a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
 			{{--<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>--}}
 			{{--<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>--}}
 
-	{{--<h5>Find us on</h5>	--}}
+	{{--<h5>Find us on</h5>--}}
 	{{--<div style="font-size:2.5em;">--}}
 		{{--<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>--}}
 		{{--<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>--}}
@@ -800,13 +798,12 @@
 		{{--<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>--}}
 		{{--<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>--}}
 	{{--</div>--}}
-	{{--</div>--}}
-    {{--</div>--}}
-
-	{{--<p style="padding:18px 0 44px">&copy; 2012, allright reserved </p>--}}
-	{{--</footer>--}}
-    {{--</div><!-- /container -->--}}
-{{--</section>--}}
+	</div>
+    </div>
+	{{--<p style="padding:18px 0 44px">&copy; 2018, allright reserved </p>--}}
+	</footer>
+    </div><!-- /container -->
+</section>
 
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
 <!-- Javascript
@@ -871,6 +868,6 @@
 	</div>
 	</div>
 </div>
-<span id="themesBtn"></span>
+{{--<span id="themesBtn"></span>--}}
 </body>
 </html>
