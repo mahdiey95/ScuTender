@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Contractor;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+
 
 class RegisterController extends Controller
 {
@@ -51,6 +53,12 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users',
             'password' => 'required|string|min:3|confirmed',
+            'registration_number' => 'required',
+            'economic_id' => 'required',
+            'ceo_name' => 'required',
+            'email' => 'required|email',
+            'field' => 'required',
+            'phone' => 'required'
         ]);
     }
 
@@ -62,6 +70,17 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        Contractor::create([
+            'name' => $data['name'],
+            'registration_number' => $data['registration_number'],
+            'economic_id' => $data['economic_id'],
+            'ceo_name' => $data['ceo_name'],
+            'email' => $data['email'],
+            'field' => $data['field'],
+            'phone' => $data['phone']
+        ]);
+
+
         return User::create([
             'name' => $data['name'],
             'username' => $data['username'],

@@ -146,8 +146,32 @@
                 {{--</div>--}}
             {{--</div>--}}
         {{--</div>--}}
-        <form action="action_page.php" style="border:1px solid #ccc">
+        <form method="post" action="{{route('register')}}" style="border:1px solid #ccc">
+            {{ csrf_field() }}
             <div class="signupcontainer well">
+
+                @if (count($errors) != 0)
+                <span class="help-block">
+                    <strong>خطا در ذخیره اطلاعات</strong>
+
+                    @if($errors->has('username'))
+                        @if(strpos($errors->first('username'),'taken'))
+                            <br/>
+                            <strong>نام کاربری از قبل وجود دارد</strong>
+                        @endif
+                    @endif
+
+                    @if($errors->has('password'))
+                        @if(strpos($errors->first('password'),'match'))
+                            <br/>
+                            <strong>رمز عبور های وارد شده یکسان نیستند</strong>
+                        @endif
+                    @endif
+
+
+                </span>
+                @endif
+
                 <h1>فرم ثبت نام</h1>
                 <p>لطفا اطلاعات دقیق خود را در فرم زیر ثبت کنید.</p>
                 <hr>
@@ -158,30 +182,30 @@
                 <label for="field"><b>زمینه کاری</b></label>
                 <input type="text" placeholder="زمینه کاری شرکت خود را وارد کنید." name="field" required>
 
-                <label for="registrationnum"><b>شماره ثبت</b></label>
-                <input type="text" placeholder="شماره ثبت شرکت را وارد کنید." name="registrationnum" required>
+                <label for="registration_number"><b>شماره ثبت</b></label>
+                <input type="number" placeholder="شماره ثبت شرکت را وارد کنید." name="registration_number" required>
 
-                <label for="mobile"><b>شماره موبایل</b></label>
-                <input type="text" placeholder="شماره موبایل خود را وارد کنید" name="mobile" required>
+                <label for="mobile"><b>تلفن تماس</b></label>
+                <input type="number" placeholder="شماره موبایل خود را وارد کنید" name="phone" required>
 
-                <label for="economicid"><b>َشماره اقتصادی</b></label>
-                <input type="text" placeholder="شماره اقتصادی شرکت را وارد کنید" name="economicid" required>
+                <label for="economic_id"><b>َشماره اقتصادی</b></label>
+                <input type="number" placeholder="شماره اقتصادی شرکت را وارد کنید" name="economic_id" required>
 
                 <label for="ceoname"><b>نام مدیرعامل</b></label>
-                <input type="text" placeholder="نام مدیر عامل شرکت را وارد کنید" name="ceoname" required>
+                <input type="text" placeholder="نام مدیر عامل شرکت را وارد کنید" name="ceo_name" required>
 
                 <label for="email"><b>ایمیل</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required>
+                <input type="email" placeholder="ایمیل را وارد کنید" name="email" required>
 
-                <label for="psw"><b>رمز عبور</b></label>
-                <input type="password" placeholder="رمز عبور خود را وارد کنید" name="psw" required>
+                <label for="username"><b>نام کاربری</b></label>
+                <input type="text" placeholder="نام کاربری را وارد کنید" name="username" required>
 
-                <label for="psw-repeat"><b>تکرار رمز عبور</b></label>
-                <input type="password" placeholder="رمز عبور خود را مجددا وارد کنید" name="psw-repeat" required>
+                <label for="password"><b>رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور خود را وارد کنید" name="password" required>
 
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> مرا به خاطر بسپار
-                </label>
+                <label for="password_confirmation"><b>تکرار رمز عبور</b></label>
+                <input type="password" placeholder="رمز عبور خود را مجددا وارد کنید" name="password_confirmation" required>
+
 
                 {{--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>--}}
 
