@@ -62,10 +62,11 @@
         <div class="container">
             <div class="row well">
 
-                <form method="post">
+                <form method="post" action="{{route('tender.store')}}">
+                    {{csrf_field()}}
 
                     <div class="form-row form-inline" style="float: right">
-                        <input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl">
+                        <input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl" required>
                         <label class="control-label">عنوان مناقصه</label>
                     </div>
                     <div class="form-group form-inline">
@@ -76,8 +77,17 @@
                         <label class="control-label">موضوع مناقصه</label>
                     </div>
                     <div class="form-group form-inline" style="float: right">
-                        <textarea name="description" class="form-control"></textarea>
+                        <textarea name="description" class="form-control" required></textarea>
                         <label class="control-label">توضیحات</label>
+                    </div>
+
+                    <div class="form-row form-inline">
+                        <input type="date" name="startDate" class="form-control" dir="rtl" required>
+                        <label class="control-label">تاریخ شروع</label>
+                    </div>
+                    <div class="form-row form-inline">
+                        <input type="date" name="endDate" class="form-control"  dir="rtl" required>
+                        <label class="control-label">تاریخ پایان</label>
                     </div>
 
                     <button type="submit" class="btn btn-warning">ثبت</button>

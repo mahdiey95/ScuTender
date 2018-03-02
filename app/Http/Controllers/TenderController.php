@@ -54,6 +54,28 @@ class TenderController extends Controller
             abort(403);
 
 
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'field' => 'required',
+            'description' => 'required',
+            'startDate' => 'required',
+            'endDate' => 'required'
+        ]);
+
+
+        $tender = new Tender([
+            'name' => $request->name,
+            'field' => $request->field,
+            'description' => $request->description,
+            'start_date' => $request->startdate,
+            'end_date' => $request->enddate,
+            'price' => 100
+        ]);
+
+        if($tender->save())
+            return 'ok';
+        else
+            abort(500,'Saving tender failed');
     }
 
     /**
