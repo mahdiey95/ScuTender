@@ -86,17 +86,20 @@ hr {
 }
 
 /* Set a style for all buttons */
-button {
+.tblbutton {
     background-color: #4CAF50;
     color: white;
     padding: 18px 20px;
-    margin: 8px 0;
     border: none;
     cursor: pointer;
-    width:60%;
+    width:20%;
     opacity: 0.9;
     font-family: "B Nazanin";
     font-size: large;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 button:hover {
@@ -148,13 +151,14 @@ strong{
     color: red;
 }
 .select{
-    width: 60%;
+    width: 70%;
     padding: 18px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
     direction: rtl;
+    height: 40px;
 }
 .select:focus{
     background-color: #ddd;
@@ -170,3 +174,36 @@ newtendercontainer{
     direction: rtl;
 
 }
+.tablelable{
+
+    font-size: 22px;
+}
+table{
+    width: 90%;
+    float: right;
+    direction: rtl;
+    margin: 50px;
+}
+tr{
+    margin: 20px;
+}
+th.lbl{
+    width: 20%;
+}
+th.dscribs{
+    width: 80%;
+}
+.tableinput{
+    width: 70%;
+    padding: 18px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    direction: rtl;
+}
+.logoutbtn{
+    border: none;
+    background: transparent;
+}
+

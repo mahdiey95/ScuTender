@@ -37,8 +37,11 @@
                 <div class="nav-collapse collapse">
 
                     <ul class="nav pull-right">
-                        <li class="active"><a href="indexx.blade.php">home</a></li>
-                        <li class=""><a href="services.blade.php">delet</a></li>
+                        <li class="active"><form id="logout" action="rout('logout')" method="post" >
+                                {{csrf_field()}}
+                                <a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
+                            </form></li>
+                        <li class=""><a href="NewTender.blade.php">مناقصه جدید</a></li>
                         <li class=""><a href="login">ورود</a></li>
                         <li class=""><a href="index.blade.php">خانه</a></li>
                         <li class=""><a href="register"> ثبت نام</a></li>
@@ -63,44 +66,54 @@
         <div class="container">
             <div class="row well">
 
-                <form class="newtendercontainer well" method="post"  action="{{route('tender.store')}}">
+                <form class="newtendercontainer" method="post"  action="{{route('tender.store')}}">
                     {{csrf_field()}}
                     <table>
                     {{--<div class="form-row form-inline" style="float: right">--}}
+                        <th class="lbl"></th>
+                        <th class="dscribs"></th>
+
                         <tr>
-                        <td><input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl" required></td>
-                       <td> <label class="control-label" for="name">عنوان مناقصه</label></td>
+                            <td> <label class="control-label tablelable" for="name">عنوان مناقصه</label></td>
+                            <td><input type="text" name="name" class="tableinput select" placeholder="مثال:تعمیر ساختمان" dir="rtl" required></td>
                         </tr>
                     {{--</div>--}}
                     {{--<div class="form-group form-inline">--}}
                         <tr>
-                      <td>
-                          <select name="field" class="select span2">
-                              <option value="CONSTRUCTION">عمرانی</option>
-                              <option value="COMPUTER">کامپیوتر</option>
-                          </select>
-                      </td>
-                      <td>  <label class="control-label" for="field">موضوع مناقصه</label></td>
+                            <td>  <label class="control-label tablelable" for="field">موضوع مناقصه</label></td>
+                            <td>
+                                <select name="field" class=" tableinput">
+                                    <option value="CONSTRUCTION">عمرانی</option>
+                                    <option value="COMPUTER">کامپیوتر</option>
+                                </select>
+                            </td>
+
                         </tr>
                     {{--</div>--}}
                     {{--<div class="form-group form-inline" style="float: right">--}}
                         <tr>
-                            <td><textarea name="description" class="select form-control" required></textarea></td>
-                            <td><label class="control-label" for="description">توضیحات</label></td>
+                            <td><label class="control-label tablelable" for="description">توضیحات</label></td>
+                            <td><textarea name="description" class="select tableinput form-control" required></textarea></td>
                         </tr>
                     {{--</div>--}}
 
                     {{--<div class="form-row form-inline">--}}
-                        <input type="date" name="startDate" class="form-control select" dir="rtl" required>
-                        {{--<label class="control-label" for="startDate">تاریخ شروع</label>--}}
+                        <tr>
+                            <td> <label class="control-label tablelable" for="startDate">تاریخ شروع</label></td>
+                            <td> <input type="date" name="startDate" class="form-control tableinput select" dir="rtl" required></td>
+                        </tr>
                     {{--</div>--}}
-                    <div class="form-row form-inline">
-                        <input type="date" name="endDate" class="form-control select"  dir="rtl" required>
-                        <label class="control-label" for="endDate">تاریخ پایان</label>
-                    </div>
+                        <tr>
+                            <td><label class="control-label tablelable" for="endDate">تاریخ پایان</label></td>
+                            <td><input type="date" name="endDate" class="form-control tableinput select"  dir="rtl" required></td>
+                        </tr>
+                    {{--<div class="form-row form-inline">--}}
 
-                    <button type="submit" class="btn btn-warning button">ثبت</button>
+
+                    {{--</div>--}}
                     </table>
+                    <button type="submit" class="tblbutton">ثبت</button>
+
                 </form>
 
             </div>

@@ -50,8 +50,11 @@
                 <div class="nav-collapse collapse">
 
                     <ul class="nav pull-right">
-                        <li class="active"><a href="indexx.blade.php">home</a></li>
-                        <li class=""><a href="services.blade.php">delet</a></li>
+                        <li class="active"><form id="logout" action="rout('logout')" method="post" >
+                                {{csrf_field()}}
+                                <a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
+                            </form></li>
+                        <li class=""><a href="NewTender.blade.php">مناقصه جدید</a></li>
                         <li class=""><a href="login">ورود</a></li>
                         <li class=""><a href="index.blade.php">خانه</a></li>
                         <li class=""><a href="register"> ثبت نام</a></li>
