@@ -102,7 +102,16 @@
                                     <li class="span3">
                                         <div class="thumbnail">
                                             <div class="blockDtl">
-                                                <h4>{{$tender->name}}</h4>
+                                                <h4 style="background:
+														@if($tender->status == '1')
+															#5eff5a
+														@endif
+														@if($tender->status == '3')
+															#ff5054
+														@endif
+														@if($tender->status == '2')
+															#688aff
+														@endif">{{$tender->name}}</h4>
                                                 <a href="./tender/{{$tender->id}}"><img class="imgicon" src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
                                                 <p>{{$tender->description}}</p>
                                             </div>

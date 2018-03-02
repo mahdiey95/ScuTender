@@ -23,7 +23,8 @@ class TenderController extends Controller
      */
     public function index()
     {
-        $tenders = Tender::all();
+        $tenders = Tender::orderBy('status')->get();
+
         return view('index',['tenders'=>$tenders]);
     }
 
