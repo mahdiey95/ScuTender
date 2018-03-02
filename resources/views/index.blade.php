@@ -49,7 +49,7 @@
 					<div class="nav-collapse collapse">
 
 						<ul class="nav pull-right">
-							<li class="active"><form id="logout" action="rout('logout')" method="post" >
+							<li class="active"><form id="logout" action="{{route('logout')}}" method="post" >
 									{{csrf_field()}}
 									<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 								</form></li>
