@@ -67,13 +67,13 @@ class TenderController extends Controller
             'name' => $request->name,
             'field' => $request->field,
             'description' => $request->description,
-            'start_date' => $request->startdate,
-            'end_date' => $request->enddate,
+            'start_date' => '1396-11-2',
+            'end_date' => '1396-12-3',
             'price' => 100
         ]);
 
         if($tender->save())
-            return 'ok';
+            return redirect(route('tender.index'));
         else
             abort(500,'Saving tender failed');
     }
