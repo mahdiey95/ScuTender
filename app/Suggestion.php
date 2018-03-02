@@ -8,6 +8,6 @@ class Suggestion extends Model
 {
     public $timestamps = false;
     protected $fillable = [
-        'id','price','duration','conditions'
+        'id','tender_id','contractor_name','price','duration','conditions'
     ];
 }

@@ -1,0 +1,5 @@
+{{$tender}}
+
+<br/>
+
+{{$suggestions}}

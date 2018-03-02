@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tender;
+use App\Suggestion;
 use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
 
@@ -36,7 +37,7 @@ class TenderController extends Controller
         $user = Auth::user();
 
         if($user->role != 'ADMIN')
-            abort(403);
+            return abort(403);
 
         return view('NewTender'); //TODO create add tender view
     }
@@ -75,7 +76,7 @@ class TenderController extends Controller
         if($tender->save())
             return redirect(route('tender.index'));
         else
-            abort(500,'Saving tender failed');
+            return abort(500,'Saving tender failed');
     }
 
     /**
@@ -88,13 +89,33 @@ class TenderController extends Controller
     {
         $user = Auth::user();
 
+        $tender = Tender::find($id);
+
+
         if($user->role == 'ADMIN')
-            return 'tender detail for admin'; //TODO create tender detail view for admin
+        {
+            $suggestions = Suggestion::where('tender_id','=',$id)->get();
+
+            return view('tender_detail_admin',[
+                'tender' => $tender,
+                'suggestions' => $suggestions]);
+        }
+
         else if($user->role == 'CONTRACTOR')
-            return 'tender detail for contractor'; //TODO create tender detail view for contractor
+        {
+            $suggestion = Suggestion::where('tender_id','=',$id)
+                ->where('contractor_name','=',$user->name)->get();
+
+
+            return view('tender_detail_contractor',[
+                'tender' => $tender,
+                'suggestion' => $suggestion
+            ]);
+
+        }
 
         else
-            return '403'; //TODO create error view
+            return abort(403); //TODO create error view
     }
 
     /**
