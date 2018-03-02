@@ -15,6 +15,7 @@
     <link href="../resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -62,36 +63,44 @@
         <div class="container">
             <div class="row well">
 
-                <form method="post" action="{{route('tender.store')}}">
+                <form class="newtendercontainer well" method="post"  action="{{route('tender.store')}}">
                     {{csrf_field()}}
+                    <table>
+                    {{--<div class="form-row form-inline" style="float: right">--}}
+                        <tr>
+                        <td><input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl" required></td>
+                       <td> <label class="control-label" for="name">عنوان مناقصه</label></td>
+                        </tr>
+                    {{--</div>--}}
+                    {{--<div class="form-group form-inline">--}}
+                        <tr>
+                      <td>
+                          <select name="field" class="select span2">
+                              <option value="CONSTRUCTION">عمرانی</option>
+                              <option value="COMPUTER">کامپیوتر</option>
+                          </select>
+                      </td>
+                      <td>  <label class="control-label" for="field">موضوع مناقصه</label></td>
+                        </tr>
+                    {{--</div>--}}
+                    {{--<div class="form-group form-inline" style="float: right">--}}
+                        <tr>
+                            <td><textarea name="description" class="select form-control" required></textarea></td>
+                            <td><label class="control-label" for="description">توضیحات</label></td>
+                        </tr>
+                    {{--</div>--}}
 
-                    <div class="form-row form-inline" style="float: right">
-                        <input type="text" name="name" class="span2" placeholder="مثال:تعمیر ساختمان" dir="rtl" required>
-                        <label class="control-label">عنوان مناقصه</label>
-                    </div>
-                    <div class="form-group form-inline">
-                        <select name="field" class="span2">
-                            <option value="CONSTRUCTION">عمرانی</option>
-                            <option value="COMPUTER">کامپیوتر</option>
-                        </select>
-                        <label class="control-label">موضوع مناقصه</label>
-                    </div>
-                    <div class="form-group form-inline" style="float: right">
-                        <textarea name="description" class="form-control" required></textarea>
-                        <label class="control-label">توضیحات</label>
-                    </div>
-
+                    {{--<div class="form-row form-inline">--}}
+                        <input type="date" name="startDate" class="form-control select" dir="rtl" required>
+                        {{--<label class="control-label" for="startDate">تاریخ شروع</label>--}}
+                    {{--</div>--}}
                     <div class="form-row form-inline">
-                        <input type="date" name="startDate" class="form-control" dir="rtl" required>
-                        <label class="control-label">تاریخ شروع</label>
-                    </div>
-                    <div class="form-row form-inline">
-                        <input type="date" name="endDate" class="form-control"  dir="rtl" required>
-                        <label class="control-label">تاریخ پایان</label>
+                        <input type="date" name="endDate" class="form-control select"  dir="rtl" required>
+                        <label class="control-label" for="endDate">تاریخ پایان</label>
                     </div>
 
-                    <button type="submit" class="btn btn-warning">ثبت</button>
-
+                    <button type="submit" class="btn btn-warning button">ثبت</button>
+                    </table>
                 </form>
 
             </div>

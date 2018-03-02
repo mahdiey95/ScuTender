@@ -59,7 +59,7 @@ form{
 * {box-sizing: border-box}
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=number],input[type=email] {
     width: 60%;
     padding: 18px;
     margin: 5px 0 22px 0;
@@ -70,7 +70,7 @@ input[type=text], input[type=password] {
 
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus,input[type=number]:focus,input[type=email]:focus {
     background-color: #ddd;
     outline: none;
     height: 50px;
@@ -145,5 +145,28 @@ p{
 
 strong{
     font-size: large;
-   color: red;
+    color: red;
+}
+.select{
+    width: 60%;
+    padding: 18px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    direction: rtl;
+}
+.select:focus{
+    background-color: #ddd;
+    outline: none;
+    height: 50px;
+}
+newtendercontainer{
+    width: 60%;
+    padding: 18px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    direction: rtl;
+
 }
