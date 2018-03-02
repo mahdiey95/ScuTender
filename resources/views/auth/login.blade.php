@@ -142,6 +142,11 @@
         <div class="logincontainer well">
             <form method="POST" action="{{ route('login') }}">
                 {{ csrf_field() }}
+                @if ($errors->has('username') || $errors->has('password'))
+                    <span class="help-block">
+                        <strong>نام کاربری یا رمز عبور اشتباه است</strong>
+                    </span>
+                @endif
                 <label for="uname"><b>نام کاربری</b></label>
                 <input type="text" placeholder="نام کاربری را وارد کنید" name="username" value="{{ old('username') }}" required autofocus>
 
@@ -156,11 +161,7 @@
                     <span class="psw"><a href="{{ route('password.request') }}">فراموشی رمز عبور</a></span>
                 </label>
 
-                @if ($errors->has('username') || $errors->has('password'))
-                    <span class="help-block">
-                        <strong>نام کاربری یا رمز عبور اشتباه است</strong>
-                    </span>
-                @endif
+
 
             </form>
         </div>
