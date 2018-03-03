@@ -15,6 +15,8 @@
 	<link href="./resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
+	{{--<link href="./resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">--}}
+
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -100,8 +102,8 @@
 
 									@foreach($tenders as $tender)
                                     <li class="span3">
-                                        <div class="thumbnail">
-                                            <div class="blockDtl">
+                                        <div class="tenders thumbnail">
+                                            <div class="blockDtl tenders">
                                                 <h4 style="background:
 														@if($tender->status == '1')
 															#5eff5a
@@ -113,7 +115,7 @@
 															#688aff
 														@endif">{{$tender->name}}</h4>
                                                 <a href="./tender/{{$tender->id}}"><img class="imgicon" src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
-                                                <p>{{$tender->description}}</p>
+                                                <input class="tendersdescrib" value="{{$tender->description}}" readonly />
                                             </div>
                                         </div>
                                     </li>
@@ -130,7 +132,7 @@
                 <ul class="media-list">
                     <li class="media well well-small">
                         <h4>راهنما </h4>
-                        <p>
+                        <p style="direction:rtl">
                             به سامانه مناقصات دانشگاه شهید چمران اهواز خوش آمدید.
                             برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.در این سایت مناقصات جدید به رنگ سبز مناقصات در حال برگزاری به رنگ آبی و مناقصات به پایان رسیده با رنگ قرمز مشخص شده اند.با تشکر
                         </p>
@@ -821,7 +823,6 @@
 <!-- Javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	<script src="./resources/assets/themes/js/jquery-1.8.3.min.js"></script>
 	<script src="./resources/assets/themes/js/bootstrap.min.js"></script>
 	<script src="./resources/assets/themes/js/bootstrap-tooltip.js"></script>
