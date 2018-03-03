@@ -103,7 +103,7 @@
 									@foreach($tenders as $tender)
                                     <li class="span3">
                                         <div class="tenders thumbnail">
-                                            <div class="blockDtl tenders">
+                                            <div class="blockDtl">
                                                 <h4 style="background:
 														@if($tender->status == '1')
 															#5eff5a
