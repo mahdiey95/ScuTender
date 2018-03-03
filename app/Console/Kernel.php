@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        //TODO add changing tender status schedule here
         // $schedule->command('inspire')
         //          ->hourly();
     }

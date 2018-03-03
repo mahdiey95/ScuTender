@@ -105,7 +105,7 @@ class TenderController extends Controller
         else if($user->role == 'CONTRACTOR')
         {
             $suggestion = Suggestion::where('tender_id','=',$id)
-                ->where('contractor_name','=',$user->name)->get();
+                ->where('contractor_name','=',$user->name)->get()->first();
 
 
             return view('tender_detail_contractor',[
@@ -156,5 +156,30 @@ class TenderController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function storeSuggestion(Request $request)
+    {
+        $user = Auth::user();
+        if($user->role != 'CONTRACTOR')
+            return abort(403);
+
+        //TODO add validation for suggestion store request
+        //TODO check if tender finished
+        //TODO delete old suggestion if exists
+
+        $suggestion = new Suggestion([
+            'tender_id' => $request->tender_id,
+            'contractor_name' => $user->name,
+            'price' => $request->price,
+            'duration' => $request->duration,
+            'conditions' => $request->conditions
+        ]);
+
+        if($suggestion->save())
+            return 'ok';
+        else
+            return abort(500,'couldnt save suggestion');
     }
 }

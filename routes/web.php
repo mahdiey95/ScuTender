@@ -17,13 +17,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('home',function () {
-//    return redirect('tender');
-//});
+//Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/news' , function () {
+Route::get('home',function () {
+    return redirect('tender');
+});
+
+Route::get('news' , function () {
     return view('blog');
 });
 
 Route::resource('tender','TenderController');
+
+Route::post('suggestion', [
+    'as' => 'suggestion', 'uses' => 'TenderController@storeSuggestion'
+]);
