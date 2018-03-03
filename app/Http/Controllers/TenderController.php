@@ -166,9 +166,16 @@ class TenderController extends Controller
         if($user->role != 'CONTRACTOR')
             return abort(403);
 
+
         //TODO add validation for suggestion store request
-        //TODO check if tender finished
+
         //TODO delete old suggestion if exists
+
+        if(Tender::find($request->tender_id)->status != '1')
+            return abort(403);
+
+        Suggestion::where('contractor_name','=',$user->name)
+            ->where('tender_id','=',$request->tender_id)->delete();
 
         $suggestion = new Suggestion([
             'tender_id' => $request->tender_id,

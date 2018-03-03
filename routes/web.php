@@ -21,11 +21,9 @@ Auth::routes();
 
 Route::get('home',function () {
     return redirect('tender');
-});
+})->name('home');
 
-Route::get('news' , function () {
-    return view('blog');
-});
+
 
 Route::resource('tender','TenderController');
 
@@ -36,3 +34,11 @@ Route::post('suggestion', [
 Route::get('contractor/{name}', [
     'as' => 'contractor.show', 'uses' => 'TenderController@showContractor'
 ]);
+
+Route::get('news' , function () {
+    return view('blog');
+})->name('news');
+
+Route::get('contact' , function () {
+    return view('contact');
+})->name('contact');
