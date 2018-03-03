@@ -37,23 +37,28 @@
                 <div class="nav-collapse collapse">
 
                     <ul class="nav pull-right">
-                        <li class="active"><form id="logout" action="{{route('logout')}}" method="post" >
+
+                        @if(Auth::check())
+                            <form id="logout" action="{{route('logout')}}" method="post" >
                                 {{csrf_field()}}
+                            </form>
+                            <li class="">
                                 <a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
-                            </form></li>
-                        <li class=""><a href="NewTender.blade.php">مناقصه جدید</a></li>
-                        <li class=""><a href="login">ورود</a></li>
-                        <li class=""><a href="index.blade.php">خانه</a></li>
-                        <li class=""><a href="register"> ثبت نام</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="elements.blade.php">Page Elements</a></li>
-                                <li><a href="comingsoon.blade.php">Coming soon page</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="blog.blade.php">اخبار</a></li>
-                        <li class=""><a href="contact.blade.php">تماس با ما</a></li>
+                            </li>
+                            @if(Auth::user()->role == 'ADMIN')
+                                <li class="active"><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+                            @endif
+                        @else
+                            <li class=""><a href="{{route('login')}}">ورود</a></li>
+                            <li class=""><a href="{{route('register')}}"> ثبت نام</a></li>
+                        @endif
+
+                        <li class=""><a href="{{route('news')}}">اخبار</a></li>
+                        <li class=""><a href="{{route('contact')}}">تماس با ما</a></li>
+
+                        <li class=""><a href="{{route('tender.index')}}">خانه</a></li>
+
+
                     </ul>
                 </div>
             </div>
