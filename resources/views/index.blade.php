@@ -47,7 +47,9 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
+
 					<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سامانه مناقصات</small></a></h1>
+
 					<div class="nav-collapse collapse">
 
 						<ul class="nav pull-right">
@@ -56,6 +58,7 @@
 								<form id="logout" action="{{route('logout')}}" method="post" >
 									{{csrf_field()}}
 								</form>
+
 								<li class="">
 										<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 								</li>
@@ -72,9 +75,10 @@
 
 							<li class="active"><a href="{{route('tender.index')}}">خانه</a></li>
 
-
 						</ul>
+
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -82,6 +86,7 @@
 <!--Header Ends================================================ -->
 <section id="bodySection">
 	<div id="sectionTwo">
+		@if(Auth::check()) <div> <label class="username" >کاربر:{{Auth::user()->name}}</label></div> @endif
 		<div class="container">
 		<div class="row">
 			<div class="span9">

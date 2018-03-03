@@ -82,6 +82,7 @@
 <!--Header Ends================================================ -->
 <section id="bodySection">
     <div id="sectionTwo">
+        @if(Auth::check()) <div> <label class="username" >کاربر:{{Auth::user()->name}}</label></div> @endif
         <div class="container">
             <div class="row">
                 <div class="span9">

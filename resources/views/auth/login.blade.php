@@ -279,7 +279,7 @@
     </div><!-- /container -->
 </section>
 
-<a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
+<a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i></a>
 <!-- Javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

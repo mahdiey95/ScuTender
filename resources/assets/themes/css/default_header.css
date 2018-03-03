@@ -34,3 +34,17 @@ P{
     border: 0px;
     background: transparent;
 }
+
+.username{
+    background: transparent;
+    color:#757677;
+    font-family:"B Homa";
+    font-size: 18px;
+    text-align: right;
+    direction: rtl;
+    margin-right: 12px;
+    width: 100%;
+    display: block;
+    margin-right:50px;
+    float: right;
+}
