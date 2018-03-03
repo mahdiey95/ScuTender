@@ -32,3 +32,7 @@ Route::resource('tender','TenderController');
 Route::post('suggestion', [
     'as' => 'suggestion', 'uses' => 'TenderController@storeSuggestion'
 ]);
+
+Route::get('contractor/{name}', [
+    'as' => 'contractor.show', 'uses' => 'TenderController@showContractor'
+]);

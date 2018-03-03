@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contractor;
 use Illuminate\Http\Request;
 use App\Tender;
 use App\Suggestion;
@@ -95,7 +96,7 @@ class TenderController extends Controller
 
         if($user->role == 'ADMIN')
         {
-            $suggestions = Suggestion::where('tender_id','=',$id)->get();
+            $suggestions = Suggestion::where('tender_id','=',$id)->orderby('price')->get();
 
             return view('tender_detail_admin',[
                 'tender' => $tender,
@@ -181,5 +182,28 @@ class TenderController extends Controller
             return 'ok';
         else
             return abort(500,'couldnt save suggestion');
+    }
+
+    public function showContractor($name) {
+
+        if(Auth::user()->role != 'ADMIN')
+            return abort(403);
+
+        $contractor = Contractor::where('name','=',$name)->get();
+        if(count($contractor) != 1)
+            return abort(404);
+
+        $contractor = $contractor->first();
+
+        $suggestions = Suggestion::where('contractor_name','=',$name)->orderby('id','DESC')->get();
+
+        foreach ($suggestions as $suggestion) {
+            $suggestion->tender = Tender::find($suggestion->tender_id);
+        }
+
+        return view('contractor_detail',[
+            'contractor' => $contractor,
+            'suggestions' => $suggestions]);
+
     }
 }

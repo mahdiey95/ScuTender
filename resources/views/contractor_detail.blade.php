@@ -81,63 +81,76 @@
                 <div class="span9">
                     <ul class="media-list" >
                         <li class="media well well-small">
-                            <h4>{{$tender->name}}</h4>
-                            <p>
-                                {{$tender->description}}
-                            </p>
-                        </li>
+                            <h4>پیشنهاد های شرکت {{$contractor->name}} برای مناقصات</h4>
 
-                        <li class="media well well-small">
-                            @if($tender->status == '2')
-                                <h4 style="background: #688aff">مناقصه هنوز شروع نشده است</h4>
-                            @endif
-                            @if($tender->status == '3')
-                                <h4 style="background: #ff5054">مناقصه به پایان رسیده است</h4>
-                            @endif
-
-                            <h4>پیشنهاد ها برای این مناقصه</h4>
-
-                                @if(count($suggestions) != 0)
+                            @if(count($suggestions) != 0)
                                 <table class="table table-bordered">
                                     <thead>
-                                        <tr>
-                                            <th>نام شرکت</th>
-                                            <th>قیمت پیشنهادی</th>
-                                            <th>زمان پیشنهادی</th>
-                                            <th>شرایط</th>
-                                        </tr>
+                                    <tr>
+                                        <th>نام مناقصه</th>
+                                        <th>قیمت پیشنهادی</th>
+                                        <th>زمان پیشنهادی</th>
+                                        <th>شرایط</th>
+                                    </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($suggestions as $suggestion)
-                                        <tr>
-                                            <td><a href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                    @foreach($suggestions as $suggestion)
+                                        <tr style="background: @if($suggestion->tender->status == '1')
+                                                #5eff5a
+                                        @endif
+                                        @if($suggestion->tender->status == '3')
+                                                #ff5054
+                                        @endif
+                                        @if($suggestion->tender->status == '2')
+                                                #688aff
+                                        @endif">
+                                            <td><a href="{{route('tender.show',$suggestion->tender_id)}}">{{$suggestion->tender->name}}</a></td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
                                             <td>{{$suggestion->condition}}</td>
                                         </tr>
-                                        @endforeach
+                                    @endforeach
                                     </tbody>
                                 </table>
-                                @else
+                            @else
                                 <p>هیچ پیشنهادی برای این مناقصه ثبت نشده</p>
-                                @endif
+                            @endif
 
                         </li>
+
+
 
                     </ul>
                 </div>
                 <div class="span3">
                     <ul class="media-list">
                         <li class="media well well-small">
-                            <h4>تاریخ شروع</h4>
+                            <h4>شرکت {{$contractor->name}}</h4>
                             <p>
-                                {{$tender->start_date}}
+                                زمینه فعالیت :
+                                {{$contractor->field}}
                             </p>
-                        </li>
-                        <li class="media well well-small">
-                            <h4>تاریخ پایان</h4>
+
                             <p>
-                                {{$tender->end_date}}
+                                مدیر عامل :
+                                {{$contractor->ceo_name}}
+                            </p>
+                            <p>
+                                شماره تماس :
+                                {{$contractor->phone}}
+                            </p>
+                            <p>
+                                ایمیل :
+                                {{$contractor->email}}
+                            </p>
+                            <p>
+                                شماره ثبت :
+                                {{$contractor->registration_number}}
+                            </p>
+
+                            <p>
+                                شناسه اقتصادی :
+                                {{$contractor->economic_id}}
                             </p>
                         </li>
                     </ul>
