@@ -229,3 +229,35 @@ th.dscribs{
     padding-left: 10px;
     padding-right: 10px;
 }
+.suggestion{
+    display:inline-block;
+    direction: rtl;
+    float: right;
+    margin: 10px;
+    padding:18px;
+    horiz-align: center;
+    width: 100%;
+
+}
+.textarea{
+    width: 60%;
+    padding: 18px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    direction: rtl;
+
+}
+
+input[type=submit]{
+    background: #4CAF50;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: block;
+    color: #f1f1f1;
+    padding: 8px;
+    width: 25%;
+    height: 30px;
+    margin-right: 40px;
+}

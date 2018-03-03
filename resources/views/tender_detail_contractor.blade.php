@@ -15,6 +15,7 @@
     <link href="../resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -99,21 +100,24 @@
                             <form method="post" action="{{route('suggestion')}}">
                                 {{csrf_field()}}
                                 <fieldset @if($tender->status == 2 || $tender->status == 3) disabled @endif>
-                                    <div class="form-inline">
-                                        <label>قیمت پیشنهادی</label>
-                                        <input type="text" name="price" class="form-control" value="{{$suggestion->price or ""}}" required>
-
-                                        <label>زمان پیشنهادی</label>
-                                        <input type="text" name="duration" class="form-control" value="{{$suggestion->duration or ""}}" required>
+                                    <div class="suggestion">
+                                        <div class="form-inline">
+                                            <label for="price">قیمت پیشنهادی</label>
+                                            <input type="text" name="price" value="{{$suggestion->price or ""}}" required/>
+                                         </div>
+                                        <div class="form-inline">
+                                            <label for="duration" >زمان پیشنهادی</label>
+                                            <input type="text" name="duration" value="{{$suggestion->duration or ""}}" required/>
+                                         </div>
+                                        <div class="form-inline">
+                                            <label for="conditions">شرایط</label>
+                                            <textarea class="textarea" name="conditions" required style="background: #f1f1f1">{{$suggestion->conditions or ""}}</textarea>
+                                        </div>
+                                        <div class="form-inline">
+                                            <input class="saggestioninput" type="submit" value="ثبت پیشنهاد">
+                                        </div>
+                                        <input name="tender_id" type="hidden" value="{{$tender->id}}">
                                     </div>
-                                    <div class="form-inline">
-                                        <label>شرایط</label>
-                                        <textarea class="form-control" name="conditions" required>{{$suggestion->conditions or ""}}</textarea>
-                                    </div>
-                                    <div class="form-inline">
-                                        <input class="form-control" type="submit" value="ثبت پیشنهاد">
-                                    </div>
-                                    <input name="tender_id" type="hidden" value="{{$tender->id}}">
                                 </fieldset>
                             </form>
 
