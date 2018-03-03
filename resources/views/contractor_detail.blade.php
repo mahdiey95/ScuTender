@@ -16,6 +16,7 @@
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/admin.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -84,12 +85,12 @@
                             <h4>پیشنهاد های شرکت {{$contractor->name}} برای مناقصات</h4>
 
                             @if(count($suggestions) != 0)
-                                <table class="table table-bordered">
+                                <table class="adminTable">
                                     <thead>
                                     <tr>
                                         <th>نام مناقصه</th>
-                                        <th>قیمت پیشنهادی</th>
-                                        <th>زمان پیشنهادی</th>
+                                        <th>قیمت پیشنهادی(تومان)</th>
+                                        <th>زمان پیشنهادی(روز)</th>
                                         <th>شرایط</th>
                                     </tr>
                                     </thead>
@@ -104,7 +105,7 @@
                                         @if($suggestion->tender->status == '2')
                                                 #688aff
                                         @endif">
-                                            <td><a href="{{route('tender.show',$suggestion->tender_id)}}">{{$suggestion->tender->name}}</a></td>
+                                            <td><a style="color: #0052cc" href="{{route('tender.show',$suggestion->tender_id)}}">{{$suggestion->tender->name}}</a></td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
                                             <td>{{$suggestion->condition}}</td>

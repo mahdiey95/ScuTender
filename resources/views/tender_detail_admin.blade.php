@@ -16,6 +16,7 @@
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/admin.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -98,19 +99,19 @@
                             <h4>پیشنهاد ها برای این مناقصه</h4>
 
                                 @if(count($suggestions) != 0)
-                                <table class="table table-bordered">
+                                <table class="adminTable">
                                     <thead>
                                         <tr>
                                             <th>نام شرکت</th>
-                                            <th>قیمت پیشنهادی</th>
-                                            <th>زمان پیشنهادی</th>
+                                            <th>قیمت پیشنهادی(تومان)</th>
+                                            <th>زمان پیشنهادی(روز)</th>
                                             <th>شرایط</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach($suggestions as $suggestion)
                                         <tr>
-                                            <td><a href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                            <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
                                             <td>{{$suggestion->condition}}</td>
@@ -186,7 +187,7 @@
     </div><!-- /container -->
 </section>
 
-<a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i> Go to top</a>
+<a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i></a>
 <!-- Javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
