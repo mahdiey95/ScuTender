@@ -169,7 +169,6 @@ class TenderController extends Controller
 
         //TODO add validation for suggestion store request
 
-        //TODO delete old suggestion if exists
 
         if(Tender::find($request->tender_id)->status != '1')
             return abort(403);
@@ -186,7 +185,7 @@ class TenderController extends Controller
         ]);
 
         if($suggestion->save())
-            return 'ok';
+            return back()->with('success','پیشنهاد شما برای این مناقصه ثبت شد');
         else
             return abort(500,'couldnt save suggestion');
     }
