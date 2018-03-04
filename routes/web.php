@@ -36,7 +36,8 @@ Route::get('contractor/{name}', [
 ]);
 
 Route::get('news' , function () {
-    return view('blog');
+    redirect('/tender');
+    //return view('blog');
 })->name('news');
 
 Route::get('contact' , function () {
