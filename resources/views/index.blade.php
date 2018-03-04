@@ -20,12 +20,15 @@
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
-<div id="logoSection">
-	<div class="headerimg">
-	<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
-	</div>
-	<div class="headerimg">
-	<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+
+<div id="logoSection" >
+	<div class="container">
+		<div class="division ">
+			<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+		</div>
+		<div class="division">
+			<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+		</div>
 	</div>
 </div>
 
@@ -90,7 +93,9 @@
 <!--Header Ends================================================ -->
 <section id="bodySection">
 	<div id="sectionTwo">
+		<div class="container">
 		@if(Auth::check()) <div> <label class="username" >کاربر:{{Auth::user()->name}}</label></div> @endif
+		</div>
 		<div class="container">
 		<div class="row">
 			<div class="span9">

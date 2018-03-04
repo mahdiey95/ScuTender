@@ -1,9 +1,14 @@
 #logoSection{
     height: 140px;
-    background:#3399ff;
+    background:#6666ff;
     display: inline-block;
     width: 100%;
+}
 
+.division{
+    float: left;
+    width: 40%;
+    margin-left: 10px;
 }
 .headerimg{
     display: inline-block;
@@ -12,10 +17,10 @@
 }
 .logo{
     display:inline-block;
-    margin-right: 0px;
-    margin-left:400px;
-    width: 132px;
+    width: 150px;
     height:132px;
+    alignment: center;
+    /*padding-left: 10%;*/
 }
 .imgicon{
     width: 90px;
@@ -23,9 +28,10 @@
 }
 .flagIR {
     display: inline-block;
-    margin-left: 2%;
-    width: 135px;
+    padding-left: 40px;
+    width: 140px;
     height: 140px;
+    float: left;
 }
 P{
     direction: rtl;
@@ -49,9 +55,9 @@ P{
     font-size: 18px;
     text-align: right;
     direction: rtl;
-    margin-right: 12px;
     width: 100%;
     display: block;
-    margin-right:50px;
+    margin-right:20px;
     float: right;
+    padding-bottom: 10px;
 }

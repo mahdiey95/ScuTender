@@ -19,10 +19,16 @@
     <style type="text/css" id="enject"></style>
 </head>
 <body>
-<section id="logoSection">
-    <img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
-    <img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
-</section>
+<div id="logoSection" >
+    <div class="container">
+        <div class="division ">
+            <img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+        </div>
+        <div class="division">
+            <img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+        </div>
+    </div>
+</div>
 
 {{--<section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">--}}
 {{--<div class="container" >--}}

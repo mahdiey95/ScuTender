@@ -17,6 +17,16 @@
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
+<div id="logoSection" >
+	<div class="container">
+		<div class="division ">
+			<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+		</div>
+		<div class="division">
+			<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
+		</div>
+	</div>
+</div>
 <section id="headerSection">
 	<div class="container">
 		<div class="navbar">
