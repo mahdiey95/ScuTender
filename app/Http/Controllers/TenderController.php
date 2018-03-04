@@ -8,6 +8,7 @@ use App\Tender;
 use App\Suggestion;
 use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
+use Morilog\Jalali\jDate;
 
 class TenderController extends Controller
 {
@@ -41,7 +42,11 @@ class TenderController extends Controller
         if($user->role != 'ADMIN')
             return abort(403);
 
-        return view('NewTender'); //TODO create add tender view
+
+        $date = jDate::forge('now')->format('date');
+
+
+        return view('NewTender',['date' => $date]); //TODO create add tender view
     }
 
     /**
@@ -61,8 +66,8 @@ class TenderController extends Controller
             'name' => 'required',
             'field' => 'required',
             'description' => 'required',
-            'startDate' => 'required',
-            'endDate' => 'required'
+            'start_date' => 'required',
+            'end_date' => 'required'
         ]);
 
 
@@ -70,8 +75,8 @@ class TenderController extends Controller
             'name' => $request->name,
             'field' => $request->field,
             'description' => $request->description,
-            'start_date' => '1396-11-2',
-            'end_date' => '1396-12-3',
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'price' => 100
         ]);
 

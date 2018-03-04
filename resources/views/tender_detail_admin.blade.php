@@ -128,7 +128,7 @@
                                             <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
-                                            <td>{{$suggestion->condition}}</td>
+                                            <td>{{$suggestion->conditions}}</td>
                                         </tr>
                                         @endforeach
                                     </tbody>

@@ -12,11 +12,15 @@
     <![endif]-->
     <link id="callCss" rel="stylesheet" href="../resources/assets/themes/current/bootstrap.min.css" type="text/css" media="screen"/>
     <link href="../resources/assets/themes/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    {{--<link rel="stylesheet" href="../resources/assets/themes/css/bootstrap-theme.min.css" />--}}
+    <link href="../resources/assets/themes/css/jquery.Bootstrap-PersianDateTimePicker.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
+
     <style type="text/css" id="enject"></style>
+
 </head>
 <body>
 <div id="logoSection" >
@@ -113,24 +117,34 @@
 
                     {{--<div class="form-row form-inline">--}}
                         <tr>
-                            <td> <label class="control-label tablelable" for="startDate">تاریخ شروع</label></td>
-                            <td> <input type="date" name="startDate" class="form-control tableinput select" dir="rtl" required></td>
+                            <td> <label class="control-label tablelable" for="start_date">تاریخ شروع</label></td>
+                            <td> <input type="text" name="start_date" class="form-control" id="fromDate1" placeholder="از تاریخ"
+                                        data-mddatetimepicker="true" data-trigger="click" data-targetselector="#fromDate1"
+                                        data-groupid="group1" data-fromdate="true" data-enabletimepicker="false"
+                                        data-placement="right" data-disablebeforetoday="true"/></td>
                         </tr>
                     {{--</div>--}}
                         <tr>
-                            <td><label class="control-label tablelable" for="endDate">تاریخ پایان</label></td>
-                            <td><input type="date" name="endDate" class="form-control tableinput select"  dir="rtl" required></td>
+                            <td><label class="control-label tablelable" for="end_date">تاریخ پایان</label></td>
+                            <td><input type="text" name="end_date" class="form-control" id="toDate1" placeholder="تا تاریخ"
+                                       data-mddatetimepicker="true" data-trigger="click" data-targetselector="#toDate1"
+                                       data-groupid="group1" data-todate="true" data-enabletimepicker="false"
+                                       data-placement="right"/></td>
                         </tr>
                     {{--<div class="form-row form-inline">--}}
 
 
                     {{--</div>--}}
                     </table>
+
+
+
                     <button type="submit" class="tblbutton">ثبت</button>
 
                 </form>
 
             </div>
+
         </div>
     </div>
 </section>
@@ -244,64 +258,14 @@
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-    <script src="../resources/assets/themes/js/jquery-1.8.3.min.js"></script>
+    <script src="../resources/assets/themes/js/jquery-3.1.0.min.js"></script>
     <script src="../resources/assets/themes/js/bootstrap.min.js"></script>
-    <script src="../resources/assets/themes/js/bootstrap-tooltip.js"></script>
-    <script src="../resources/assets/themes/js/bootstrap-popover.js"></script>
+    {{--<script src="../resources/assets/themes/js/bootstrap-tooltip.js"></script>--}}
+    {{--<script src="../resources/assets/themes/js/bootstrap-popover.js"></script>--}}
     <script src="../resources/assets/themes/js/business_ltd_1.0.js"></script>
-    <!-- Themes switcher section ============================================================================================= -->
-    <div id="secectionBox">
-        <link rel="stylesheet" href="../resources/assets/themes/switch/themeswitch.css" type="text/css" media="screen" />
-        <script src="../resources/assets/themes/switch/theamswitcher.js" type="text/javascript" charset="utf-8"></script>
-        <div id="themeContainer">
-            <div id="hideme" class="themeTitle">Style Selector</div>
-            <div class="themeName">Oregional Skin</div>
-            <div class="images style">
-                <a href="../resources/assets/themes/css/#" name="current"><img src="../resources/assets/themes/switch/images/clr/current.png" alt="bootstrap business templates" class="active"></a>
-            </div>
-            <div class="themeName">Bootswatch Skins (11)</div>
-            <div class="images style">
-                <a href="../resources/assets/themes/css/#" name="amelia" title="Amelia"><img src="../resources/assets/themes/switch/images/clr/amelia.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="spruce" title="Spruce"><img src="../resources/assets/themes/switch/images/clr/spruce.png" alt="bootstrap business templates" ></a>
-                <a href="../resources/assets/themes/css/#" name="superhero" title="Superhero"><img src="../resources/assets/themes/switch/images/clr/superhero.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="cyborg"><img src="../resources/assets/themes/switch/images/clr/cyborg.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="cerulean"><img src="../resources/assets/themes/switch/images/clr/cerulean.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="journal"><img src="../resources/assets/themes/switch/images/clr/journal.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="readable"><img src="../resources/assets/themes/switch/images/clr/readable.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="simplex"><img src="../resources/assets/themes/switch/images/clr/simplex.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="slate"><img src="../resources/assets/themes/switch/images/clr/slate.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="spacelab"><img src="../resources/assets/themes/switch/images/clr/spacelab.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="united"><img src="../resources/assets/themes/switch/images/clr/united.png" alt="bootstrap business templates"></a>
-                <p style="margin:0;line-height:normal;margin-left:-10px;display:none;"><small>These are just examples and you can build your own color scheme in the backend.</small></p>
-            </div>
-            <div class="themeName">Background Patterns </div>
-            <div class="images patterns">
-                <a href="../resources/assets/themes/css/#" name="pattern1"><img src="../resources/assets/themes/switch/images/pattern/pattern1.png" alt="bootstrap business templates" class="active"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern2"><img src="../resources/assets/themes/switch/images/pattern/pattern2.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern3"><img src="../resources/assets/themes/switch/images/pattern/pattern3.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern4"><img src="../resources/assets/themes/switch/images/pattern/pattern4.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern5"><img src="../resources/assets/themes/switch/images/pattern/pattern5.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern6"><img src="../resources/assets/themes/switch/images/pattern/pattern6.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern7"><img src="../resources/assets/themes/switch/images/pattern/pattern7.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern8"><img src="../resources/assets/themes/switch/images/pattern/pattern8.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern9"><img src="../resources/assets/themes/switch/images/pattern/pattern9.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern10"><img src="../resources/assets/themes/switch/images/pattern/pattern10.png" alt="bootstrap business templates"></a>
 
-                <a href="../resources/assets/themes/css/#" name="pattern11"><img src="../resources/assets/themes/switch/images/pattern/pattern11.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern12"><img src="../resources/assets/themes/switch/images/pattern/pattern12.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern13"><img src="../resources/assets/themes/switch/images/pattern/pattern13.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern14"><img src="../resources/assets/themes/switch/images/pattern/pattern14.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern15"><img src="../resources/assets/themes/switch/images/pattern/pattern15.png" alt="bootstrap business templates"></a>
+    <script src="../resources/assets/themes/js/MdBootstrapPersianDateTimePicker/jalaali.js" type="text/javascript"></script>
+    <script src="../resources/assets/themes/js/MdBootstrapPersianDateTimePicker/jquery.Bootstrap-PersianDateTimePicker.js" type="text/javascript"></script>
 
-                <a href="../resources/assets/themes/css/#" name="pattern16"><img src="../resources/assets/themes/switch/images/pattern/pattern16.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern17"><img src="../resources/assets/themes/switch/images/pattern/pattern17.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern18"><img src="../resources/assets/themes/switch/images/pattern/pattern18.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern19"><img src="../resources/assets/themes/switch/images/pattern/pattern19.png" alt="bootstrap business templates"></a>
-                <a href="../resources/assets/themes/css/#" name="pattern20"><img src="../resources/assets/themes/switch/images/pattern/pattern20.png" alt="bootstrap business templates"></a>
-
-            </div>
-        </div>
-    </div>
-    <span id="themesBtn"></span>
 </body>
 </html>
