@@ -36,10 +36,14 @@ Route::get('contractor/{name}', [
 ]);
 
 Route::get('news' , function () {
-    redirect('/tender');
+    return redirect('/tender');
     //return view('blog');
 })->name('news');
 
 Route::get('contact' , function () {
     return view('contact');
 })->name('contact');
+
+Route::post('search', [
+    'as' => 'tender.search', 'uses' => 'TenderController@searchTenders'
+]);

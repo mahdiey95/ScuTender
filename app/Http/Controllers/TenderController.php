@@ -161,7 +161,12 @@ class TenderController extends Controller
      */
     public function destroy($id)
     {
-        //
+        if(Auth::user()->role != 'ADMIN')
+            return abort(403);
+
+        Tender::find($id)->delete();
+        Suggestion::where('tender_id','=',$id)->delete();
+        return redirect(route('tender.index'));
     }
 
 
@@ -215,6 +220,14 @@ class TenderController extends Controller
         return view('contractor_detail',[
             'contractor' => $contractor,
             'suggestions' => $suggestions]);
+
+    }
+
+    public function searchTenders(Request $request) {
+        $tenders = Tender::where('name','LIKE','%'.$request->search_name.'%')->
+            where('field','LIKE','%'.$request->search_field.'%')->get();
+
+        return view('index',['tenders'=>$tenders]);
 
     }
 }

@@ -113,7 +113,7 @@
                             <h4>پیشنهاد ها برای این مناقصه</h4>
 
                                 @if(count($suggestions) != 0)
-                                <table class="adminTable">
+                                <table class="adminTable mytable">
                                     <thead>
                                         <tr>
                                             <th>نام شرکت</th>
@@ -139,6 +139,16 @@
 
                         </li>
 
+
+                        @if($tender->status != '1')
+                        <li>
+                            <form action="{{route('tender.destroy',$tender->id)}}" method="post">
+                                {{csrf_field()}}
+                                {{ method_field('DELETE') }}
+                                <button type="submit" class="btn-danger tblbutton">حذف مناقصه</button>
+                            </form>
+                        </li>
+                        @endif
                     </ul>
                 </div>
                 <div class="span3">

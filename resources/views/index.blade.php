@@ -99,10 +99,17 @@
 		<div class="container">
 		<div class="row">
 			<div class="span9">
-			<form class="well form-inline">
-			  جستو جو بر اساس عنوان <input type="text" class="span2" placeholder="مثال:تعمیر ساختمان">
-			  زمینه کاری<select class="span2"><option>همه زمینه ها</option><option>عمرانی</option><option>Popular</option><option>Coming Soon</option></select>
-			  <button type="submit" class="btn btn-warning">جست و جو</button>
+			<form class="well form-inline" style="direction: rtl" action="{{route('tender.search')}}" method="post">
+				{{csrf_field()}}
+				<label for="search_name">جستو جو بر اساس عنوان</label>
+			    <input type="text" name="search_name" id="search_name" class="span2" placeholder="مثال:تعمیر ساختمان">
+				<label for="search_field">زمینه کاری</label>
+			  	<select name="search_field" id="search_field" class="span2">
+					<option value="">همه زمینه ها</option>
+					<option value="CONSTRUCTION">عمرانی</option>
+					<option value="COMPUTER">کامپیوتر</option>
+				</select>
+			  	<button type="submit" class="btn btn-warning">جست و جو</button>
 			</form>
 			<div class="row">
 			<div class="span9">
@@ -118,6 +125,10 @@
                         <div class="tab-content label-primary">
                             <div class="tab-pane active" id="all">
                                 <ul class="thumbnails">
+
+									@if(count($tenders) == 0)
+									<h3>هیچ مناقصه ای یافت نشد</h3>
+									@endif
 
 									@foreach($tenders as $tender)
                                     <li class="span3">
@@ -180,7 +191,7 @@
 	<div class="span3">
 			<h4>ارتباط با ما</h4>
 			<address style="margin-bottom:15px;">
-			<strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+			<strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </strong><br>
 			</address>
 
 			<a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>

@@ -99,7 +99,7 @@
                             <h4>پیشنهاد های شرکت {{$contractor->name}} برای مناقصات</h4>
 
                             @if(count($suggestions) != 0)
-                                <table class="adminTable">
+                                <table class="adminTable mytable">
                                     <thead>
                                     <tr>
                                         <th>نام مناقصه</th>
