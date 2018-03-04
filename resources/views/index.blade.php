@@ -20,10 +20,14 @@
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
-<section id="logoSection">
+<div id="logoSection">
+	<div class="headerimg">
 	<img src=".\resources\assets\themes\images\logo\Iranian-flag.jpg" class="flagIR">
+	</div>
+	<div class="headerimg">
 	<img class="logo" src=".\resources\assets\themes\images\logo\logo.png" >
-</section>
+	</div>
+</div>
 
 	{{--<section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/portfolio.png) no-repeat center center #000;">--}}
 		{{--<div class="container" >--}}
@@ -144,7 +148,7 @@
                         <h4>راهنما </h4>
                         <p style="direction:rtl">
                             به سامانه مناقصات دانشگاه شهید چمران اهواز خوش آمدید.
-                            برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.در این سایت مناقصات جدید به رنگ سبز مناقصات در حال برگزاری به رنگ آبی و مناقصات به پایان رسیده با رنگ قرمز مشخص شده اند.با تشکر
+                            برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.در این سایت مناقصات جدید به رنگ آبی مناقصات در حال برگزاری به رنگ سبز و مناقصات به پایان رسیده با رنگ قرمز مشخص شده اند.با تشکر
                         </p>
                     </li>
                 </ul>

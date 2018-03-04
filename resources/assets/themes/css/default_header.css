@@ -1,7 +1,14 @@
 #logoSection{
     height: 140px;
     background:#3399ff;
+    display: inline-block;
+    width: 100%;
 
+}
+.headerimg{
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
 }
 .logo{
     display:inline-block;
