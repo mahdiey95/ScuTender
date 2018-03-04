@@ -191,96 +191,17 @@
     <div class="container">
         <footer class="footer well well-small">
             <div class="row-fluid">
-                {{--<div class="span4">--}}
-                {{--<h4>Newsletter and Subscription</h4>--}}
-                {{--<h5>Our aim</h5>--}}
-                {{--<em>--}}
-                {{--"To provide affordable web design and development services for different devices is our aim,--}}
-                {{--that fully meet your requirements." <br/><br/>--}}
-                {{--</em>--}}
-                {{--<h5>What our client say?</h5>--}}
-                {{--<em>--}}
-                {{--" I can confirm, bougth the theme a couple of days afo and it is really fantastic. Very flexible, very good support. I really like it."--}}
-                {{--</em>--}}
-                {{--<br/><br/>--}}
-                {{--<h5>Subscription</h5>--}}
-                {{--<form>--}}
-                {{--<div class="input-append">--}}
-                {{--<input id="appendedInputButton"  placeholder="Enter your e-mail" type="text">--}}
-                {{--<button class="btn btn-warning" type="button">send </button>--}}
-                {{--</div>--}}
-                {{--</form>--}}
-                {{--</div>--}}
-                {{--<div class="span5">--}}
-                {{--<h4>Latest news</h4>--}}
-                {{--<ul class="media-list">--}}
-                {{--<li class="media">--}}
-                {{--<a class="pull-left" href="blog_details.blade.php">--}}
-                {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
-                {{--</a>--}}
-                {{--<div class="media-body">--}}
-                {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
-                {{--"To provide affordable web design and..."<br/>--}}
-                {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li class="media">--}}
-                {{--<a class="pull-left" href="blog_details.blade.php">--}}
-                {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
-                {{--</a>--}}
-                {{--<div class="media-body">--}}
-                {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
-                {{--"To provide affordable web design and..."<br/>--}}
-                {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li class="media">--}}
-                {{--<a class="pull-left" href="blog_details.blade.php">--}}
-                {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
-                {{--</a>--}}
-                {{--<div class="media-body">--}}
-                {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
-                {{--"To provide affordable web design and..."<br/>--}}
-                {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--<li class="media">--}}
-                {{--<a class="pull-left" href="blog_details.blade.php">--}}
-                {{--<img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">--}}
-                {{--</a>--}}
-                {{--<div class="media-body">--}}
-                {{--<h5 class="media-heading">Why our customers satisfied?</h5>--}}
-                {{--"To provide affordable web design and..."<br/>--}}
-                {{--<small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>--}}
-                {{--</div>--}}
-                {{--</li>--}}
-                {{--</ul>--}}
-                {{--</div>--}}
-
                 <div class="span3">
                     <h4>ارتباط با ما</h4>
                     <address style="margin-bottom:15px;">
-                        <strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
                     </address>
-                    {{--Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>--}}
-                    {{--Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>--}}
-                    {{--Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>--}}
-                    {{--<h5>Quick Links</h5>--}}
-                    <a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
-                    {{--<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>--}}
-                    {{--<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>--}}
 
-                    {{--<h5>Find us on</h5>--}}
-                    {{--<div style="font-size:2.5em;">--}}
-                    {{--<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>--}}
-                    {{--<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>--}}
-                    {{--<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>--}}
-                    {{--<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>--}}
-                    {{--<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>--}}
-                    {{--</div>--}}
+                    <a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
+
                 </div>
             </div>
-            {{--<p style="padding:18px 0 44px">&copy; 2018, allright reserved </p>--}}
+
         </footer>
     </div><!-- /container -->
 </section>

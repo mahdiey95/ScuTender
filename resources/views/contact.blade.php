@@ -14,6 +14,8 @@
 	<link href="./resources/assets/themes/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/font-awesome.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
+	<link href="./resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
+	{{--<link href="./resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">--}}
 	<style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -32,38 +34,52 @@
 		<div class="navbar">
 			<div class="container">
 				<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 				</button>
-				<h1><a class="brand" href="indexx.blade.php"> Business <small>  Ltd.</small></a></h1>
+
+				<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سامانه مناقصات</small></a></h1>
+
 				<div class="nav-collapse collapse">
+
 					<ul class="nav pull-right">
-						<li class=""><a href="indexx.blade.php">Home	</a></li>
-						<li class=""><a href="services.blade.php">What we do?</a></li>
-						<li class=""><a href="about_us.blade.php">Who we are?</a></li>
-						<li class=""><a href="index.blade.php">Portfolio</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="elements.blade.php">Page Elements</a></li>
-								<li><a href="comingsoon.blade.php">Coming soon page</a></li>
-							</ul>
-						</li>
-						<li class=""><a href="blog.blade.php">Blog</a></li>
-						<li class="active"><a href="contact.blade.php">Support</a></li>
+
+						@if(Auth::check())
+							<form id="logout" action="{{route('logout')}}" method="post" >
+								{{csrf_field()}}
+							</form>
+
+							<li class="">
+								<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
+							</li>
+							@if(Auth::user()->role == 'ADMIN')
+								<li class=""><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+							@endif
+						@else
+							<li class=""><a href="{{route('login')}}">ورود</a></li>
+							<li class=""><a href="{{route('register')}}"> ثبت نام</a></li>
+						@endif
+
+						<li class=""><a href="{{route('news')}}">اخبار</a></li>
+						<li class=""><a href="{{route('contact')}}">تماس با ما</a></li>
+
+						<li class="active"><a href="{{route('tender.index')}}">خانه</a></li>
+
 					</ul>
+
 				</div>
+
 			</div>
 		</div>
 	</div>
 </section>
 <!--Header Ends================================================ -->
-<section id="mapSection"> 
-<div id="myMap" style="height:400px">
-<!-- please edit in (js code which is available in the foote section) longitude and longitude of your location  -->
-</div>	
-</section>
+{{--<section id="mapSection"> --}}
+{{--<div id="myMap" style="height:400px">--}}
+{{--<!-- please edit in (js code which is available in the foote section) longitude and longitude of your location  -->--}}
+{{--</div>	--}}
+{{--</section>--}}
 <!-- Page banner -->
 <!--
 <section id="bannerSection" style="background:url(./resources/assets/themes/images/banner/contact.png) no-repeat center center #000;">
@@ -84,39 +100,31 @@
 	<div class="container">					
 	<div class="row">
 			<div class="span4">
-			<h3>  Mailing Address </h3>	
-				2601 Mission St.<br/>
-				San Francisco, CA 94110<br/><br/>
-				info@mysite.com<br/>
-				﻿Tel 123-456-6780<br/>
-				Fax 123-456-5679<br/>
+			<h3>  آدرس پستی </h3>
+				اهواز,بلوار گلستان<br/>
+				دانشگاه شهید چمران اهواز<br/><br/>
+				Oisc@scu.ac.ir<br/>
+				تلفن:33330011 الی 33330019<br/>
+				نمابر: 2044 3333<br/>
 			</div>
+
 			<div class="span4">
-					<h3> Opening Hours</h3>
-					<h4> Monday - Friday</h4>
-					09:00am - 09:00pm<br/><br/>
-					<h4>Saturday</h4>
-					09:00am - 07:00pm<br/><br/>
-					<h4>Sunday</h4>
-					12:30pm - 06:00pm<br/><br/>
-			</div>
-			<div class="span4">
-				<h3>  Email Us</h3>
+				<h3>  با ما در تماس باشید</h3>
 				<form class="form-horizontal">
 				<fieldset>
 				  <div class="control-group">
 				   
-					  <input type="text" placeholder="name" class="input-xlarge"/>
+					  <input type="text" placeholder="نام" class="input-xlarge"/>
 				   
 				  </div>
 				   <div class="control-group">
 				   
-					  <input type="text" placeholder="email" class="input-xlarge"/>
+					  <input type="text" placeholder="ایمیل" class="input-xlarge"/>
 				   
 				  </div>
 				   <div class="control-group">
 				   
-					  <input type="text" placeholder="subject" class="input-xlarge"/>
+					  <input type="text" placeholder="موضوع" class="input-xlarge"/>
 				  
 				  </div>
 				  <div class="control-group">
@@ -124,7 +132,7 @@
 				   
 				  </div>
 
-					<button class="btn btn-large" type="submit"> <i class="icon-envelope"></i> Send Message</button>
+					<button class="btn btn-large" type="submit"> <i class="icon-envelope"></i> ارسال پیام</button>
 
 				</fieldset>
 			  </form>
@@ -136,104 +144,21 @@
  <!-- Footer
   ================================================== -->
 <section id="footerSection">
-<div class="container">
-    <footer class="footer well well-small">
-	<div class="row-fluid">
-	<div class="span4">
-			<h4>Newsletter and Subscription</h4>
-			<h5>Our aim</h5>
-			<em>
-			"To provide affordable web design and development services for different devices is our aim, 
-			that fully meet your requirements." <br/><br/>
-			</em>
-			<h5>What our client say?</h5>
-			<em>
-			" I can confirm, bougth the theme a couple of days afo and it is really fantastic. Very flexible, very good support. I really like it."
-			</em>
-			<br/><br/>
-			<h5>Subscription</h5>
-			<form>
-			<div class="input-append">
-			  <input id="appendedInputButton"  placeholder="Enter your e-mail" type="text">
-			  <button class="btn btn-warning" type="button">send </button>
-			</div>
-			</form>
-		</div>
-		<div class="span5">
-		<h4>Latest news</h4>
-		<ul class="media-list">
-		  <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		   <li class="media">
-			<a class="pull-left" href="blog_details.blade.php">
-			  <img class="media-object" src="./resources/assets/themes/images/img64x64.png" alt="bootstrap business template">
-			</a>
-			<div class="media-body">
-			  <h5 class="media-heading">Why our customers satisfied?</h5>
-			  "To provide affordable web design and..."<br/>
-			  <small><em>November 14, 2012</em> <a href="blog_details.blade.php"> More</a></small>
-			</div>
-		  </li>
-		</ul>
-		</div>
-	
-	<div class="span3">
-			<h4>Visit us</h4>
-			<address style="margin-bottom:15px;">
-			<strong><a href="indexx.blade.php" title="business"><i class=" icon-home"></i> Business (p.) Ltd. </a></strong><br>
-				194, Vectoria Street, Newwork <br>
-				nw 488, USA<br>
-			</address>
-			Phone: <i class="icon-phone-sign"></i> &nbsp; 00123 456 000 789 <br>
-			Email: <a href="contact.blade.php" title="contact"><i class="icon-envelope-alt"></i> info@companyltd.com</a><br/>
-			Link: <a href="indexx.blade.php" title="Business ltd"><i class="icon-globe"></i> www.businessltd.com</a><br/><br/>
-			<h5>Quick Links</h5>	
-			<a href="services.blade.php" title="services"><i class="icon-cogs"></i> Services </a><br/>
-			<a href="about.html" title=""><i class="icon-info-sign"></i> About us </a><br/>
-			<a href="index.blade.php" title="portfolio"><i class="icon-question-sign"></i> Portfolio </a><br/>
+	<div class="container">
+		<footer class="footer well well-small">
+			<div class="row-fluid">
+				<div class="span3">
+					<h4>ارتباط با ما</h4>
+					<address style="margin-bottom:15px;">
+						<strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+					</address>
 
-	<h5>Find us on</h5>	
-	<div style="font-size:2.5em;">
-		<a href="indexx.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-facebook-sign"> </i> </a>
-		<a href="index.blade.php" title="" style="display:inline-block; width:1em"> <i class="icon-twitter-sign"> </i> </a>
-		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-facetime-video"> </i> </a>
-		<a href="services.blade.php" title="" style="display:inline-block;width:1em"> <i class="icon-google-plus-sign"> </i> </a>
-		<a href="about.html" title="" style="display:inline-block;width:1em" > <i class="icon-rss"> </i> </a>
-	</div>
-	</div>
-    </div>
+					<a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
 
-	<p style="padding:18px 0 44px">&copy; 2012, allright reserved </p>
-	</footer>
-    </div><!-- /container -->
+				</div>
+			</div>
+		</footer>
+	</div><!-- /container -->
 </section>
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i></a>
 <!-- Javascript
