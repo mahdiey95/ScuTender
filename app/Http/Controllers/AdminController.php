@@ -24,6 +24,8 @@ class AdminController extends Controller
 
         $data = $request->validate([
             'name' => 'required|string|max:255',
+            'role' => 'required|string|max:255',
+            'title' => 'required|string|max:255',
             'username' => 'required|string|max:255|unique:users',
             'password' => 'required|string|min:3|confirmed'
         ]);
@@ -31,7 +33,9 @@ class AdminController extends Controller
         $user = new User([
             'name' => $data['name'],
             'username' => $data['username'],
-            'password' => bcrypt($data['password'])
+            'password' => bcrypt($data['password']),
+            'role' => $data['role'],
+            'title' => $data['title']
         ]);
 
         if($user->save())

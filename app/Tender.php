@@ -10,6 +10,6 @@ class Tender extends Model
 
     protected $fillable = [
         'id','name','price','field','description',
-        'start_date','end_date','status'
+        'start_date','end_date','status','winner_suggestion_id'
     ];
 }

@@ -77,7 +77,6 @@ class TenderController extends Controller
             'description' => $request->description,
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
-            'price' => 100
         ]);
 
         if($tender->save())
@@ -102,10 +101,20 @@ class TenderController extends Controller
         if($user->role == 'ADMIN')
         {
             $suggestions = Suggestion::where('tender_id','=',$id)->orderby('price')->get();
+            $accepted_id = 0;
+            foreach($suggestions as $suggestion)
+            {
+                if(str_contains($suggestion->accepting_titles , $user->title))
+                {
+                    $accepted_id = $suggestion->id;
+                    break;
+                }
+            }
 
             return view('tender_detail_admin',[
                 'tender' => $tender,
-                'suggestions' => $suggestions]);
+                'suggestions' => $suggestions,
+                'accepted_id' => $accepted_id]);
         }
 
         else if($user->role == 'CONTRACTOR')
@@ -170,35 +179,7 @@ class TenderController extends Controller
     }
 
 
-    public function storeSuggestion(Request $request)
-    {
-        $user = Auth::user();
-        if($user->role != 'CONTRACTOR')
-            return abort(403);
 
-
-        //TODO add validation for suggestion store request
-
-
-        if(Tender::find($request->tender_id)->status != '1')
-            return abort(403);
-
-        Suggestion::where('contractor_name','=',$user->name)
-            ->where('tender_id','=',$request->tender_id)->delete();
-
-        $suggestion = new Suggestion([
-            'tender_id' => $request->tender_id,
-            'contractor_name' => $user->name,
-            'price' => $request->price,
-            'duration' => $request->duration,
-            'conditions' => $request->conditions
-        ]);
-
-        if($suggestion->save())
-            return back()->with('success','پیشنهاد شما برای این مناقصه ثبت شد');
-        else
-            return abort(500,'couldnt save suggestion');
-    }
 
     public function showContractor($name) {
 

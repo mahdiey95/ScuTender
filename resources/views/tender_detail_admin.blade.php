@@ -117,7 +117,9 @@
                             <h4>پیشنهاد ها برای این مناقصه</h4>
 
                                 @if(count($suggestions) != 0)
-                                <table class="adminTable mytable">
+
+                                    @if($tender->status == 1 || $tender->status == 2)
+                                        <table class="adminTable mytable">
                                     <thead>
                                         <tr>
                                             <th>نام شرکت</th>
@@ -137,6 +139,71 @@
                                         @endforeach
                                     </tbody>
                                 </table>
+                                    @elseif($tender->status == 3)
+                                        <table class="adminTable mytable">
+                                            <thead>
+                                            <tr>
+                                                <th>نام شرکت</th>
+                                                <th>قیمت پیشنهادی(تومان)</th>
+                                                <th>زمان پیشنهادی(روز)</th>
+                                                <th>شرایط</th>
+                                                <th>کاربرانی که موافقت کردند</th>
+                                                <th>موافقت</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($suggestions as $suggestion)
+                                                <tr>
+                                                    <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                                    <td>{{$suggestion->price}}</td>
+                                                    <td>{{$suggestion->duration}}</td>
+                                                    <td>{{$suggestion->conditions}}</td>
+                                                    <td>
+                                                        @if($suggestion->accepting_titles != "")
+                                                            <br/>
+                                                            @foreach(explode('%',$suggestion->accepting_titles) as $title)
+                                                                {{$title}}
+                                                                <br/>
+                                                            @endforeach
+                                                        @endif
+                                                    </td>
+                                                    @if($suggestion->id == $accepted_id)
+                                                    <td><a style="color: #0052cc;" href="{{route('suggestion.accept',$suggestion->id)}}">لغو پذیرش</a></td>
+                                                    @else
+                                                    <td><a style="color: #0052cc;" href="{{route('suggestion.accept',$suggestion->id)}}">پذیرش پیشنهاد</a></td>
+                                                    @endif
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    @elseif($tender->status == 4)
+                                        <table class="adminTable mytable">
+                                            <thead>
+                                            <tr>
+                                                <th>نام شرکت</th>
+                                                <th>قیمت پیشنهادی(تومان)</th>
+                                                <th>زمان پیشنهادی(روز)</th>
+                                                <th>شرایط</th>
+                                                <th>وضعیت</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            @foreach($suggestions as $suggestion)
+                                                <tr class="@if($suggestion->id == $tender->winner_suggestion_id) tender_ongoing @endif">
+                                                    <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                                    <td>{{$suggestion->price}}</td>
+                                                    <td>{{$suggestion->duration}}</td>
+                                                    <td>{{$suggestion->conditions}}</td>
+                                                    @if($suggestion->id == $tender->winner_suggestion_id)
+                                                    <td>برنده مناقصه</td>
+                                                    @else
+                                                    <td></td>
+                                                    @endif
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                    @endif
                                 @else
                                 <p>هیچ پیشنهادی برای این مناقصه ثبت نشده</p>
                                 @endif
