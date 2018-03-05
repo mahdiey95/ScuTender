@@ -16,6 +16,7 @@
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/tender_status.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -103,44 +104,50 @@
 
                         <li class="media well well-small">
                             @if($tender->status == '2')
-                                <h4 style="background: #688aff">مناقصه هنوز شروع نشده است</h4>
+                                <h4 class="tender_new">مناقصه هنوز شروع نشده است</h4>
                             @endif
                             @if($tender->status == '3')
-                                <h4 style="background: #ff5054">مناقصه به پایان رسیده است</h4>
+                                <h4 class="tender_deciding">مناقصه به پایان رسیده و در مرحله تصمیم گیری است</h4>
+                            @endif
+                            @if($tender->status == '4')
+                                <h4 class="tender_done">مناقصه به پایان رسیده است</h4>
                             @endif
 
-                            <h4>پیشنهاد شما برای این مناقصه</h4>
-
-                            <form method="post" action="{{route('suggestion')}}">
-                                {{csrf_field()}}
-                                <fieldset @if($tender->status == 2 || $tender->status == 3) disabled @endif>
-                                    <div class="suggestion">
-                                        <div class="form-inline">
-                                            <label for="price">قیمت پیشنهادی</label>
-                                            <input type="text" name="price" value="{{$suggestion->price or ""}}" required/>
-                                         </div>
-                                        <div class="form-inline">
-                                            <label for="duration" >زمان پیشنهادی</label>
-                                            <input type="text" name="duration" value="{{$suggestion->duration or ""}}" required/>
-                                         </div>
-                                        <div class="form-inline">
-                                            <label for="conditions">شرایط</label>
-                                            <textarea class="textarea" name="conditions" required style="background: #f1f1f1">{{$suggestion->conditions or ""}}</textarea>
+                            @if($tender->status != '4')
+                                <h4>پیشنهاد شما برای این مناقصه</h4>
+                                <form method="post" action="{{route('suggestion')}}">
+                                    {{csrf_field()}}
+                                    <fieldset @if($tender->status == 2 || $tender->status == 3) disabled @endif>
+                                        <div class="suggestion">
+                                            <div class="form-inline">
+                                                <label for="price">قیمت پیشنهادی</label>
+                                                <input type="text" name="price" value="{{$suggestion->price or ""}}" required/>
+                                             </div>
+                                            <div class="form-inline">
+                                                <label for="duration" >زمان پیشنهادی</label>
+                                                <input type="text" name="duration" value="{{$suggestion->duration or ""}}" required/>
+                                             </div>
+                                            <div class="form-inline">
+                                                <label for="conditions">شرایط</label>
+                                                <textarea class="textarea" name="conditions" required style="background: #f1f1f1">{{$suggestion->conditions or ""}}</textarea>
+                                            </div>
+                                            <div class="form-inline">
+                                                <input class="saggestioninput" type="submit" value="ثبت پیشنهاد">
+                                            </div>
+                                            <input name="tender_id" type="hidden" value="{{$tender->id}}">
                                         </div>
-                                        <div class="form-inline">
-                                            <input class="saggestioninput" type="submit" value="ثبت پیشنهاد">
+                                    </fieldset>
+                                </form>
+                                @if (session('success'))
+                                    <div class="flash-message">
+                                        <div class="alert alert-success">
+                                            {{session('success')}}
                                         </div>
-                                        <input name="tender_id" type="hidden" value="{{$tender->id}}">
                                     </div>
-                                </fieldset>
-                            </form>
-
-                            @if (session('success'))
-                                <div class="flash-message">
-                                    <div class="alert alert-success">
-                                        {{session('success')}}
-                                    </div>
-                                </div>
+                                @endif
+                            @else
+                                <h4>برنده مناقصه</h4>
+                                <p>شرکت فلان</p>
                             @endif
 
                         </li>

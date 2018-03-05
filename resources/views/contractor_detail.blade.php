@@ -17,6 +17,7 @@
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/admin.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/tender_status.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -110,15 +111,15 @@
                                     </thead>
                                     <tbody>
                                     @foreach($suggestions as $suggestion)
-                                        <tr style="background: @if($suggestion->tender->status == '1')
-                                                #5eff5a
-                                        @endif
-                                        @if($suggestion->tender->status == '3')
-                                                #ff5054
-                                        @endif
-                                        @if($suggestion->tender->status == '2')
-                                                #688aff
-                                        @endif">
+                                        <tr class=" @if($suggestion->tender->status == '1')
+                                                        tender_ongoing
+                                                    @endif
+                                                    @if($suggestion->tender->status == '3')
+                                                        tender_deciding
+                                                    @endif
+                                                    @if($suggestion->tender->status == '4')
+                                                        tender_done
+                                                    @endif">
                                             <td><a style="color: #0052cc" href="{{route('tender.show',$suggestion->tender_id)}}">{{$suggestion->tender->name}}</a></td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>

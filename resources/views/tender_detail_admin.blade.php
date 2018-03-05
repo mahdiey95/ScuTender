@@ -17,6 +17,7 @@
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/admin.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/tender_status.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
 <body>
@@ -103,11 +104,14 @@
                         </li>
 
                         <li class="media well well-small">
-                            @if($tender->status == '2')
-                                <h4 style="background: #688aff">مناقصه هنوز شروع نشده است</h4>
+                            @if($tender->status == 2)
+                                <h4 class="tender_new">مناقصه هنوز شروع نشده است</h4>
                             @endif
-                            @if($tender->status == '3')
-                                <h4 style="background: #ff5054">مناقصه به پایان رسیده است</h4>
+                            @if($tender->status == 3)
+                                <h4 class="tender_deciding">مناقصه به پایان رسیده و در مرحله تصمیم گیری است</h4>
+                            @endif
+                            @if($tender->status == 4)
+                                <h4 class="tender_done">مناقصه به پایان رسیده است</h4>
                             @endif
 
                             <h4>پیشنهاد ها برای این مناقصه</h4>
@@ -140,7 +144,8 @@
                         </li>
 
 
-                        @if($tender->status != '1')
+                        @if($tender->status == 2 || $tender->status == 4
+                        || ($tender->status == 3 && count($suggestions) == 0))
                         <li>
                             <form action="{{route('tender.destroy',$tender->id)}}" method="post">
                                 {{csrf_field()}}
@@ -185,7 +190,7 @@
                 <div class="span3">
                     <h4>ارتباط با ما</h4>
                     <address style="margin-bottom:15px;">
-                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </strong><br>
                     </address>
 
                     <a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>

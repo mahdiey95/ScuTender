@@ -16,6 +16,7 @@
 	<link href="./resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
 	<link href="./resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
 	{{--<link href="./resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">--}}
+	<link href="./resources/assets/themes/css/tender_status.css" rel="stylesheet" type="text/css">
 
 	<style type="text/css" id="enject"></style>
 </head>
@@ -71,6 +72,10 @@
 								</li>
 								@if(Auth::user()->role == 'ADMIN')
 									<li class=""><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+								@endif
+
+								@if(Auth::user()->role == 'SYSADMIN')
+									<li class=""><a href="{{route('admin.create')}}">کاربر جدید</a></li>
 								@endif
 							@else
 								<li class=""><a href="{{route('login')}}">ورود</a></li>
@@ -134,15 +139,15 @@
                                     <li class="span3">
                                         <div class="tenders thumbnail">
                                             <div class="blockDtl">
-                                                <h4 style="background:
+                                                <h4 class="
 														@if($tender->status == '1')
-															#5eff5a
-														@endif
-														@if($tender->status == '3')
-															#ff5054
-														@endif
-														@if($tender->status == '2')
-															#688aff
+															tender_ongoing
+														@elseif($tender->status == '2')
+															tender_new
+														@elseif($tender->status == '3')
+															tender_deciding
+														@elseif($tender->status == '4')
+															tender_done
 														@endif">{{$tender->name}}</h4>
                                                 <a href="./tender/{{$tender->id}}"><img class="imgicon" src="./resources/assets/themes/images/fields/{{$tender->field}}.png" alt="bootstrap business templates"/></a>
                                                 <input class="tendersdescrib" value="{{$tender->description}}" readonly />

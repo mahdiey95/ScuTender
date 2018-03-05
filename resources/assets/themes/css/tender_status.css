@@ -1,0 +1,15 @@
+.tender_new {
+    background: #688aff !important;
+}
+
+.tender_ongoing {
+    background: #5eff5a !important;
+}
+
+.tender_deciding {
+    background: #fff949 !important;
+}
+
+.tender_done {
+    background: #ff5054 !important;
+}

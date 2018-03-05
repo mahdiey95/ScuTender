@@ -47,3 +47,13 @@ Route::get('contact' , function () {
 Route::post('search', [
     'as' => 'tender.search', 'uses' => 'TenderController@searchTenders'
 ]);
+
+Route::get('create_admin', [
+    'as' => 'admin.create', 'uses' => 'AdminController@createAdmin'
+]);
+
+Route::post('store_admin', [
+    'as' => 'admin.store', 'uses' => 'AdminController@storeAdmin'
+]);
+
+//TODO add users managing table for admin

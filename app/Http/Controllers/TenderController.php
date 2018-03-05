@@ -46,7 +46,7 @@ class TenderController extends Controller
         $date = jDate::forge('now')->format('date');
 
 
-        return view('NewTender',['date' => $date]); //TODO create add tender view
+        return view('NewTender',['date' => $date]);
     }
 
     /**

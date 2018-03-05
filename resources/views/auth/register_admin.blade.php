@@ -69,7 +69,7 @@
                             @endif
                         @else
                             <li class=""><a href="{{route('login')}}">ورود</a></li>
-                            <li class="active"><a href="{{route('register')}}"> ثبت نام</a></li>
+                            <li class=""><a href="{{route('register')}}"> ثبت نام</a></li>
                         @endif
 
                         <li class=""><a href="{{route('news')}}">اخبار</a></li>
@@ -87,56 +87,55 @@
 <!--Header Ends================================================ -->
 <section id="bodySection">
     <div id="sectionTwo">
-        <form method="post" action="{{route('register')}}" style="border:1px solid #ccc">
+        <form method="post" action="{{route('admin.store')}}" style="border:1px solid #ccc">
             {{ csrf_field() }}
             <div class="signupcontainer well">
 
+                @if (session('success'))
+                    <div class="flash-message">
+                        <div class="alert alert-success">
+                            {{session('success')}}
+                        </div>
+                    </div>
+                @endif
+
                 @if (count($errors) != 0)
-                <span class="help-block">
+                    <span class="help-block">
                     <strong>خطا در ذخیره اطلاعات</strong>
 
-                    @if($errors->has('username'))
-                        @if(strpos($errors->first('username'),'taken'))
-                            <br/>
-                            <strong>نام کاربری از قبل وجود دارد</strong>
+                        @if($errors->has('username'))
+                            @if(strpos($errors->first('username'),'taken'))
+                                <br/>
+                                <strong>نام کاربری از قبل وجود دارد</strong>
+                            @endif
                         @endif
-                    @endif
 
-                    @if($errors->has('password'))
-                        @if(strpos($errors->first('password'),'match'))
-                            <br/>
-                            <strong>رمز عبور های وارد شده یکسان نیستند</strong>
+                        @if($errors->has('password'))
+                            @if(strpos($errors->first('password'),'match'))
+                                <br/>
+                                <strong>رمز عبور های وارد شده یکسان نیستند</strong>
+                            @endif
                         @endif
-                    @endif
 
 
                 </span>
                 @endif
 
                 <h1>فرم ثبت نام</h1>
-                <p>لطفا اطلاعات دقیق خود را در فرم زیر ثبت کنید.</p>
+
                 <hr>
 
-                <label for="name"><b>نام شرکت</b></label>
-                <input type="text" placeholder="نام شرکت" name="name" required>
+                <label for="name"><b>نام و نام خانوادگی</b></label>
+                <input type="text"  name="name" required>
 
-                <label for="field"><b>زمینه کاری</b></label>
-                <input type="text" placeholder="زمینه کاری شرکت خود را وارد کنید." name="field" required>
+                <label for="title"><b>سمت</b></label>
+                <input type="text" name="title" required>
 
-                <label for="registration_number"><b>شماره ثبت</b></label>
-                <input type="number" placeholder="شماره ثبت شرکت را وارد کنید." name="registration_number" required>
-
-                <label for="mobile"><b>تلفن تماس</b></label>
-                <input type="number" placeholder="شماره موبایل خود را وارد کنید" name="phone" required>
-
-                <label for="economic_id"><b>َشماره اقتصادی</b></label>
-                <input type="number" placeholder="شماره اقتصادی شرکت را وارد کنید" name="economic_id" required>
-
-                <label for="ceoname"><b>نام مدیرعامل</b></label>
-                <input type="text" placeholder="نام مدیر عامل شرکت را وارد کنید" name="ceo_name" required>
-
-                <label for="email"><b>ایمیل</b></label>
-                <input type="email" placeholder="ایمیل را وارد کنید" name="email" required>
+                <label for="role"><b>دسترسی سیستم</b></label>
+                <select name="role" class=" tableinput">
+                    <option value="ADMIN">مدیریت</option>
+                    <option value="EXPERT">کارشناس</option>
+                </select>
 
                 <label for="username"><b>نام کاربری</b></label>
                 <input type="text" placeholder="نام کاربری را وارد کنید" name="username" required>
@@ -154,6 +153,8 @@
                     {{--<button type="button" class="cancelbtn">Cancel</button>--}}
                     <button type="submit" class="signupbtn">ثبت نام</button>
                 </div>
+
+
             </div>
         </form>
 
