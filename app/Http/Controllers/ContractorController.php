@@ -9,6 +9,7 @@ use App\Suggestion;
 use Illuminate\Support\Facades\Auth;
 use Mockery\Exception;
 use Morilog\Jalali\jDate;
+use Illuminate\Support\Facades\Storage;
 
 class ContractorController extends Controller
 {
@@ -34,9 +35,14 @@ class ContractorController extends Controller
             $suggestion->tender = Tender::find($suggestion->tender_id);
         }
 
+        $resumeUrl = '';
+        if(Storage::exists('resumes/'.$contractor->id))
+            $resumeUrl = Storage::url('resumes/'.$contractor->id.'.pdf');
+
         return view('contractor_detail',[
             'contractor' => $contractor,
-            'suggestions' => $suggestions]);
+            'suggestions' => $suggestions ,
+            'resumeUrl' => $resumeUrl]);
 
     }
 

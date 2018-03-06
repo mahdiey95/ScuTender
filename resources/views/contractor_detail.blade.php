@@ -189,6 +189,9 @@
                                 شناسه اقتصادی :
                                 {{$contractor->economic_id}}
                             </p>
+                            {{--@if($resumeUrl != '')--}}
+                                {{--<a href="{{$resumeUrl}}">دریافت رزومه شرکت</a>--}}
+                            {{--@endif--}}
                         </li>
                     </ul>
                 </div>

@@ -147,6 +147,8 @@
                 <label for="password_confirmation"><b>تکرار رمز عبور</b></label>
                 <input type="password" placeholder="رمز عبور خود را مجددا وارد کنید" name="password_confirmation" required>
 
+                {{--<label for="resume"><b>(رزومه شرکت (اختیاری</b></label>--}}
+                {{--<input type="file" name="resume">--}}
 
                 {{--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>--}}
 
