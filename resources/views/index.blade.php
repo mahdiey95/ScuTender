@@ -70,8 +70,9 @@
 								<li class="">
 										<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 								</li>
-								@if(Auth::user()->role == 'ADMIN')
+								@if(Auth::user()->role == 'ADMIN' || Auth::user()->role == 'EXPERT')
 									<li class=""><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+									<li class=""><a href="{{route('contractor.index')}}">شرکت ها</a></li>
 								@endif
 
 								@if(Auth::user()->role == 'SYSADMIN')
@@ -169,7 +170,21 @@
                         <h4>راهنما </h4>
                         <p style="direction:rtl">
                             به سامانه مناقصات دانشگاه شهید چمران اهواز خوش آمدید.
-                            برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.در این سایت مناقصات جدید به رنگ آبی مناقصات در حال برگزاری به رنگ سبز و مناقصات به پایان رسیده با رنگ قرمز مشخص شده اند.با تشکر
+                            برای شرکت در مناقصات و مشاهده ی کامل مناقصات ابتدا باید در سایت ثبت نام کنید.
+							در این سایت :
+							<p class="tender_new">
+							مناقصات جدید به رنگ آبی
+							</p>
+							<p class="tender_ongoing">
+							مناقصات در حال برگزاری به رنگ سبز
+							</p>
+							<p class="tender_deciding">
+							مناقصات در انتظار اعلام نتیجه به رنگ زرد
+							</p>
+							<p class="tender_done">
+							و مناقصات به پایان رسیده با رنگ قرمز
+							</p>
+							مشخص شده اند.با تشکر
                         </p>
                     </li>
                 </ul>

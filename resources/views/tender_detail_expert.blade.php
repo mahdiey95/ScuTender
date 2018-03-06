@@ -16,6 +16,7 @@
     <link href="../resources/assets/themes/css/base.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/default_header.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/forms.css" rel="stylesheet" type="text/css">
+    <link href="../resources/assets/themes/css/admin.css" rel="stylesheet" type="text/css">
     <link href="../resources/assets/themes/css/tender_status.css" rel="stylesheet" type="text/css">
     <style type="text/css" id="enject"></style>
 </head>
@@ -89,7 +90,7 @@
 <section id="bodySection">
     <div id="sectionTwo">
         <div class="container">
-        @if(Auth::check()) <div> <label class="username" >کاربر:{{Auth::user()->name}}</label></div> @endif
+            @if(Auth::check()) <div> <label class="username" >کاربر:{{Auth::user()->name}}</label></div> @endif
         </div>
         <div class="container">
             <div class="row">
@@ -103,57 +104,117 @@
                         </li>
 
                         <li class="media well well-small">
-                            @if($tender->status == '2')
+                            @if($tender->status == 2)
                                 <h4 class="tender_new">مناقصه هنوز شروع نشده است</h4>
                             @endif
-                            @if($tender->status == '3')
+                            @if($tender->status == 3)
                                 <h4 class="tender_deciding">مناقصه به پایان رسیده و در مرحله تصمیم گیری است</h4>
                             @endif
-                            @if($tender->status == '4')
+                            @if($tender->status == 4)
                                 <h4 class="tender_done">مناقصه به پایان رسیده است</h4>
                             @endif
 
+                            <h4>پیشنهاد ها برای این مناقصه</h4>
 
+                            @if(count($suggestions) != 0)
 
-                            @if($tender->status != '4')
-                                <h4>پیشنهاد شما برای این مناقصه</h4>
-                                @if (session('success'))
-                                    <div class="flash-message">
-                                        <div class="alert alert-success">
-                                            {{session('success')}}
-                                        </div>
-                                    </div>
+                                @if($tender->status == 1 || $tender->status == 2)
+                                    <table class="adminTable mytable">
+                                        <thead>
+                                        <tr>
+                                            <th>نام شرکت</th>
+                                            <th>قیمت پیشنهادی(تومان)</th>
+                                            <th>زمان پیشنهادی(روز)</th>
+                                            <th>شرایط</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($suggestions as $suggestion)
+                                            <tr>
+                                                <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                                <td>{{$suggestion->price}}</td>
+                                                <td>{{$suggestion->duration}}</td>
+                                                <td>{{$suggestion->conditions}}</td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                @elseif($tender->status == 3)
+                                    <table class="adminTable mytable">
+                                        <thead>
+                                        <tr>
+                                            <th>نام شرکت</th>
+                                            <th>قیمت پیشنهادی(تومان)</th>
+                                            <th>زمان پیشنهادی(روز)</th>
+                                            <th>شرایط</th>
+                                            <th>کاربرانی که موافقت کردند</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($suggestions as $suggestion)
+                                            <tr>
+                                                <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                                <td>{{$suggestion->price}}</td>
+                                                <td>{{$suggestion->duration}}</td>
+                                                <td>{{$suggestion->conditions}}</td>
+                                                <td>
+                                                    @if($suggestion->accepting_titles != "")
+                                                        <br/>
+                                                        @foreach(explode('%',$suggestion->accepting_titles) as $title)
+                                                            {{$title}}
+                                                            <br/>
+                                                        @endforeach
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+                                @elseif($tender->status == 4)
+                                    <table class="adminTable mytable">
+                                        <thead>
+                                        <tr>
+                                            <th>نام شرکت</th>
+                                            <th>قیمت پیشنهادی(تومان)</th>
+                                            <th>زمان پیشنهادی(روز)</th>
+                                            <th>شرایط</th>
+                                            <th>وضعیت</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($suggestions as $suggestion)
+                                            <tr class="@if($suggestion->id == $tender->winner_suggestion_id) tender_ongoing @endif">
+                                                <td><a style="color: #0052cc;" href="{{route('contractor.show',$suggestion->contractor_name)}}">{{$suggestion->contractor_name}}</a></td>
+                                                <td>{{$suggestion->price}}</td>
+                                                <td>{{$suggestion->duration}}</td>
+                                                <td>{{$suggestion->conditions}}</td>
+                                                @if($suggestion->id == $tender->winner_suggestion_id)
+                                                    <td>برنده مناقصه</td>
+                                                @else
+                                                    <td></td>
+                                                @endif
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
                                 @endif
-                                <form method="post" action="{{route('suggestion')}}">
-                                    {{csrf_field()}}
-                                    <fieldset @if($tender->status == 2 || $tender->status == 3) disabled @endif>
-                                        <div class="suggestion">
-                                            <div class="form-inline">
-                                                <label for="price">قیمت پیشنهادی</label>
-                                                <input type="number" name="price" value="{{$suggestion->price or ""}}" required/>
-                                             </div>
-                                            <div class="form-inline">
-                                                <label for="duration" >زمان پیشنهادی(روز)</label>
-                                                <input type="number" name="duration" value="{{$suggestion->duration or ""}}" required/>
-                                             </div>
-                                            <div class="form-inline">
-                                                <label for="conditions">شرایط</label>
-                                                <textarea class="textarea" name="conditions" required style="background: #f1f1f1">{{$suggestion->conditions or ""}}</textarea>
-                                            </div>
-                                            <div class="form-inline">
-                                                <input class="saggestioninput" type="submit" value="ثبت پیشنهاد">
-                                            </div>
-                                            <input name="tender_id" type="hidden" value="{{$tender->id}}">
-                                        </div>
-                                    </fieldset>
-                                </form>
-
                             @else
-                                <h4>برنده مناقصه شرکت {{$winner_name}}</h4>
+                                <p>هیچ پیشنهادی برای این مناقصه ثبت نشده</p>
                             @endif
 
                         </li>
 
+
+                        @if($tender->status == 2 || $tender->status == 4
+                        || ($tender->status == 3 && count($suggestions) == 0))
+                            <li>
+                                <form action="{{route('tender.destroy',$tender->id)}}" method="post">
+                                    {{csrf_field()}}
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn-danger tblbutton">حذف مناقصه</button>
+                                </form>
+                            </li>
+                        @endif
                     </ul>
                 </div>
                 <div class="span3">
@@ -190,7 +251,7 @@
                 <div class="span3">
                     <h4>ارتباط با ما</h4>
                     <address style="margin-bottom:15px;">
-                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </strong><br>
                     </address>
 
                     <a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
@@ -201,6 +262,7 @@
         </footer>
     </div><!-- /container -->
 </section>
+
 <a href="#" class="btn" style="position: fixed; bottom: 38px; right: 10px; display: none; " id="toTop"> <i class="icon-arrow-up"></i></a>
 <!-- Javascript
     ================================================== -->

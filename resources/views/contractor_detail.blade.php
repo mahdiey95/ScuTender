@@ -104,26 +104,38 @@
                                     <thead>
                                     <tr>
                                         <th>نام مناقصه</th>
+                                        <th>مرحله مناقصه</th>
                                         <th>قیمت پیشنهادی(تومان)</th>
                                         <th>زمان پیشنهادی(روز)</th>
                                         <th>شرایط</th>
+                                        <th>وضعیت پیشنهاد</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     @foreach($suggestions as $suggestion)
-                                        <tr class=" @if($suggestion->tender->status == '1')
-                                                        tender_ongoing
-                                                    @endif
-                                                    @if($suggestion->tender->status == '3')
-                                                        tender_deciding
-                                                    @endif
-                                                    @if($suggestion->tender->status == '4')
-                                                        tender_done
-                                                    @endif">
+                                        <tr>
                                             <td><a style="color: #0052cc" href="{{route('tender.show',$suggestion->tender_id)}}">{{$suggestion->tender->name}}</a></td>
+                                            <td>
+                                                @if($suggestion->tender->status == 1)
+                                                    در حال برگزاری
+                                                @elseif($suggestion->tender->status == 3)
+                                                    در انتظار تصمیم گیری
+                                                @elseif($suggestion->tender->status == 4)
+                                                    به پایان رسیده
+                                                @endif
+                                            </td>
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
                                             <td>{{$suggestion->conditions}}</td>
+                                            <td class="@if($suggestion->tender->winner_suggestion_id == $suggestion->id) tender_ongoing @endif">
+                                                @if($suggestion->tender->winner_suggestion_id == $suggestion->id)
+                                                    برنده مناقصه
+                                                @elseif($suggestion->tender->status == 4)
+                                                    رد شده
+                                                @else
+                                                    مناقصه تمام نشده
+                                                @endif
+                                            </td>
                                         </tr>
                                     @endforeach
                                     </tbody>

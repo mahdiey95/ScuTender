@@ -62,9 +62,13 @@ Route::get('accept/{id}', [
 
 
 //========== contractors ==========
+
+Route::get('contractors','ContractorController@index')->name('contractor.index');
+
 Route::get('contractor/{name}', [
-    'as' => 'contractor.show', 'uses' => 'TenderController@showContractor'
+    'as' => 'contractor.show', 'uses' => 'ContractorController@showContractor'
 ]);
+
 //==============================
 
 

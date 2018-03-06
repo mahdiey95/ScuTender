@@ -39,7 +39,7 @@ class TenderController extends Controller
     {
         $user = Auth::user();
 
-        if($user->role != 'ADMIN')
+        if(!($user->role == 'ADMIN' || $user->role == 'EXPERT'))
             return abort(403);
 
 
@@ -117,15 +117,29 @@ class TenderController extends Controller
                 'accepted_id' => $accepted_id]);
         }
 
+        else if($user->role == 'EXPERT')
+        {
+            $suggestions = Suggestion::where('tender_id','=',$id)->orderby('price')->get();
+
+            return view('tender_detail_expert',[
+                'tender' => $tender,
+                'suggestions' => $suggestions]);
+        }
+
         else if($user->role == 'CONTRACTOR')
         {
             $suggestion = Suggestion::where('tender_id','=',$id)
                 ->where('contractor_name','=',$user->name)->get()->first();
 
+            $winner_name = '';
+
+            if($tender->status == 4)
+                $winner_name = Suggestion::find($tender->winner_suggestion_id)->contractor_name;
 
             return view('tender_detail_contractor',[
                 'tender' => $tender,
-                'suggestion' => $suggestion
+                'suggestion' => $suggestion,
+                'winner_name' => $winner_name
             ]);
 
         }
@@ -181,28 +195,7 @@ class TenderController extends Controller
 
 
 
-    public function showContractor($name) {
 
-        if(Auth::user()->role != 'ADMIN')
-            return abort(403);
-
-        $contractor = Contractor::where('name','=',$name)->get();
-        if(count($contractor) != 1)
-            return abort(404);
-
-        $contractor = $contractor->first();
-
-        $suggestions = Suggestion::where('contractor_name','=',$name)->orderby('id','DESC')->get();
-
-        foreach ($suggestions as $suggestion) {
-            $suggestion->tender = Tender::find($suggestion->tender_id);
-        }
-
-        return view('contractor_detail',[
-            'contractor' => $contractor,
-            'suggestions' => $suggestions]);
-
-    }
 
     public function searchTenders(Request $request) {
         $tenders = Tender::where('name','LIKE','%'.$request->search_name.'%')->
