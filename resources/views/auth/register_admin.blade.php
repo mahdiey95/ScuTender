@@ -52,7 +52,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
                 <h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سامانه مناقصات</small></a></h1>
+
                 <div class="nav-collapse collapse">
 
                     <ul class="nav pull-right">
@@ -61,11 +63,17 @@
                             <form id="logout" action="{{route('logout')}}" method="post" >
                                 {{csrf_field()}}
                             </form>
+
                             <li class="">
                                 <a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
                             </li>
-                            @if(Auth::user()->role == 'ADMIN')
+                            @if(Auth::user()->role == 'ADMIN' || Auth::user()->role == 'EXPERT')
                                 <li class=""><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+                                <li class=""><a href="{{route('contractor.index')}}">شرکت ها</a></li>
+                            @endif
+
+                            @if(Auth::user()->role == 'SYSADMIN')
+                                <li class="active"><a href="{{route('admin.create')}}">کاربر جدید</a></li>
                             @endif
                         @else
                             <li class=""><a href="{{route('login')}}">ورود</a></li>
@@ -77,9 +85,10 @@
 
                         <li class=""><a href="{{route('tender.index')}}">خانه</a></li>
 
-
                     </ul>
+
                 </div>
+
             </div>
         </div>
     </div>

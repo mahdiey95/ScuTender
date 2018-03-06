@@ -24,3 +24,11 @@ tr,td{
 tr:hover{
     background:#ddd;
 }
+
+.mytable{
+    width: 100%;
+    float: right;
+    direction: rtl;
+    margin: 20px;
+    margin-right: auto;
+}

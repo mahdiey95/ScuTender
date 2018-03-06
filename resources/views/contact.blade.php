@@ -53,8 +53,13 @@
 							<li class="">
 								<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 							</li>
-							@if(Auth::user()->role == 'ADMIN')
+							@if(Auth::user()->role == 'ADMIN' || Auth::user()->role == 'EXPERT')
 								<li class=""><a href="{{route('tender.create')}}">مناقصه جدید</a></li>
+								<li class=""><a href="{{route('contractor.index')}}">شرکت ها</a></li>
+							@endif
+
+							@if(Auth::user()->role == 'SYSADMIN')
+								<li class=""><a href="{{route('admin.create')}}">کاربر جدید</a></li>
 							@endif
 						@else
 							<li class=""><a href="{{route('login')}}">ورود</a></li>
@@ -62,9 +67,9 @@
 						@endif
 
 						<li class=""><a href="{{route('news')}}">اخبار</a></li>
-						<li class=""><a href="{{route('contact')}}">تماس با ما</a></li>
+						<li class="active"><a href="{{route('contact')}}">تماس با ما</a></li>
 
-						<li class="active"><a href="{{route('tender.index')}}">خانه</a></li>
+						<li class=""><a href="{{route('tender.index')}}">خانه</a></li>
 
 					</ul>
 
