@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+use Illuminate\Support\Facades\Auth;
 
 
 Auth::routes();
@@ -95,4 +95,11 @@ Route::get('admin/help' , function () {
 //TODO add users managing table for admin
 
 //=========================
+
+
+Route::get('download/{category}/{directoryId}/{filename}' , function($category,$directory,$filename) {
+    if($category == 'suggestions' && Auth::user()->role == 'CONTRACTOR')
+        return abort(403);
+    return Storage::download($category.'/'.$directory.'/'.$filename);
+})->name('donwload')->middleware('auth');
 

@@ -58,7 +58,7 @@
 
 					<h1><a class="brand" href="indexx.blade.php"> دانشگاه شهید چمران اهواز <small>  سامانه مناقصات</small></a></h1>
 
-					<div class="nav-collapse collapse">
+						<div class="nav-collapse collapse">
 
 						<ul class="nav pull-right">
 
@@ -233,7 +233,7 @@
 <!-- Javascript
     ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-	<script src="./resources/assets/themes/js/jquery-1.8.3.min.js"></script>
+	<script src="./resources/assets/themes/js/jquery-3.1.0.min.js"></script>
 	<script src="./resources/assets/themes/js/bootstrap.min.js"></script>
 	<script src="./resources/assets/themes/js/bootstrap-tooltip.js"></script>
     <script src="./resources/assets/themes/js/bootstrap-popover.js"></script>

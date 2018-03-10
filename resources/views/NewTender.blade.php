@@ -98,7 +98,7 @@
         <div class="container">
             <div class="row well">
 
-                <form class="newtendercontainer" method="post"  action="{{route('tender.store')}}">
+                <form class="newtendercontainer" method="post"  action="{{route('tender.store')}}" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <table class="mytable">
                     {{--<div class="form-row form-inline" style="float: right">--}}
@@ -149,8 +149,8 @@
                         </tr>
 
                         <tr>
-                            <td><label class="control-label tablelable" for="tender_file">فایل های مربوطه</label></td>
-                            <td><input type="file" name="tender_files" class="select tableinput textarea"/></td>
+                            <td><label class="control-label tablelable" for="documents[]">فایل های مربوطه</label></td>
+                            <td><input type="file" name="documents[]" class="select tableinput textarea" multiple/></td>
                         </tr>
                     {{--</div>--}}
                     </table>

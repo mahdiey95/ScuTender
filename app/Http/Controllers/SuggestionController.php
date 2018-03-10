@@ -42,7 +42,20 @@ class SuggestionController extends Controller
         ]);
 
         if($suggestion->save())
+        {
+            if($request->file('files'))
+            {
+                foreach($request->file('files') as $file)
+                {
+                    if(!empty($file))
+                    {
+                        $filename = $file->getClientOriginalName();
+                        $file->storeAs('suggestions/'.$suggestion->id , $filename);
+                    }
+                }
+            }
             return back()->with('success','پیشنهاد شما برای این مناقصه ثبت شد');
+        }
         else
             return abort(500,'couldnt save suggestion');
     }

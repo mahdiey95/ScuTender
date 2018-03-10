@@ -117,6 +117,24 @@
                         </li>
 
                         <li class="media well well-small">
+                            <h4>اسناد مناقصه</h4>
+                            <p>
+                                @if(count($documents) == 0)
+                                    هیچ سندی برای این مناقصه ثبت نشده
+                                @else
+                                    @foreach($documents as $document)
+                                        <a href="{{route('donwload' , ['category' => 'tenders',
+                                'directory' => $tender->id,
+                                'filename' => $document])}}">
+                                            {{$document}}
+                                        </a>
+                                        <br/>
+                                    @endforeach
+                                @endif
+                            </p>
+                        <li/>
+
+                        <li class="media well well-small">
                             @if($tender->status == 2)
                                 <h4 class="tender_new">مناقصه هنوز شروع نشده است</h4>
                             @endif
@@ -139,6 +157,7 @@
                                             <th>قیمت پیشنهادی(تومان)</th>
                                             <th>زمان پیشنهادی(روز)</th>
                                             <th>شرایط</th>
+                                            <th>فایل های پیوست</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -148,6 +167,20 @@
                                             <td>{{$suggestion->price}}</td>
                                             <td>{{$suggestion->duration}}</td>
                                             <td>{{$suggestion->conditions}}</td>
+                                            @if(count($suggestion->documents) != 0)
+                                                @foreach($suggestion->documents as $document)
+                                                    <td>
+                                                        <a href="{{route('donwload' , ['category' => 'suggestions',
+                                'directory' => $suggestion->id,
+                                'filename' => $document])}}">
+                                                            {{$document}}
+                                                        </a>
+                                                        <br/>
+                                                    </td>
+                                                @endforeach
+                                            @else
+                                                <td></td>
+                                            @endif
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -160,6 +193,7 @@
                                                 <th>قیمت پیشنهادی(تومان)</th>
                                                 <th>زمان پیشنهادی(روز)</th>
                                                 <th>شرایط</th>
+                                                <th>فایل های پیوست</th>
                                                 <th>کاربرانی که موافقت کردند</th>
                                                 <th>موافقت</th>
                                             </tr>
@@ -171,6 +205,20 @@
                                                     <td>{{$suggestion->price}}</td>
                                                     <td>{{$suggestion->duration}}</td>
                                                     <td>{{$suggestion->conditions}}</td>
+                                                    @if(count($suggestion->documents) != 0)
+                                                        @foreach($suggestion->documents as $document)
+                                                            <td>
+                                                                <a href="{{route('donwload' , ['category' => 'suggestions',
+                                'directory' => $suggestion->id,
+                                'filename' => $document])}}">
+                                                                    {{$document}}
+                                                                </a>
+                                                                <br/>
+                                                            </td>
+                                                        @endforeach
+                                                    @else
+                                                        <td></td>
+                                                    @endif
                                                     <td>
                                                         @if($suggestion->accepting_titles != "")
                                                             <br/>
@@ -197,6 +245,7 @@
                                                 <th>قیمت پیشنهادی(تومان)</th>
                                                 <th>زمان پیشنهادی(روز)</th>
                                                 <th>شرایط</th>
+                                                <th>فایل های پیوست</th>
                                                 <th>وضعیت</th>
                                             </tr>
                                             </thead>
@@ -207,6 +256,22 @@
                                                     <td>{{$suggestion->price}}</td>
                                                     <td>{{$suggestion->duration}}</td>
                                                     <td>{{$suggestion->conditions}}</td>
+
+                                                    @if(count($suggestion->documents) != 0)
+                                                        @foreach($suggestion->documents as $document)
+                                                        <td>
+                                                            <a href="{{route('donwload' , ['category' => 'suggestions',
+                                'directory' => $suggestion->id,
+                                'filename' => $document])}}">
+                                                                {{$document}}
+                                                            </a>
+                                                            <br/>
+                                                        </td>
+                                                        @endforeach
+                                                    @else
+                                                    <td></td>
+                                                    @endif
+
                                                     @if($suggestion->id == $tender->winner_suggestion_id)
                                                     <td>برنده مناقصه</td>
                                                     @else

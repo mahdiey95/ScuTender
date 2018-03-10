@@ -114,6 +114,23 @@
                                 {{$tender->description}}
                             </p>
                         </li>
+                        <li class="media well well-small">
+                            <h4>اسناد مناقصه</h4>
+                            <p>
+                                @if(count($documents) == 0)
+                                    هیچ سندی برای این مناقصه ثبت نشده
+                                @else
+                                    @foreach($documents as $document)
+                                        <a href="{{route('donwload' , ['category' => 'tenders',
+                                'directory' => $tender->id,
+                                'filename' => $document])}}">
+                                            {{$document}}
+                                        </a>
+                                        <br/>
+                                    @endforeach
+                                @endif
+                            </p>
+                        <li/>
 
                         <li class="media well well-small">
                             @if($tender->status == '2')
@@ -137,7 +154,7 @@
                                         </div>
                                     </div>
                                 @endif
-                                <form method="post" action="{{route('suggestion')}}">
+                                <form method="post" action="{{route('suggestion')}}" enctype="multipart/form-data">
                                     {{csrf_field()}}
                                     <fieldset @if($tender->status == 2 || $tender->status == 3) disabled @endif>
                                         <div class="suggestion">
@@ -152,6 +169,10 @@
                                             <div class="form-inline">
                                                 <label for="conditions">شرایط</label>
                                                 <textarea class="textarea" name="conditions" required style="background: #f1f1f1">{{$suggestion->conditions or ""}}</textarea>
+                                            </div>
+                                            <div class="form-inline">
+                                                <label for="duration" >فایل های پیوست</label>
+                                                <input type="file" name="files[]" multiple/>
                                             </div>
                                             <div class="form-inline">
                                                 <input class="saggestioninput" type="submit" value="ثبت پیشنهاد">

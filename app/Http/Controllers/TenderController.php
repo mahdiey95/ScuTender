@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Tender;
 use App\Suggestion;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use Mockery\Exception;
 use Morilog\Jalali\jDate;
 
@@ -81,26 +82,21 @@ class TenderController extends Controller
 
         if($tender->save())
         {
-            $file = $request->file('tender_file');
-            $destinationPath = 'tenders/'.$tender->id;
-            $filename = $file->getClientOriginalName();
-            $file->move($destinationPath, $filename);
 
-//            if($request->file('tender_files'))
-//            {
-//                echo 'ok';
-//                foreach($request->file('tender_files') as $file)
-//                {
-//                    if(!empty($file))
-//                    {
-//                        $destinationPath = 'tenders/'.$tender->id;
-//                        $filename = $file->getClientOriginalName();
-//                        $file->move($destinationPath, $filename);
-//
-//                        echo $filename;
-//                    }
-//                }
-//            }
+
+            if($request->file('documents'))
+            {
+                foreach($request->file('documents') as $file)
+                {
+                    if(!empty($file))
+                    {
+                        $filename = $file->getClientOriginalName();
+                        $file->storeAs('tenders/'.$tender->id , $filename);
+
+                        echo $filename;
+                    }
+                }
+            }
 
             return redirect(route('tender.index'));
         }
@@ -119,7 +115,15 @@ class TenderController extends Controller
         $user = Auth::user();
 
         $tender = Tender::find($id);
-
+        $documents = array();
+        if(Storage::exists('tenders/'.$id.'/'))
+        {
+            $files = Storage::files('tenders/'.$id.'/');
+            foreach($files as $file)
+            {
+                array_push($documents,last(explode('/',$file)));
+            }
+        }
 
         if($user->role == 'ADMIN')
         {
@@ -130,23 +134,48 @@ class TenderController extends Controller
                 if(str_contains($suggestion->accepting_titles , $user->title))
                 {
                     $accepted_id = $suggestion->id;
-                    break;
                 }
+                $suggestion_docs = array();
+                if(Storage::exists('suggestions/'.$suggestion->id.'/'))
+                {
+                    $files = Storage::files('suggestions/'.$suggestion->id.'/');
+                    foreach($files as $file)
+                    {
+                        array_push($suggestion_docs,last(explode('/',$file)));
+                    }
+                }
+                $suggestion->documents = $suggestion_docs;
             }
 
             return view('tender_detail_admin',[
                 'tender' => $tender,
                 'suggestions' => $suggestions,
-                'accepted_id' => $accepted_id]);
+                'accepted_id' => $accepted_id,
+                'documents' => $documents]);
         }
 
         else if($user->role == 'EXPERT')
         {
             $suggestions = Suggestion::where('tender_id','=',$id)->orderby('price')->get();
 
+            foreach($suggestions as $suggestion)
+            {
+                $suggestion_docs = array();
+                if(Storage::exists('suggestions/'.$suggestion->id.'/'))
+                {
+                    $files = Storage::files('suggestions/'.$suggestion->id.'/');
+                    foreach($files as $file)
+                    {
+                        array_push($suggestion_docs,last(explode('/',$file)));
+                    }
+                }
+                $suggestion->documents = $suggestion_docs;
+            }
+
             return view('tender_detail_expert',[
                 'tender' => $tender,
-                'suggestions' => $suggestions]);
+                'suggestions' => $suggestions,
+                'documents' => $documents]);
         }
 
         else if($user->role == 'CONTRACTOR')
@@ -162,7 +191,8 @@ class TenderController extends Controller
             return view('tender_detail_contractor',[
                 'tender' => $tender,
                 'suggestion' => $suggestion,
-                'winner_name' => $winner_name
+                'winner_name' => $winner_name,
+                'documents' => $documents
             ]);
 
         }
