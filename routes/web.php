@@ -68,6 +68,9 @@ Route::get('contractors','ContractorController@index')->name('contractor.index')
 Route::get('contractor/{name}', [
     'as' => 'contractor.show', 'uses' => 'ContractorController@showContractor'
 ]);
+Route::get('help' , function () {
+    return view('contractor_help');
+})->name('contractor_help');
 
 //==============================
 
@@ -82,6 +85,11 @@ Route::get('create_admin', [
 Route::post('store_admin', [
     'as' => 'admin.store', 'uses' => 'AdminController@storeAdmin'
 ]);
+
+Route::get('help' , function () {
+    return view('admin_help');
+})->name('admin.help');
+
 
 //TODO add users managing table for admin
 

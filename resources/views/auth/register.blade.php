@@ -147,6 +147,9 @@
                 <label for="password_confirmation"><b>تکرار رمز عبور</b></label>
                 <input type="password" placeholder="رمز عبور خود را مجددا وارد کنید" name="password_confirmation" required>
 
+                <label for="upload_file"><b>ارسال فایل</b></label>
+                <input type="file" id="file" name="upload_file">
+
 
                 {{--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>--}}
 
@@ -173,7 +176,7 @@
                 <div class="span3">
                     <h4>ارتباط با ما</h4>
                     <address style="margin-bottom:15px;">
-                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+                        <strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </strong><br>
                     </address>
 
                     <a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>
