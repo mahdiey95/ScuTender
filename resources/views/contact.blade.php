@@ -54,7 +54,7 @@
 								<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 							</li>
 							@if(Auth::user()->role == 'CONTRACTOR' )
-								<li class=""><a href="{{route('contractor_help')}}">راهنما</a> </li>
+								<li class=""><a href="{{route('contractor.help')}}">راهنما</a> </li>
 							@endif
 							@if(Auth::user()->role == 'ADMIN' || Auth::user()->role == 'EXPERT')
 								<li class=""><a href="{{route('admin.help')}}">راهنما</a></li>
@@ -159,7 +159,7 @@
 				<div class="span3">
 					<h4>ارتباط با ما</h4>
 					<address style="margin-bottom:15px;">
-						<strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </a></strong><br>
+						<strong>{{--<a href="indexx.blade.php" title="business">--}}<i class=" icon-home"></i> اهواز - بلوار گلستان- دانشگاه شهید چمران اهواز </strong><br>
 					</address>
 
 					<a href="contact.blade.php" title="services"><i class="icon-cogs"></i> ارتباط با ما </a><br/>

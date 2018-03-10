@@ -76,11 +76,34 @@ class TenderController extends Controller
             'field' => $request->field,
             'description' => $request->description,
             'start_date' => $request->start_date,
-            'end_date' => $request->end_date,
+            'end_date' => $request->end_date
         ]);
 
         if($tender->save())
+        {
+            $file = $request->file('tender_file');
+            $destinationPath = 'tenders/'.$tender->id;
+            $filename = $file->getClientOriginalName();
+            $file->move($destinationPath, $filename);
+
+//            if($request->file('tender_files'))
+//            {
+//                echo 'ok';
+//                foreach($request->file('tender_files') as $file)
+//                {
+//                    if(!empty($file))
+//                    {
+//                        $destinationPath = 'tenders/'.$tender->id;
+//                        $filename = $file->getClientOriginalName();
+//                        $file->move($destinationPath, $filename);
+//
+//                        echo $filename;
+//                    }
+//                }
+//            }
+
             return redirect(route('tender.index'));
+        }
         else
             return abort(500,'Saving tender failed');
     }

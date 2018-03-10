@@ -71,7 +71,7 @@
 										<a href="javascript:{}" onclick="document.getElementById('logout').submit()">خروج</a>
 								</li>
 								@if(Auth::user()->role == 'CONTRACTOR' )
-									<li class=""><a href="{{route('contractor_help')}}">راهنما</a> </li>
+									<li class=""><a href="{{route('contractor.help')}}">راهنما</a> </li>
 								@endif
 								@if(Auth::user()->role == 'ADMIN' || Auth::user()->role == 'EXPERT')
 									<li class=""><a href="{{route('admin.help')}}">راهنما</a></li>
