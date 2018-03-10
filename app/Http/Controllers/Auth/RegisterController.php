@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Contractor;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -70,7 +71,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        Contractor::create([
+        $contractor = new Contractor([
             'name' => $data['name'],
             'registration_number' => $data['registration_number'],
             'economic_id' => $data['economic_id'],
@@ -80,6 +81,14 @@ class RegisterController extends Controller
             'phone' => $data['phone']
         ]);
 
+        $contractor->save();
+
+
+
+//        if($data['resume'] != '')
+//        {
+//            Storage::put('resumes/'.$contractor->id.'.pdf' , $data['resume']);
+//        }
 
         return User::create([
             'name' => $data['name'],

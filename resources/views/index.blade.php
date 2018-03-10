@@ -118,14 +118,16 @@
 			  	<button type="submit" class="btn btn-warning">جست و جو</button>
 			</form>
 			<div class="row">
-			<div class="span9">
-				<ul class="nav nav-pills pull-left">
-				<li class="active"><a href="#all" data-toggle="tab">همه</a></li>
-				<li class=""><a href="#new" data-toggle="tab">جدید</a></li>
-				<li class=""><a href="#popular" data-toggle="tab">در حال برگزاری</a></li>
-				<li class=""><a href="#comingsoon" data-toggle="tab">به پایان رسیده</a></li>
-				</ul>
+				<div class="span9">
+					<ul class="nav nav-pills pull-left">
+					<li class="active"><a href="#all" data-toggle="tab">همه</a></li>
+					<li class=""><a href="#new" data-toggle="tab">جدید</a></li>
+					<li class=""><a href="#popular" data-toggle="tab">در حال برگزاری</a></li>
+					<li class=""><a href="#comingsoon" data-toggle="tab">به پایان رسیده</a></li>
+					</ul>
+				</div>
 			</div>
+			<div class="row">
                 <div class="span9">
                     <div class="tabbable tabs">
                         <div class="tab-content label-primary">
@@ -162,7 +164,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+			</div>
+
             </div>
             <div class="span3">
                 <ul class="media-list">
